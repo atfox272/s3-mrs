@@ -1,4 +1,4 @@
-// import './auth.js';
+import API_URL  from './api.js'; // Ensure that the script type is set to "module" in the HTML file
 
 // View management
 const views = {
@@ -14,7 +14,7 @@ const views = {
 let currentUser = null;
 
 // Load a view into the main content area
-async function loadView(viewName) {
+export async function loadView(viewName) {
     try {
         const response = await fetch(views[viewName]);
         if (!response.ok) throw new Error('View not found');
@@ -39,12 +39,12 @@ async function loadView(viewName) {
 }
 
 // auth.js
-async function handleLogin() {
+export async function handleLogin() {
     const email = document.getElementById('email-input').value; // Assuming you have an input for email
     const password = document.getElementById('password-input').value; // Assuming you have an input for password
 
     try {
-        const response = await fetch('http://localhost:3001/api/auth/login', {
+        const response = await fetch(`${API_URL}/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -75,14 +75,14 @@ async function handleLogin() {
 }
 
 // Handle logout
-function handleLogout() {
+export function handleLogout() {
     currentUser = null;
     updateUserUI();
     loadView('login');
 }
 
 // Update UI based on user state
-function updateUserUI() {
+export function updateUserUI() {
     const userNameSpan = document.getElementById('user-name');
     const loginBtn = document.getElementById('login-btn');
     const logoutBtn = document.getElementById('logout-btn');
@@ -97,6 +97,11 @@ function updateUserUI() {
         logoutBtn.style.display = 'none';
     }
 }
+
+window.loadView = loadView;
+window.handleLogin = handleLogin;
+window.handleLogout = handleLogout;
+window.updateUserUI = updateUserUI;
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
