@@ -8,10 +8,14 @@ const views = {
     history: 'views/history.html',
     profile: 'views/profile.html',
     login: 'views/login.html',
+    notifications: 'views/notifications.html',
 };
 
 // Current user state
 let currentUser = null;
+
+// Add a bell icon element
+const bellIcon = document.getElementById('bell-icon');
 
 // Load a view into the main content area
 export async function loadView(viewName) {
@@ -89,19 +93,29 @@ export function updateUserUI() {
     
     if (currentUser) {
         userNameSpan.textContent = currentUser.name;
+        userNameSpan.style.marginRight = '-55px'; // Adjust margin-right because the bell icon is too far right
         loginBtn.style.display = 'none';
         logoutBtn.style.display = 'block';
+        bellIcon.style.display = 'block'; // Show bell icon when logged in
     } else {
         userNameSpan.textContent = 'Chưa đăng nhập';
+        userNameSpan.style.marginRight = '0'; // Reset margin-right when not logged in
         loginBtn.style.display = 'block';
         logoutBtn.style.display = 'none';
+        bellIcon.style.display = 'none'; // Hide bell icon when not logged in
     }
+}
+
+// Load notification view
+export function loadNotifications() {
+    loadView('notifications');
 }
 
 window.loadView = loadView;
 window.handleLogin = handleLogin;
 window.handleLogout = handleLogout;
 window.updateUserUI = updateUserUI;
+window.loadNotifications = loadNotifications;
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
