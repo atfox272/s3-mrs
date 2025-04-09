@@ -1,0 +1,129 @@
+{
+  "uuid": "0a558c4c-dc95-4565-aeeb-5fcc25f078cd",
+  "lastMigration": 33,
+  "name": "Mock api",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "dade4247-87a8-4dcd-ade7-6abc57e8ebc1",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/auth/login",
+      "responses": [
+        {
+          "uuid": "7ec71884-49a5-46e4-8585-9b54c0912afc",
+          "body": "{\n  \"success\": true,\n  \"user\": {\n    \"id\": \"2114700\",\n    \"name\": \"Trần Anh Tài\",\n    \"email\": \"trananhtai@hcmut.edu.vn\",\n    \"role\": \"student\"\n  },\n  \"token\": \"your_jwt_token_here\",\n  \"message\": \"Tài khoản hoặc mật khẩu không đúng. Vui lòng thử lại. (Message for login failure)\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "email",
+              "value": "atfox272@gmail.com",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "be8571bb-927d-46ce-a712-607350acd762",
+          "body": "{\n  \"success\": false,\n  \"message\": \"Tài khoản hoặc mật khẩu không đúng. Vui lòng thử lại.\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "email",
+              "value": "atfox272@gmail.com",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": "FALLBACK",
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "dade4247-87a8-4dcd-ade7-6abc57e8ebc1"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

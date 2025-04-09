@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S3-MRS - HCMUT Smart Study Space Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/hcmut-logo.jpg" alt="HCMUT Logo" style="height: 60px; width: auto;">
+                <h1 style="font-size: 1.8rem;">S3-MRS</h1>
+            </div>
+            <div class="user-info">
+                <span id="user-name" style="min-width: 150px; display: inline-block; margin-right: 10px;">Chưa đăng nhập</span>
+                <button id="login-btn" onclick="loadView('login')" style="margin-right: 5px;">Đăng nhập</button>
+                <button id="logout-btn" onclick="handleLogout()" style="display: none;">Đăng xuất</button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-content">
+            <button class="nav-btn" onclick="loadView('home')">
+                <i class="fas fa-home"></i>
+                <span>Trang chủ</span>
+            </button>
+            <button class="nav-btn" onclick="loadView('rooms')">
+                <i class="fas fa-door-open"></i>
+                <span>Thông tin phòng</span>
+            </button>
+            <button class="nav-btn" onclick="loadView('reservations')">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Lịch hẹn</span>
+            </button>
+            <button class="nav-btn" onclick="loadView('history')">
+                <i class="fas fa-history"></i>
+                <span>Lịch sử phòng</span>
+            </button>
+            <button class="nav-btn" onclick="loadView('profile')">
+                <i class="fas fa-user"></i>
+                <span>Thông tin cá nhân</span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Main content view -->
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HCMUT - Smart Study Space Management and Reservation System</p>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="js/main.js"></script>
+    <!-- <script src="js/auth.js"></script> -->
+</body>
+</html>

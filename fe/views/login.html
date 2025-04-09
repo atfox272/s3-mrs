@@ -1,0 +1,22 @@
+<div class="login-container">
+    <h2>Đăng Nhập</h2>
+    <form id="login-form" onsubmit="handleLogin(); return false;">
+        <div class="input-group">
+            <label for="email-input">Email:</label>
+            <input type="email" id="email-input" placeholder="Nhập email" required>
+        </div>
+        <div class="input-group">
+            <label for="password-input">Mật khẩu:</label>
+            <input type="password" id="password-input" placeholder="Nhập mật khẩu" required>
+        </div>
+        <button type="submit" id="login-btn">Đăng nhập</button>
+    </form>
+    <p class="error-message" id="error-message" style="color: red; display: none; font-size: 0.9rem;">Thông báo lỗi sẽ hiển thị ở đây nếu có vấn đề trong quá trình đăng nhập.</p>
+    <script>
+        function displayErrorMessage(message) {
+            const errorMessageElement = document.getElementById('error-message');
+            errorMessageElement.textContent = message; // Set the error message
+            errorMessageElement.style.display = 'block'; // Make the error message visible
+        }
+    </script>
+</div> 
