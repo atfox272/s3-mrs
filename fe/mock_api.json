@@ -17,7 +17,7 @@
       "responses": [
         {
           "uuid": "7ec71884-49a5-46e4-8585-9b54c0912afc",
-          "body": "{\n  \"success\": true,\n  \"user\": {\n    \"id\": \"2114700\",\n    \"name\": \"Trần Anh Tài\",\n    \"email\": \"trananhtai@hcmut.edu.vn\",\n    \"role\": \"student\"\n  },\n  \"token\": \"your_jwt_token_here\",\n  \"message\": \"Tài khoản hoặc mật khẩu không đúng. Vui lòng thử lại. (Message for login failure)\"\n}",
+          "body": "{\n  \"success\": true,\n  \"user\": {\n    \"id\": \"2114700\",\n    \"name\": \"Trần Anh Student\",\n    \"email\": \"trananhtai@hcmut.edu.vn\",\n    \"role\": \"student\"\n  },\n  \"token\": \"your_jwt_token_here\"\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -30,7 +30,7 @@
             {
               "target": "body",
               "modifier": "email",
-              "value": "atfox272@gmail.com",
+              "value": "user@gmail.com",
               "invert": false,
               "operator": "equals"
             }
@@ -39,6 +39,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "dbe16b45-8659-41ec-96ca-faba4c93f766",
+          "body": "{\n  \"success\": true,\n  \"user\": {\n    \"id\": \"2114700\",\n    \"name\": \"Trần Anh SRSO\",\n    \"email\": \"trananhtai@hcmut.edu.vn\",\n    \"role\": \"SRSO\"\n  },\n  \"token\": \"your_jwt_token_here\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "email",
+              "value": "srso@gmail.com",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         },
@@ -73,12 +100,47 @@
       "responseMode": "FALLBACK",
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "b9eae9a2-f8a3-4ae5-b377-e5dd4e646ed4",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/room/rules",
+      "responses": [
+        {
+          "uuid": "ff0ef01f-88cc-4966-beab-9a894d0c60cd",
+          "body": "{\n  \"rules\": [\n    {\n      \"id\": 1,\n      \"text\": \"Không xả rác trong phòng học.\"\n    },\n    {\n      \"id\": 2,\n      \"text\": \"Sắp xếp lại ghế khi ra khỏi phòng.\"\n    },\n    {\n      \"id\": 3,\n      \"text\": \"Giữ gìn cơ sở vật chất và thiết bị trong phòng học.\"\n    },\n    {\n      \"id\": 4,\n      \"text\": \"Không mang đồ ăn gây mùi vào phòng học.\"\n    },\n    {\n      \"id\": 5,\n      \"text\": \"Nếu có vấn đề về cơ sở vật chất thì vui lòng báo cáo lên quản trị viên.\"\n    },\n    {\n      \"id\": 6,\n      \"text\": \"Vui lòng checkin trước khi sử dụng phòng học\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
     {
       "type": "route",
       "uuid": "dade4247-87a8-4dcd-ade7-6abc57e8ebc1"
+    },
+    {
+      "type": "route",
+      "uuid": "b9eae9a2-f8a3-4ae5-b377-e5dd4e646ed4"
     }
   ],
   "proxyMode": false,

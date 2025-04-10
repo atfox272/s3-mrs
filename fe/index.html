@@ -16,7 +16,7 @@
             </div>
             <div class="user-info">
                 <span id="user-name" style="min-width: 150px; display: inline-block; margin-right: -5px;">Chưa đăng nhập</span>
-                <button id="bell-icon" onclick="loadView('notifications')" style="display: block; width: 20px; margin-right: 5px; border: none; background: transparent; padding: 0px; font-size: 1.2rem; color: rgb(2, 2, 144);">
+                <button id="bell-icon" onclick="loadView('std_notifications')" style="display: block; width: 20px; margin-right: 5px; border: none; background: transparent; padding: 0px; font-size: 1.2rem; color: rgb(2, 2, 144);">
                     <i class="fas fa-bell"></i>
                 </button>
                 <button id="login-btn" onclick="loadView('login')" style="margin-right: 5px;">Đăng nhập</button>
@@ -31,21 +31,37 @@
                 <i class="fas fa-home"></i>
                 <span>Trang chủ</span>
             </button>
-            <button class="nav-btn" onclick="loadView('rooms')">
+            <button class="nav-btn" onclick="loadView('std_rooms')">
                 <i class="fas fa-door-open"></i>
                 <span>Thông tin phòng</span>
             </button>
-            <button class="nav-btn" onclick="loadView('reservations')">
+            <button class="nav-btn" onclick="loadView('std_reservations')">
                 <i class="fas fa-calendar-alt"></i>
                 <span>Lịch hẹn</span>
             </button>
-            <button class="nav-btn" onclick="loadView('history')">
+            <button class="nav-btn" onclick="loadView('std_history')">
                 <i class="fas fa-history"></i>
                 <span>Lịch sử phòng</span>
             </button>
-            <button class="nav-btn" onclick="loadView('profile')">
+            <button class="nav-btn" onclick="loadView('std_profile')">
                 <i class="fas fa-user"></i>
                 <span>Thông tin cá nhân</span>
+            </button>
+            <button class="nav-btn" onclick="loadView('srso_general_config')">
+                <i class="fas fa-cogs"></i>
+                <span>Cấu hình chung</span>
+            </button>
+            <button class="nav-btn" onclick="loadView('srso_room_config')">
+                <i class="fas fa-cog"></i>
+                <span>Cấu hình phòng</span>
+            </button>
+            <button class="nav-btn" onclick="loadView('srso_room_status')">
+                <i class="fas fa-clipboard-list"></i>
+                <span>Trạng thái phòng</span>
+            </button>
+            <button class="nav-btn" onclick="loadView('srso_statistics')">
+                <i class="fas fa-chart-bar"></i>
+                <span>Thống kê</span>
             </button>
         </div>
     </nav>

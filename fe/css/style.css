@@ -197,6 +197,25 @@ button {
     font-size: 0.9rem;
 }
 
+.rule-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.rule-info h2 {
+    color: #1a237e;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.rule-info div {
+    color: #353535;
+    line-height: 2.4; /* Increase line height for better spacing between lines */
+    font-size: 1.1rem;
+}
+
 .quick-info {
     background: white;
     padding: 2rem;

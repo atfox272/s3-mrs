@@ -1,21 +1,23 @@
 import API_URL  from './api.js'; // Ensure that the script type is set to "module" in the HTML file
+import getRoomRule from './std_rooms.js';
 
 // View management
 const views = {
     home: 'views/home.html',
-    rooms: 'views/rooms.html',
-    reservations: 'views/reservations.html',
-    history: 'views/history.html',
-    profile: 'views/profile.html',
     login: 'views/login.html',
-    notifications: 'views/notifications.html',
+    std_rooms: 'views/std_rooms.html',
+    std_reservations: 'views/std_reservations.html',
+    std_history: 'views/std_history.html',
+    std_profile: 'views/std_profile.html',
+    std_notifications: 'views/std_notifications.html',
+    srso_general_config: 'views/srso_gen_config.html',
+    srso_room_config: 'views/srso_room_config.html',
+    srso_room_status: 'views/srso_room_status.html',
+    srso_statistics: 'views/srso_statistics.html',
 };
 
 // Current user state
 let currentUser = null;
-
-// Add a bell icon element
-const bellIcon = document.getElementById('bell-icon');
 
 // Load a view into the main content area
 export async function loadView(viewName) {
@@ -31,6 +33,12 @@ export async function loadView(viewName) {
             btn.classList.remove('active');
         });
         document.querySelector(`[onclick="loadView('${viewName}')"]`).classList.add('active');
+
+        if (viewName === 'home') { // If the view is home, fetch and display room rules
+            const roomRules = await getRoomRule(); // Await the result of getRoomRule
+            document.querySelector('#room-rule-content').innerHTML = roomRules; // Set the content
+        }
+
     } catch (error) {
         console.error('Error loading view:', error);
         document.getElementById('main-content').innerHTML = `
@@ -90,19 +98,52 @@ export function updateUserUI() {
     const userNameSpan = document.getElementById('user-name');
     const loginBtn = document.getElementById('login-btn');
     const logoutBtn = document.getElementById('logout-btn');
-    
+    const bellIcon = document.getElementById('bell-icon');
+    const homeNavBtn = document.querySelector('.nav-btn:nth-child(1)'); // Select the "home" button
+    const roomsNavBtn = document.querySelector('.nav-btn:nth-child(2)'); // Select the "rooms" button
+    const reservationsNavBtn = document.querySelector('.nav-btn:nth-child(3)'); // Select the "reservations" button
+    const historyNavBtn = document.querySelector('.nav-btn:nth-child(4)'); // Select the "history" button
+    const profileNavBtn = document.querySelector('.nav-btn:nth-child(5)'); // Select the "profile" button
+    const genConfigNavBtn = document.querySelector('.nav-btn:nth-child(6)'); // Select the "general_config" button
+    const roomConfigNavBtn = document.querySelector('.nav-btn:nth-child(7)'); // Select the "room_config" button
+    const roomStatusNavBtn = document.querySelector('.nav-btn:nth-child(8)'); // Select the "room_history" button
+    const statisticsNavBtn = document.querySelector('.nav-btn:nth-child(9)'); // Select the "statistics" button
+
+    // Show or hide navigation buttons based on user state    
     if (currentUser) {
         userNameSpan.textContent = currentUser.name;
-        userNameSpan.style.marginRight = '-55px'; // Adjust margin-right because the bell icon is too far right
+        userNameSpan.style.marginRight = '-25px'; // Adjust margin-right because the bell icon is too far right
         loginBtn.style.display = 'none';
         logoutBtn.style.display = 'block';
-        bellIcon.style.display = 'block'; // Show bell icon when logged in
+        homeNavBtn.style.display = 'block'; // Hide the button if the user is not logged in
+        if(currentUser.role == "student") {
+            bellIcon.style.display = 'block'; // Show bell icon when logged in
+            roomsNavBtn.style.display = 'block'; // Show the button if the user is logged in
+            reservationsNavBtn.style.display = 'block'; // Show the button if the user is logged in
+            historyNavBtn.style.display = 'block'; // Show the button if the user is logged in
+            profileNavBtn.style.display = 'block'; // Show the button if the user is logged in
+        }
+        else if(currentUser.role == "SRSO") {
+            genConfigNavBtn.style.display = 'block';  // Show the button if the user is not logged in
+            roomConfigNavBtn.style.display = 'block'; // Show the button if the user is logged in
+            roomStatusNavBtn.style.display = 'block'; // Show the button if the user is logged in
+            statisticsNavBtn.style.display = 'block'; // Show the button if the user is logged in
+        }
     } else {
         userNameSpan.textContent = 'Chưa đăng nhập';
         userNameSpan.style.marginRight = '0'; // Reset margin-right when not logged in
         loginBtn.style.display = 'block';
         logoutBtn.style.display = 'none';
         bellIcon.style.display = 'none'; // Hide bell icon when not logged in
+        homeNavBtn.style.display = 'block'; // Hide the button if the user is not logged in
+        roomsNavBtn.style.display = 'none'; // Hide the button if the user is not logged in
+        reservationsNavBtn.style.display = 'none'; // Hide the button if the user is not logged in
+        historyNavBtn.style.display = 'none'; // Hide the button if the user is not logged in
+        profileNavBtn.style.display = 'none'; // Hide the button if the user is not logged in
+        genConfigNavBtn.style.display = 'none';  // Hide the button if the user is not logged in
+        roomConfigNavBtn.style.display = 'none'; // Hide the button if the user is not logged in
+        roomStatusNavBtn.style.display = 'none'; // Hide the button if the user is not logged in
+        statisticsNavBtn.style.display = 'none'; // Hide the button if the user is not logged in
     }
 }
 
@@ -110,6 +151,7 @@ export function updateUserUI() {
 export function loadNotifications() {
     loadView('notifications');
 }
+
 
 window.loadView = loadView;
 window.handleLogin = handleLogin;
@@ -126,3 +168,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // TODO: Implement session management
     updateUserUI();
 });
+
