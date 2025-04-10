@@ -106,7 +106,7 @@
       "type": "http",
       "documentation": "",
       "method": "get",
-      "endpoint": "api/room/rules",
+      "endpoint": "api/rooms/rules",
       "responses": [
         {
           "uuid": "ff0ef01f-88cc-4966-beab-9a894d0c60cd",
@@ -137,7 +137,7 @@
       "type": "http",
       "documentation": "",
       "method": "get",
-      "endpoint": "api/rooms",
+      "endpoint": "api/rooms/campus",
       "responses": [
         {
           "uuid": "7ed09994-35a0-4994-91b4-4a558a3530e8",
@@ -197,6 +197,45 @@
       "responseMode": "FALLBACK",
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "66192423-39b9-40fc-b2c6-675e5dd7fc72",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/rooms/room",
+      "responses": [
+        {
+          "uuid": "fa6d316a-1587-48f9-8e2b-48882dc2e53b",
+          "body": "{\n  \"room\": {\n    \"campus\": \"CS1\",\n    \"building\": \"C6\",\n    \"floor\": 1,\n    \"room\": \"103\",\n    \"capacity\": 7,\n    \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n    \"status\": \"Available\",\n    \"time\": [\n      {\n        \"slot\": \"7:00 - 8:00\",\n        \"status\": \"Available\"\n      },\n      {\n        \"slot\": \"8:00 - 9:00\",\n        \"status\": \"Occupied\"\n      },\n      {\n        \"slot\": \"9:00 - 10:00\",\n        \"status\": \"Available\"\n      },\n      {\n        \"slot\": \"10:00 - 11:00\",\n        \"status\": \"Occupied\"\n      }\n    ],\n    \"roomId\": \"C6-103\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "roomId",
+              "value": "C6-103",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
@@ -211,6 +250,10 @@
     {
       "type": "route",
       "uuid": "18aaab6a-1434-4cfb-b589-6e0be0b04e40"
+    },
+    {
+      "type": "route",
+      "uuid": "66192423-39b9-40fc-b2c6-675e5dd7fc72"
     }
   ],
   "proxyMode": false,
