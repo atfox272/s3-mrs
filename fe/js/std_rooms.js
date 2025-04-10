@@ -52,7 +52,7 @@ async function loadRoomsByCampus(cs) {
 
 async function loadRoomsByID(roomId) {
     try {
-        const response = await fetch(`${ROOMS_API}/room?roomId=${roomId}`);
+        const response = await fetch(`${ROOMS_API}/room-id?roomId=${roomId}`);
         if (!response.ok) throw new Error('Failed to fetch room data');
 
         const data = await response.json();
@@ -96,6 +96,106 @@ function setActiveButton(buttonId) {
     document.getElementById(buttonId).classList.add('active');
 }
 
+async function showAdvancedReservationMenu() {
+    try {
+        const devicesResponse = await fetch(`${API_URL}/rooms/special-devices`);
+        const devicesData = await devicesResponse.json();
+        const devicesContainer = document.getElementById('special-devices');
+        devicesContainer.innerHTML = devicesData.devices.map(device => `
+            <label>
+                <input type="checkbox" /> ${device}
+            </label>
+        `).join('');
+
+        const timeSlotsResponse = await fetch(`${API_URL}/rooms/time-slots`);
+        const timeSlotsData = await timeSlotsResponse.json();
+        const timeSlotsContainer = document.getElementById('time-slots');
+        timeSlotsContainer.innerHTML = timeSlotsData.timeSlots.map(slot => `
+            <label style="color: ${slot.status === 'Past' ? 'gray' : 'black'};">
+                <input type="checkbox" ${slot.status === 'Past' ? 'disabled' : ''} /> ${slot.slot}
+            </label>
+        `).join('');
+
+        document.getElementById('advanced-reservation-menu').style.display = 'flex';
+    } catch (error) {
+        console.error('Error loading advanced reservation data:', error);
+    }
+}
+
+function hideAdvancedReservationMenu() {
+    document.getElementById('advanced-reservation-menu').style.display = 'none';
+}
+
+function searchRooms() {
+    // Gather selected options
+    const campusCheckbox = document.querySelector('input[placeholder="Vd: 1, 2"]');
+    const buildingCheckbox = document.querySelector('input[placeholder="Vd: C6, H3"]');
+    const floorCheckbox = document.querySelector('input[placeholder="Vd: 1, 2, 6"]');
+
+    const campus = campusCheckbox.checked ? campusCheckbox.value : null;
+    const building = buildingCheckbox.checked ? buildingCheckbox.value : null;
+    const floor = floorCheckbox.checked ? floorCheckbox.value : null;
+
+    const specialDevices = Array.from(document.querySelectorAll('#special-devices input[type="checkbox"]:checked'))
+        .map(checkbox => checkbox.nextSibling.textContent.trim());
+
+    const timeSlots = Array.from(document.querySelectorAll('#time-slots input[type="checkbox"]:checked'))
+        .map(checkbox => checkbox.nextSibling.textContent.trim());
+
+    // Create JSON object
+    const searchCriteria = {
+        campus: campus,
+        building: building,
+        floor: floor,
+        specialDevices: specialDevices,
+        timeSlots: timeSlots
+    };
+
+    // Send API request
+    fetch(`${ROOMS_API}/room-metadata`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(searchCriteria)
+    })
+    .then(response => response.json())
+    .then(data => {
+        const roomList = document.getElementById('room-list');
+        roomList.innerHTML = ''; // Clear existing rows
+
+        // Display the number of rooms found
+        alert(`Tìm thấy ${data.rooms.length} phòng tương thích.`);
+        // Populate roomList with the returned rooms
+        data.rooms.forEach(room => {
+            // Get available time slots
+            const availableTimes = room.time
+                .filter(slot => slot.status === "Available") // Filter for available time slots
+                .map(slot => slot.slot) // Extract the time slots
+                .join(', '); // Join them into a string
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${room.campus}</td>
+                <td>${room.building}</td>
+                <td>${room.floor}</td>
+                <td>${room.room}</td>
+                <td>${room.capacity}</td>
+                <td>${room.equipment}</td>
+                <td>${room.status}</td>
+                <td>${availableTimes}</td> <!-- Display only available time slots -->
+                <td><a href="#" onclick="bookRoom('${room.roomId}')">Đặt phòng</a></td>
+            `;
+            roomList.appendChild(row);
+        });
+        if (data.rooms.length > 0) {    // Find a room, then hide the advanced reservation menu
+            hideAdvancedReservationMenu();
+        }
+    })
+    .catch(error => {
+        console.error('Error searching rooms:', error);
+    });
+}
+
 export async function loadStdRoomView() {
     console.log('from std_room.js');
     // Search room by ID    
@@ -126,8 +226,19 @@ export async function loadStdRoomView() {
     // Open advanced reservation menu
     document.getElementById('advanced-reservation-btn').addEventListener('click', () => {
         console.log('Advanced reservation menu opened');
-        // Logic to display the advanced booking menu
-        // Example: showAdvancedBookingMenu();
+        // Logic to display the advanced reservation menu
+        // Example: showAdvancedReservationMenu();
+        showAdvancedReservationMenu();
+        document.getElementById('advanced-search-btn').addEventListener('click', () => {
+            console.log('Advanced search button clicked');
+            // Logic to handle the advanced search
+            searchRooms();
+        });
+        document.getElementById('advanced-search-cancel-btn').addEventListener('click', () => {
+            console.log('Advanced search cancel button clicked');
+            // Logic to handle the advanced search cancel
+            hideAdvancedReservationMenu();
+        });
     });
 
     setActiveButton('cs1-btn'); // Set CS1 as active by default

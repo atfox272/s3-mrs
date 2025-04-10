@@ -2,8 +2,8 @@
     <h2>Thông tin phòng</h2>
     <div class="room-campus-controls">
         <input type="text" id="room-id-search" placeholder="Tìm phòng nhanh... (Ví dụ: C6-103, H6-105)" />
-        <button id="cs1-btn" class="cs-btn active">CS1</button>
-        <button id="cs2-btn" class="cs-btn">CS2</button>
+        <button id="cs1-btn" class="cs-btn active">Cơ sở 1</button>
+        <button id="cs2-btn" class="cs-btn">Cơ sở 2</button>
     </div>
     
     <button id="advanced-reservation-btn" class="advanced-reservation-btn">Tìm kiếm phòng nâng cao</button>
@@ -25,4 +25,37 @@
             <!-- Room rows will be dynamically inserted here -->
         </tbody>
     </table>
+</div>
+
+<div id="advanced-reservation-menu" class="modal" style="display: none;">
+    <div class="modal-content">
+        <h3>Tìm kiếm phòng nâng cao</h3>
+        <div>
+            <label>Cơ sở:</label>
+            <input type="text" placeholder="Vd: 1, 2" />
+            <input type="checkbox" />
+        </div>
+        <div>
+            <label>Tòa:</label>
+            <input type="text" placeholder="Vd: C6, H3" />
+            <input type="checkbox" />
+        </div>
+        <div>
+            <label>Tầng:</label>
+            <input type="text" placeholder="Vd: 1, 2, 6" />
+            <input type="checkbox" />
+        </div>
+        <div>
+            <label>Thiết bị đặc biệt:</label>
+            <div class="special-devices" id="special-devices"></div>
+        </div>
+        <div>
+            <label>Thời gian tự học:</label>
+            <div class="time-slots" id="time-slots"></div>
+        </div>
+        <div class="button-container">
+            <button id="advanced-search-btn">Tìm kiếm</button>
+            <button id="advanced-search-cancel-btn">Hủy</button>
+        </div>
+    </div>
 </div>

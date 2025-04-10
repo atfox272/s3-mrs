@@ -141,7 +141,7 @@
       "responses": [
         {
           "uuid": "7ed09994-35a0-4994-91b4-4a558a3530e8",
-          "body": "{\n  \"rooms\": [\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"100\",\n      \"capacity\": 30,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H6-100\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"101\",\n      \"capacity\": 25,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H6-101\"\n    }\n  ]\n}",
+          "body": "{\n  \"rooms\": [\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"100\",\n      \"capacity\": 30,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H6-100\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"101\",\n      \"capacity\": 25,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H6-101\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"B5\",\n      \"floor\": 2,\n      \"room\": \"201\",\n      \"capacity\": 25,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn, hehe\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"B5-201\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"B1\",\n      \"floor\": 3,\n      \"room\": \"301\",\n      \"capacity\": 3,\n      \"equipment\": \"wifi, máy chiếu, hehe\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"B1-301\"\n    }\n  ]\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -203,7 +203,7 @@
       "type": "http",
       "documentation": "",
       "method": "get",
-      "endpoint": "api/rooms/room",
+      "endpoint": "api/rooms/room-id",
       "responses": [
         {
           "uuid": "fa6d316a-1587-48f9-8e2b-48882dc2e53b",
@@ -236,6 +236,99 @@
       "responseMode": null,
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "5d3a8573-3ee7-44af-bb6e-82bcde1aebf3",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/rooms/special-devices",
+      "responses": [
+        {
+          "uuid": "a946bea6-f706-4b67-a1cd-7343af5f8eb5",
+          "body": "{\r\n  \"devices\": [\r\n    \"Máy chiếu\",\r\n    \"Máy lạnh\",\r\n    \"Bảng lớn\",\r\n    \"Thiết bị họp\",\r\n    \"Màn hình tương tác\"\r\n  ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "729cb933-250f-4cca-a4ea-de9e9ecb0f9a",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/rooms/time-slots",
+      "responses": [
+        {
+          "uuid": "476393ef-5a0c-4957-882e-c454fc1d6499",
+          "body": "{\r\n  \"timeSlots\": [\r\n    {\r\n      \"slot\": \"7:00 - 8:00\",\r\n      \"status\": \"Past\"\r\n    },\r\n    {\r\n      \"slot\": \"10:00 - 11:00\",\r\n      \"status\": \"Past\"\r\n    },\r\n    {\r\n      \"slot\": \"11:00 - 12:00\",\r\n      \"status\": \"Past\"\r\n    },\r\n    {\r\n      \"slot\": \"12:00 - 13:00\",\r\n      \"status\": \"Available\"\r\n    },\r\n    {\r\n      \"slot\": \"13:00 - 14:00\",\r\n      \"status\": \"Available\"\r\n    },\r\n    {\r\n      \"slot\": \"14:00 - 15:00\",\r\n      \"status\": \"Available\"\r\n    },\r\n    {\r\n      \"slot\": \"15:00 - 16:00\",\r\n      \"status\": \"Available\"\r\n    },\r\n    {\r\n      \"slot\": \"16:00 - 17:00\",\r\n      \"status\": \"Available\"\r\n    },\r\n    {\r\n      \"slot\": \"17:00 - 18:00\",\r\n      \"status\": \"Available\"\r\n    }\r\n  ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "5ffbaaac-b778-4321-af9d-8ab602268122",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/rooms/room-metadata",
+      "responses": [
+        {
+          "uuid": "06b703fe-419a-4e05-9b28-c7f510a2c9a4",
+          "body": "{\n  \"rooms\": [\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"100\",\n      \"capacity\": 30,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H6-100\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"101\",\n      \"capacity\": 25,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H6-101\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
@@ -254,6 +347,18 @@
     {
       "type": "route",
       "uuid": "66192423-39b9-40fc-b2c6-675e5dd7fc72"
+    },
+    {
+      "type": "route",
+      "uuid": "5d3a8573-3ee7-44af-bb6e-82bcde1aebf3"
+    },
+    {
+      "type": "route",
+      "uuid": "729cb933-250f-4cca-a4ea-de9e9ecb0f9a"
+    },
+    {
+      "type": "route",
+      "uuid": "5ffbaaac-b778-4321-af9d-8ab602268122"
     }
   ],
   "proxyMode": false,
