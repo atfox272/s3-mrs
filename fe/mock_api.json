@@ -110,7 +110,7 @@
       "responses": [
         {
           "uuid": "ff0ef01f-88cc-4966-beab-9a894d0c60cd",
-          "body": "{\n  \"rules\": [\n    {\n      \"id\": 1,\n      \"text\": \"Không xả rác trong phòng học.\"\n    },\n    {\n      \"id\": 2,\n      \"text\": \"Sắp xếp lại ghế khi ra khỏi phòng.\"\n    },\n    {\n      \"id\": 3,\n      \"text\": \"Giữ gìn cơ sở vật chất và thiết bị trong phòng học.\"\n    },\n    {\n      \"id\": 4,\n      \"text\": \"Không mang đồ ăn gây mùi vào phòng học.\"\n    },\n    {\n      \"id\": 5,\n      \"text\": \"Nếu có vấn đề về cơ sở vật chất thì vui lòng báo cáo lên quản trị viên.\"\n    },\n    {\n      \"id\": 6,\n      \"text\": \"Vui lòng checkin trước khi sử dụng phòng học\"\n    }\n  ]\n}",
+          "body": "{\n  \"rules\": [\n    {\n      \"id\": 1,\n      \"text\": \"Không xả rác trong phòng học.\"\n    },\n    {\n      \"id\": 2,\n      \"text\": \"Sắp xếp lại ghế khi ra khỏi phòng.\"\n    },\n    {\n      \"id\": 3,\n      \"text\": \"Giữ gìn cơ sở vật chất và thiết bị trong phòng học.\"\n    },\n    {\n      \"id\": 4,\n      \"text\": \"Không mang đồ ăn gây mùi vào phòng học.\"\n    },\n    {\n      \"id\": 5,\n      \"text\": \"Nếu có vấn đề về cơ sở vật chất thì vui lòng báo cáo lên quản trị viên.\"\n    },\n    {\n      \"id\": 6,\n      \"text\": \"Vui lòng checkin trước khi sử dụng phòng học\"\n    },\n    {\n      \"id\": 7,\n      \"text\": \"Vui lòng tắt hết các thiết bị và đèn khi rời khỏi phòng học.\"\n    },\n    {\n      \"id\": 8,\n      \"text\": \"Mỗi lần đặt phòng, sinh viên chỉ được đặt trong 1 khoảng thời gian cho phép.\"\n    }\n  ]\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -131,6 +131,72 @@
       "responseMode": null,
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "18aaab6a-1434-4cfb-b589-6e0be0b04e40",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/rooms",
+      "responses": [
+        {
+          "uuid": "7ed09994-35a0-4994-91b4-4a558a3530e8",
+          "body": "{\n  \"rooms\": [\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"100\",\n      \"capacity\": 30,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"roomId\": \"H6-100\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"C2\",\n      \"floor\": 1,\n      \"room\": \"101\",\n      \"capacity\": 25,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"roomId\": \"H6-101\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"B5\",\n      \"floor\": 1,\n      \"room\": \"102\",\n      \"capacity\": 20,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Occupied\",\n      \"roomId\": \"H6-102\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "cs",
+              "value": "CS1",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "e85ef524-65e2-4f38-abda-f67578d7c008",
+          "body": "{\n  \"rooms\": [\n    {\n      \"campus\": \"CS2\",\n      \"building\": \"H6\",\n      \"floor\": 2,\n      \"room\": \"200\",\n      \"capacity\": 40,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"roomId\": \"H6-200\"\n    },\n    {\n      \"campus\": \"CS2\",\n      \"building\": \"H6\",\n      \"floor\": 2,\n      \"room\": \"201\",\n      \"capacity\": 35,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Occupied\",\n      \"roomId\": \"H6-201\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "cs",
+              "value": "CS2",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": "FALLBACK",
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
@@ -141,6 +207,10 @@
     {
       "type": "route",
       "uuid": "b9eae9a2-f8a3-4ae5-b377-e5dd4e646ed4"
+    },
+    {
+      "type": "route",
+      "uuid": "18aaab6a-1434-4cfb-b589-6e0be0b04e40"
     }
   ],
   "proxyMode": false,

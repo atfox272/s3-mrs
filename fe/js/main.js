@@ -1,5 +1,7 @@
 import API_URL  from './api.js'; // Ensure that the script type is set to "module" in the HTML file
-import getRoomRule from './std_rooms.js';
+import {loadHomeView} from './home.js';
+import {loadStdRoomView} from './std_rooms.js';
+// import loadStdRoomView from './std_rooms.js';
 
 // View management
 const views = {
@@ -21,6 +23,7 @@ let currentUser = null;
 
 // Load a view into the main content area
 export async function loadView(viewName) {
+    console.log("[INFO]: loadView", viewName);
     try {
         const response = await fetch(views[viewName]);
         if (!response.ok) throw new Error('View not found');
@@ -35,8 +38,12 @@ export async function loadView(viewName) {
         document.querySelector(`[onclick="loadView('${viewName}')"]`).classList.add('active');
 
         if (viewName === 'home') { // If the view is home, fetch and display room rules
-            const roomRules = await getRoomRule(); // Await the result of getRoomRule
-            document.querySelector('#room-rule-content').innerHTML = roomRules; // Set the content
+            await loadHomeView();
+        }
+
+        if (viewName === 'std_rooms') {
+            // console.log("[INFO]: inside if");
+            await loadStdRoomView();
         }
 
     } catch (error) {
@@ -164,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load home view by default
     loadView('home');
     
+    console.log("[INFO]: print from home");
     // Check if user is already logged in
     // TODO: Implement session management
     updateUserUI();
