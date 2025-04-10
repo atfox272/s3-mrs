@@ -24,6 +24,11 @@ async function loadRooms(cs) {
         roomList.innerHTML = ''; // Clear existing rows
 
         data.rooms.forEach(room => {
+            const availableTimes = room.time
+                .filter(slot => slot.status === "Available") // Filter for available time slots
+                .map(slot => slot.slot) // Extract the time slots
+                .join(', '); // Join them into a string
+
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${room.campus}</td>
@@ -33,6 +38,7 @@ async function loadRooms(cs) {
                 <td>${room.capacity}</td>
                 <td>${room.equipment}</td>
                 <td>${room.status}</td>
+                <td>${availableTimes}</td> <!-- Display only available time slots -->
                 <td><a href="#" onclick="bookRoom('${room.roomId}')">Đặt phòng</a></td>
             `;
             roomList.appendChild(row);
@@ -57,7 +63,6 @@ function setActiveButton(buttonId) {
 
 export async function loadStdRoomView() {
     console.log('from std_room.js');
-    const btn = document.getElementById('cs1-btn');
     document.getElementById('cs1-btn').addEventListener('click', () => {
         console.log('from cs1 click');
         setActiveButton('cs1-btn');
@@ -67,6 +72,11 @@ export async function loadStdRoomView() {
         console.log('from cs2 click'); // Corrected log message to reflect the button clicked
         setActiveButton('cs2-btn');
         loadRooms('CS2');
+    });
+    document.getElementById('advanced-reservation-btn').addEventListener('click', () => {
+        console.log('Advanced reservation menu opened');
+        // Logic to display the advanced booking menu
+        // Example: showAdvancedBookingMenu();
     });
     setActiveButton('cs1-btn'); // Set CS1 as active by default
     loadRooms('CS1'); // Load CS1 by default
