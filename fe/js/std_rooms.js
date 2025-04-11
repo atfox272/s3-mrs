@@ -193,10 +193,13 @@ function requestReservation() {
     const mssvList = Array.from(mssvInputs).map(input => input.value.trim()).filter(value => value);
 
     // Gather selected time slots
-    const selectedTimeSlots = [];
-    document.querySelectorAll('#time-slots input[type="checkbox"]:checked').forEach(checkbox => {
-        selectedTimeSlots.push(checkbox.nextElementSibling.textContent.trim());
-    });
+    // const selectedTimeSlots = [];
+    // document.querySelectorAll('#reserve-menu-time-slots input[type="checkbox"]:checked').forEach(checkbox => {
+    //     selectedTimeSlots.push(checkbox.nextElementSibling.textContent.trim());
+    // });
+    
+    const selectedTimeSlots = Array.from(document.querySelectorAll('#reserve-menu-time-slots input[type="checkbox"]:checked'))
+        .map(checkbox => checkbox.nextSibling.textContent.trim());
 
     // Create reservation data
     const reservationData = {
