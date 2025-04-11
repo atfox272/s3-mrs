@@ -40,9 +40,15 @@ async function loadRoomsByCampus(cs) {
                 <td>${room.capacity}</td>
                 <td>${room.equipment}</td>
                 <td>${room.status}</td>
-                <td>${availableTimes}</td> <!-- Display only available time slots -->
-                <td><a href="#" onclick="bookRoom('${room.roomId}')">Đặt phòng</a></td>
+                <td>${availableTimes}</td>
+                <td><a href="#" class="reserve-room" data-room-id="${room.roomId}">Đặt phòng</a></td>
             `;
+            // Open reserve-room menu
+            row.querySelector('.reserve-room').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                const roomId = this.getAttribute('data-room-id');
+                showReserveRoomMenu(roomId, room);
+            });
             roomList.appendChild(row);
         });
     } catch (error) {
@@ -74,19 +80,115 @@ async function loadRoomsByID(roomId) {
             <td>${room.capacity}</td>
             <td>${room.equipment}</td>
             <td>${room.status}</td>
-            <td>${availableTimes}</td> <!-- Display only available time slots -->
-            <td><a href="#" onclick="bookRoom('${room.roomId}')">Đặt phòng</a></td>
+            <td>${availableTimes}</td>
+            <td><a href="#" class="reserve-room" data-room-id="${room.roomId}">Đặt phòng</a></td>
         `;
+        // Open reserve-room menu
+        row.querySelector('.reserve-room').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            const roomId = this.getAttribute('data-room-id');
+            showReserveRoomMenu(roomId, room);
+        });
         roomList.appendChild(row);
     } catch (error) {
         console.error('Error loading room by ID:', error);
     }
 }
 
-function bookRoom(roomId) {
+
+function showReserveRoomMenu(roomId, room) {
     // Logic to navigate to the booking UI
-    console.log(`Booking room: ${roomId}`);
-    // Example: loadView('booking', { roomId });
+    console.log("[INFO]: Show reserve-room menu");
+    console.log(`[INFO]: Reserve-room menu of room: ${roomId}`);
+    // Populate room information
+        const roomCampus = document.getElementById('room-campus');
+    roomCampus.innerHTML = `<strong>${room.campus}</strong>`;
+    roomCampus.style.color = '#1a237e'; // Set color for room campus
+
+    const roomBuilding = document.getElementById('room-building');
+    roomBuilding.innerHTML = `<strong>${room.building}</strong>`;
+    roomBuilding.style.color = '#1a237e'; // Set color for room building
+
+    const roomFloor = document.getElementById('room-floor');
+    roomFloor.innerHTML = `<strong>${room.floor}</strong>`;
+    roomFloor.style.color = '#1a237e'; // Set color for room floor
+
+    const roomNumber = document.getElementById('room-number');
+    roomNumber.innerHTML = `<strong>${room.room}</strong>`;
+    roomNumber.style.color = '#1a237e'; // Set color for room number
+
+    const roomCapacity = document.getElementById('room-capacity');
+    roomCapacity.innerHTML = `<strong>${room.capacity}</strong>`;
+    roomCapacity.style.color = '#1a237e'; // Set color for room capacity
+
+    const roomEquipment = document.getElementById('room-equipment');
+    roomEquipment.innerHTML = `<strong>${room.equipment}</strong>`; // Set equipment text in bold
+    roomEquipment.style.color = '#1a237e'; // Set color for room equipment
+
+    // Align text to the center
+    [roomCampus, roomBuilding, roomFloor, roomNumber, roomCapacity, roomEquipment].forEach(element => {
+        element.style.textAlign = 'center';
+    });
+
+    // Generate member list based on room capacity
+    if (room.capacity > 1) { // If the number of student > 1 -> require remaining member id
+        const memberListContainer = document.getElementById('reserve-menu-member-list');
+        memberListContainer.innerHTML = '<p><strong>Danh sách thành viên còn lại:</strong></p>'; // Clear existing content
+        for (let i = 0; i < (room.capacity - 1); i++) {
+            const memberInput = document.createElement('div');
+            memberInput.innerHTML = `
+                <input type="text" placeholder="MSSV" />
+            `;
+            memberListContainer.appendChild(memberInput);
+        }
+    }
+        // Generate time slots as checkboxes
+        const timeSlotsContainer = document.getElementById('reserve-menu-time-slots');
+        // timeSlotsContainer.innerHTML = '<p>Thời gian tự học:</p>'; // Clear existing content\
+        timeSlotsContainer.innerHTML = room.time.map(time => `
+            <label style="color: ${time.status === 'Occupied' ? 'gray' : 'black'};">
+                <input type="checkbox" ${time.status === 'Occupied' ? 'disabled' : ''} /> ${time.slot}
+            </label>
+        `).join('');
+
+    // Display the modal
+    document.getElementById('reserve-room-menu').style.display = 'block';
+
+    // Example: Disable already booked time slots
+    // const bookedSlots = ['9:00-10:00']; // Example booked slots
+    document.querySelectorAll('.reserve-menu-time-slot').forEach(slot => {
+        if (bookedSlots.includes(slot.textContent)) {
+            slot.classList.add('disabled');
+        }
+    });
+
+    const closeButton = document.getElementById('reserve-menu-close-btn');
+    closeButton.addEventListener('click', () => {
+        console.log('[INFO]: Close reserve-room menu');
+        closeReserveRoomMenu();
+    });
+    const cancelButton = document.getElementById('reserve-menu-cancel-btn');
+    cancelButton.addEventListener('click', () => {
+        console.log('[INFO]: Cancel reservation');
+        closeReserveRoomMenu();
+    });
+    const confirmButton = document.getElementById('reserve-menu-confirm-btn');
+    confirmButton.addEventListener('click', () => {
+        console.log('[INFO]: Confirm reservation');
+        requestReservation();
+    });
+
+}
+
+function closeReserveRoomMenu() {
+    document.getElementById('reserve-room-menu').style.display = 'none';
+}
+
+function requestReservation() {
+    // Logic to confirm reservation
+    console.log('[INFO]: Request reservation');
+    
+    closeReserveRoomMenu();
 }
 
 function setActiveButton(buttonId) {
@@ -182,9 +284,15 @@ function searchRooms() {
                 <td>${room.capacity}</td>
                 <td>${room.equipment}</td>
                 <td>${room.status}</td>
-                <td>${availableTimes}</td> <!-- Display only available time slots -->
-                <td><a href="#" onclick="bookRoom('${room.roomId}')">Đặt phòng</a></td>
+                <td>${availableTimes}</td>
+                <td><a href="#" class="reserve-room" data-room-id="${room.roomId}">Đặt phòng</a></td>
             `;
+            // Open reserve-room menu
+            row.querySelector('.reserve-room').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                const roomId = this.getAttribute('data-room-id');
+                showReserveRoomMenu(roomId, room);
+            });
             roomList.appendChild(row);
         });
         if (data.rooms.length > 0) {    // Find a room, then hide the advanced reservation menu
@@ -194,6 +302,30 @@ function searchRooms() {
     .catch(error => {
         console.error('Error searching rooms:', error);
     });
+}
+
+function refreshSearchFilters() {
+    console.log('Refreshing search filters');
+    // Find the active campus button
+    const activeCampusButton = document.querySelector('.cs-btn.active');
+    console.log('activeCampusButton: ', activeCampusButton);
+    if (activeCampusButton) {
+        const campusButtonId = activeCampusButton.id; // Get the ID of the active campus button
+        console.log('campus button ID: ', campusButtonId);
+        if (campusButtonId === 'cs1-btn') {
+            loadRoomsByCampus('CS1');
+        } else if (campusButtonId === 'cs2-btn') {
+            loadRoomsByCampus('CS2');
+        }
+    } else {
+        console.error('No active campus found');
+    }
+    // Clear the search input box
+    const searchInput = document.getElementById('room-id-search');
+    if (searchInput) {
+        searchInput.value = '';
+    }
+
 }
 
 export async function loadStdRoomView() {
@@ -239,6 +371,12 @@ export async function loadStdRoomView() {
             // Logic to handle the advanced search cancel
             hideAdvancedSearchMenu();
         });
+    });
+    // Refresh search filters
+    document.getElementById('refresh-search-filters').addEventListener('click', () => {
+        console.log('Refresh search filters button clicked');
+        // Logic to refresh the search filters
+        refreshSearchFilters();
     });
 
     setActiveButton('cs1-btn'); // Set CS1 as active by default

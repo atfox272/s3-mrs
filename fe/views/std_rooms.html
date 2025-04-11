@@ -1,11 +1,15 @@
-<div class="room-info-container">
+<div class="room-info-container" style="position: relative;">
+    
+    <div id="refresh-search-container" style="position: absolute; top: 25px; left: 21px; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+        <button id="refresh-search-filters">↻</button>
+    </div>
     <h2>Thông tin phòng</h2>
+    
     <div class="room-campus-controls">
         <input type="text" id="room-id-search" placeholder="Tìm phòng nhanh... (Ví dụ: C6-103, H6-105)" />
         <button id="cs1-btn" class="cs-btn active">Cơ sở 1</button>
         <button id="cs2-btn" class="cs-btn">Cơ sở 2</button>
     </div>
-    
     <button id="advanced-search-menu-btn" class="advanced-search-menu-btn">Tìm kiếm phòng nâng cao</button>
     <table class="room-table">
         <thead>
@@ -17,7 +21,7 @@
                 <th>Sức chứa</th>
                 <th>Thiết bị</th>
                 <th>Trạng thái</th>
-                <th>Thời gian</th>
+                <th>Thời gian trống</th>
                 <th>Đặt phòng</th>
             </tr>
         </thead>
@@ -27,8 +31,8 @@
     </table>
 </div>
 
-<div id="advanced-search-menu" class="modal" style="display: none;">
-    <div class="modal-content">
+<div id="advanced-search-menu" class="modal-search" style="display: none;">
+    <div class="modal-search-content">
         <h3>Tìm kiếm phòng nâng cao</h3>
         <div>
             <label>Cơ sở:</label>
@@ -50,12 +54,39 @@
             <div class="special-devices" id="special-devices"></div>
         </div>
         <div>
-            <label>Thời gian tự học:</label>
+            <label>Thời gian sử dụng:</label>
             <div class="time-slots" id="time-slots"></div>
         </div>
         <div class="button-container">
             <button id="advanced-search-btn">Tìm kiếm</button>
             <button id="advanced-search-cancel-btn">Hủy</button>
         </div>
+    </div>
+</div>
+
+<div id="reserve-room-menu" class="modal-reserve-room" style="display: none;">
+    <div class="modal-reserve-room-content">
+        <span class="reserve-menu-close-btn" id="reserve-menu-close-btn">&times;</span>
+        <h2>Đặt phòng</h2>
+        <p><strong>Thông tin phòng:</strong></p>
+        <div id="room-info">
+            <p>Cơ sở: <span id="room-campus"></span></p>
+            <p>Tòa: <span id="room-building"></span></p>
+            <p>Tầng: <span id="room-floor"></span></p>
+            <p>Phòng: <span id="room-number"></span></p>
+            <p>Sức chứa: <span id="room-capacity"></span></p>
+            <p>Thiết bị: <span id="room-equipment"></span></p>
+        </div>
+        <div id="reserve-menu-member-list">
+        </div>
+        <div>
+            <label>Thời gian sử dụng:</label>
+            <div class="reserve-menu-time-slots" id="reserve-menu-time-slots"></div>
+        </div>
+        <div class="button-container">
+            <button id="reserve-menu-confirm-btn">Đặt phòng</button>
+            <button id="reserve-menu-cancel-btn">Hủy</button>
+        </div>
+
     </div>
 </div>
