@@ -19,7 +19,7 @@ const views = {
 };
 
 // Current user state
-let currentUser = null;
+export let currentUser = null;
 
 // Load a view into the main content area
 export async function loadView(viewName) {

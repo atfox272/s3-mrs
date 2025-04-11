@@ -329,6 +329,75 @@
       "responseMode": null,
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "a78022b7-d722-49af-8b9b-6658e05bac1f",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/rooms/reserve",
+      "responses": [
+        {
+          "uuid": "6c1c3987-9ddb-4579-8aa2-db697a57062d",
+          "body": "{\r\n  \"success\": true,\r\n  \"message\": \"Reservation successful\",\r\n  \"data\": {\r\n    \"reservationId\": \"12345\",\r\n    \"roomId\": \"B5-201\",\r\n    \"mssvList\": [\"123456\", \"234567\"],\r\n    \"timeSlots\": [\"7:00-8:00\", \"9:00-10:00\"],\r\n    \"timestamp\": \"2023-10-05T14:48:00.000Z\"\r\n  }\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "305eeba7-d541-453b-b3e3-80ed9313b4d8",
+          "body": "{\r\n  \"success\": false,\r\n  \"message\": \"Bạn đã đặt vượt quá lượt sử dụng phòng hôm nay.\",\r\n  \"data\": null\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "e37fe311-fa2f-45a4-ab92-9ec8586a6aed",
+          "body": "{\r\n  \"success\": false,\r\n  \"message\": \"Số lượng thành viên bạn cung cấp không đủ để đặt phòng này.\",\r\n  \"data\": null\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": "SEQUENTIAL",
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
@@ -359,6 +428,10 @@
     {
       "type": "route",
       "uuid": "5ffbaaac-b778-4321-af9d-8ab602268122"
+    },
+    {
+      "type": "route",
+      "uuid": "a78022b7-d722-49af-8b9b-6658e05bac1f"
     }
   ],
   "proxyMode": false,

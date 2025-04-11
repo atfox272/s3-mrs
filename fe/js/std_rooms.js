@@ -1,4 +1,5 @@
 import API_URL from './api.js';
+import { currentUser } from './main.js';
 
 const ROOMS_API = `${API_URL}/rooms`;
 
@@ -164,31 +165,66 @@ function showReserveRoomMenu(roomId, room) {
 
     const closeButton = document.getElementById('reserve-menu-close-btn');
     closeButton.addEventListener('click', () => {
-        console.log('[INFO]: Close reserve-room menu');
         closeReserveRoomMenu();
     });
     const cancelButton = document.getElementById('reserve-menu-cancel-btn');
     cancelButton.addEventListener('click', () => {
-        console.log('[INFO]: Cancel reservation');
         closeReserveRoomMenu();
     });
     const confirmButton = document.getElementById('reserve-menu-confirm-btn');
     confirmButton.addEventListener('click', () => {
-        console.log('[INFO]: Confirm reservation');
         requestReservation();
     });
-
+    
 }
 
 function closeReserveRoomMenu() {
+    console.log('[INFO]: Cancel reservation');
     document.getElementById('reserve-room-menu').style.display = 'none';
 }
 
 function requestReservation() {
-    // Logic to confirm reservation
-    console.log('[INFO]: Request reservation');
-    
-    closeReserveRoomMenu();
+    // Gather room ID
+    const roomId = document.getElementById('room-number').textContent.trim();
+    const roomBuilding = document.getElementById('room-building').textContent.trim();
+
+    // Gather MSSV information
+    const mssvInputs = document.querySelectorAll('#reserve-menu-member-list input[type="text"]');
+    const mssvList = Array.from(mssvInputs).map(input => input.value.trim()).filter(value => value);
+
+    // Gather selected time slots
+    const selectedTimeSlots = [];
+    document.querySelectorAll('#time-slots input[type="checkbox"]:checked').forEach(checkbox => {
+        selectedTimeSlots.push(checkbox.nextElementSibling.textContent.trim());
+    });
+
+    // Create reservation data
+    const reservationData = {
+        hostId: currentUser.id,
+        hostRole: currentUser.role,
+        memId: mssvList,
+        roomId: `${roomBuilding}-${roomId}`,
+        time: selectedTimeSlots
+    };
+
+    // Send API request
+    fetch(`${ROOMS_API}/reserve`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(reservationData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Handle server response
+        if (data.success) {
+            alert('Đặt phòng thành công!');
+            closeReserveRoomMenu();
+        } else {
+            alert(`Đặt phòng thất bại: ${data.message}`);
+        }
+    })
 }
 
 function setActiveButton(buttonId) {
