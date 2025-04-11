@@ -398,6 +398,99 @@
       "responseMode": "SEQUENTIAL",
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "f34e9892-e329-493b-8ab1-39adc9fc3e65",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/reservations/get-reservations",
+      "responses": [
+        {
+          "uuid": "2be911a5-86dc-4193-a512-3709acab35cb",
+          "body": "{\n  \"success\": true,\n  \"reservations\": [\n    {\n      \"reservationId\": \"1\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-101\",\n      \"time\": \"13:00 - 14:00\",\n      \"details\": \"\"\n    },\n    {\n      \"reservationId\": \"2\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-201\",\n      \"time\": \"15:00 - 16:00\",\n      \"details\": \"\"\n    },\n    {\n      \"reservationId\": \"3\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-201\",\n      \"time\": \"16:00 - 17:00\",\n      \"details\": \"Chi tiết đặt phòng cho H6-201\"\n    },\n    {\n      \"reservationId\": \"4\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-201\",\n      \"time\": \"17:00 - 18:00\",\n      \"details\": \"Chi tiết đặt phòng cho H6-201\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "f247ac36-e087-490a-b3d7-035d185ddc3a",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/reservations/get-room-password",
+      "responses": [
+        {
+          "uuid": "c9eff792-8cdd-49df-9c56-1a6f5e1529d8",
+          "body": "{\n  \"success\": true,\n  \"password\": 123456\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "c26f6396-a14e-487d-ae4f-41903f50483f",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/reservations/cancel-reservation",
+      "responses": [
+        {
+          "uuid": "fa882a2f-8807-4c02-868a-21b2ede011da",
+          "body": "{\n  \"success\": true,\n  \"message\": \"If it is false, it's false :v\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
@@ -432,6 +525,18 @@
     {
       "type": "route",
       "uuid": "a78022b7-d722-49af-8b9b-6658e05bac1f"
+    },
+    {
+      "type": "route",
+      "uuid": "f34e9892-e329-493b-8ab1-39adc9fc3e65"
+    },
+    {
+      "type": "route",
+      "uuid": "f247ac36-e087-490a-b3d7-035d185ddc3a"
+    },
+    {
+      "type": "route",
+      "uuid": "c26f6396-a14e-487d-ae4f-41903f50483f"
     }
   ],
   "proxyMode": false,

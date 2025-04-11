@@ -595,3 +595,203 @@ button:hover {
     border-color: #007bff;
     outline: none;
 }
+
+.reservation-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+
+.reservation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.reservation-card {
+    background-color: #1a237e;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.reservation-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.reservation-info {
+    flex-grow: 1;
+    color: white;
+    margin-left: 10px;
+}
+
+.reservation-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.check-in-button, .cancle-reservation-button {
+    background-color: #1589dc;
+    color: white;
+    width: 120px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.check-in-button:hover, .cancle-reservation-button:hover {
+    background-color: #0056b3;
+}
+
+
+.checkin-menu-container {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+.checkin-menu-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.checkin-menu-header {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.checkin-menu-header span {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.checkin-menu-close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.checkin-menu-qr-code {
+    width: 200px;
+    height: 200px;
+    margin: 10px 0;
+}
+
+.checkin-menu-password-section {
+    margin: 10px 0;
+}
+
+#checkin-menu-room-password {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.checkin-menu-back-btn {
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.checkin-menu-back-btn:hover {
+    background-color: #3949ab;
+}
+
+
+.cancel-reservation-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.cancel-reservation-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.cancel-reservation-header {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: bold; /* Make the text bold */
+}
+
+.cancel-reservation-modal-close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.cancel-reservation-action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+    gap: 10px;
+    margin-top: 50px;
+}
+.cancel-reservation-confirm-btn, .cancel-reservation-back-btn {
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.cancel-reservation-confirm-btn:hover, .cancel-reservation-back-btn:hover {
+    background-color: #3949ab;
+}

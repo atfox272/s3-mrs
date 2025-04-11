@@ -1,6 +1,7 @@
 import API_URL  from './api.js'; // Ensure that the script type is set to "module" in the HTML file
 import {loadHomeView} from './home.js';
 import {loadStdRoomView} from './std_rooms.js';
+import {loadReservationsView} from './std_reservations.js';
 // import loadStdRoomView from './std_rooms.js';
 
 // View management
@@ -44,6 +45,10 @@ export async function loadView(viewName) {
         if (viewName === 'std_rooms') {
             // console.log("[INFO]: inside if");
             await loadStdRoomView();
+        }
+
+        if (viewName === 'std_reservations') {
+            await loadReservationsView();
         }
 
     } catch (error) {

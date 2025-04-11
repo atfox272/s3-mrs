@@ -1,0 +1,34 @@
+<div id="reservation-view" class="reservation-container">
+    <h2>Lịch hẹn</h2>
+    <div id="reservation-list" class="reservation-list">
+        <!-- Reservation cards will be dynamically inserted here -->
+    </div>
+</div>
+
+<div id="checkin-menu" class="checkin-menu-container" style="display: none;">
+    <div class="checkin-menu-content">
+        <div class="checkin-menu-header">
+            <span>Quét mã QR hoặc nhập mật khẩu phòng để xác nhận</span>
+        </div>
+        <span><strong>Mã QR của phòng:</strong></span>
+        <img src="images/qr-code.jpeg" alt="QR Code" class="checkin-menu-qr-code">
+        <div class="checkin-menu-password-section">
+            <span><strong>Mật khẩu của phòng:</strong></span>
+            <input type="text" id="checkin-menu-room-password" readonly>
+        </div>
+        <button class="checkin-menu-back-btn">Trở về</button>
+    </div>
+</div>
+
+<div id="cancel-reservation-modal" class="cancel-reservation-modal" style="display: none;">
+    <div class="cancel-reservation-content">
+        <div class="cancel-reservation-header">
+            <span>Xác nhận hủy đặt phòng</span>
+        </div>
+        <p>Nếu hủy phòng sau thời gian nhận phòng <strong>quá 15 phút</strong> có thể bị phạt? Bạn có chắc chắn muốn hủy đặt phòng này không?</p>
+        <div class="reservation-action-buttons">
+            <button class="cancel-reservation-confirm-btn" >Xác nhận</button>
+            <button class="cancel-reservation-back-btn" >Trở về</button>
+        </div>
+    </div>
+</div>
