@@ -96,7 +96,7 @@ function setActiveButton(buttonId) {
     document.getElementById(buttonId).classList.add('active');
 }
 
-async function showAdvancedReservationMenu() {
+async function showAdvancedSearchMenu() {
     try {
         const devicesResponse = await fetch(`${API_URL}/rooms/special-devices`);
         const devicesData = await devicesResponse.json();
@@ -116,14 +116,14 @@ async function showAdvancedReservationMenu() {
             </label>
         `).join('');
 
-        document.getElementById('advanced-reservation-menu').style.display = 'flex';
+        document.getElementById('advanced-search-menu').style.display = 'flex';
     } catch (error) {
         console.error('Error loading advanced reservation data:', error);
     }
 }
 
-function hideAdvancedReservationMenu() {
-    document.getElementById('advanced-reservation-menu').style.display = 'none';
+function hideAdvancedSearchMenu() {
+    document.getElementById('advanced-search-menu').style.display = 'none';
 }
 
 function searchRooms() {
@@ -188,7 +188,7 @@ function searchRooms() {
             roomList.appendChild(row);
         });
         if (data.rooms.length > 0) {    // Find a room, then hide the advanced reservation menu
-            hideAdvancedReservationMenu();
+            hideAdvancedSearchMenu();
         }
     })
     .catch(error => {
@@ -224,11 +224,11 @@ export async function loadStdRoomView() {
         loadRoomsByCampus('CS2');
     });
     // Open advanced reservation menu
-    document.getElementById('advanced-reservation-btn').addEventListener('click', () => {
-        console.log('Advanced reservation menu opened');
-        // Logic to display the advanced reservation menu
-        // Example: showAdvancedReservationMenu();
-        showAdvancedReservationMenu();
+    document.getElementById('advanced-search-menu-btn').addEventListener('click', () => {
+        console.log('Advanced search menu opened');
+        // Logic to display the advanced search menu
+        // Example: showAdvancedSearchMenu();
+        showAdvancedSearchMenu();
         document.getElementById('advanced-search-btn').addEventListener('click', () => {
             console.log('Advanced search button clicked');
             // Logic to handle the advanced search
@@ -237,7 +237,7 @@ export async function loadStdRoomView() {
         document.getElementById('advanced-search-cancel-btn').addEventListener('click', () => {
             console.log('Advanced search cancel button clicked');
             // Logic to handle the advanced search cancel
-            hideAdvancedReservationMenu();
+            hideAdvancedSearchMenu();
         });
     });
 
