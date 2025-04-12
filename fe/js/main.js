@@ -2,6 +2,12 @@ import API_URL  from './api.js'; // Ensure that the script type is set to "modul
 import {loadHomeView} from './home.js';
 import {loadStdRoomView} from './std_rooms.js';
 import {loadReservationsView} from './std_reservations.js';
+import {loadStdHistoryView} from './std_history.js';
+import {loadStdProfileView} from './std_profile.js';
+import {loadSRSOGenConfigView} from './srso_gen_config.js';
+import {loadSRSORoomConfigView} from './srso_room_config.js';
+import {loadSRSORoomStatusView} from './srso_room_status.js';
+import {loadSRSOStatisticsView} from './srso_statistics.js';
 // import loadStdRoomView from './std_rooms.js';
 
 // View management
@@ -49,6 +55,30 @@ export async function loadView(viewName) {
 
         if (viewName === 'std_reservations') {
             await loadReservationsView();
+        }
+
+        if (viewName === 'std_history') {
+            await loadStdHistoryView();
+        }
+
+        if (viewName === 'std_profile') {
+            await loadStdProfileView();
+        }
+
+        if (viewName === 'srso_general_config') {
+            await loadSRSOGenConfigView();
+        }
+
+        if (viewName === 'srso_room_config') {
+            await loadSRSORoomConfigView();
+        }
+
+        if (viewName === 'srso_room_status') {
+            await loadSRSORoomStatusView();
+        }
+
+        if (viewName === 'srso_statistics') {
+            await loadSRSOStatisticsView();
         }
 
     } catch (error) {
