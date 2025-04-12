@@ -18,6 +18,37 @@ export async function loadReservationsView() {
         const data = await response.json();
 
         if (data.success) {
+            console.log('[INFO]: Using room data:', data.usingStatus);
+            if(data.userStatus == "Using") {
+                const usingRoomList = document.getElementById('using-room-list');
+                usingRoomList.innerHTML = ''; // Clear existing content
+                const usingRoom = data. usingStatus; // Assuming usingStatus has only one element
+                const card = document.createElement('div');
+                card.className = 'using-room-card';
+                card.innerHTML = `
+                    <div class="using-room-info">
+                        <p>Cơ sở: ${usingRoom.campus}</p>
+                        <p>Phòng: ${usingRoom.roomId}</p>
+                        <p>Thời gian: ${usingRoom.time}</p>
+                    </div>
+                    <div class="using-room-buttons">
+                        <button class="detail-using-room-button" id="detail-using-room-button">Chi tiết</button>
+                        <button class="checkout-using-room-button" id="checkout-using-room-button">Rời phòng</button>
+                    </div>
+                `;
+
+                card.querySelector('.detail-using-room-button').addEventListener('click', () => {
+                    // TODO: 
+                    showDetailUsingRoom(usingRoom);
+                });
+
+                card.querySelector('.checkout-using-room-button').addEventListener('click', () => {
+                    // TODO: 
+                    showCheckoutUsingRoom(usingRoom);
+                });
+                usingRoomList.appendChild(card);
+            }
+
             const reservationList = document.getElementById('reservation-list');
             reservationList.innerHTML = ''; // Clear existing content
 
@@ -130,4 +161,104 @@ async function confirmCancelReservation(reservation) {
     } else {
         alert(`${data.message}`);
     }
+}
+
+async function showDetailUsingRoom(usingRoom) {
+    console.log('[INFO]: Show detail using room:', usingRoom);
+
+    // Populate room details
+    document.getElementById('using-room-menu-room-id').textContent = usingRoom.roomId;
+    document.getElementById('using-room-menu-campus').textContent = usingRoom.campus;
+    document.getElementById('using-room-menu-time').textContent = usingRoom.time;
+
+
+    // Calculate remaining time
+    const endTime = usingRoom.time.split(' - ')[1];
+    const [endHour, endMinute] = endTime.split(':').map(Number);
+    const endDate = new Date();
+    endDate.setHours(endHour, endMinute, 0, 0);
+
+    const timer = setInterval(updateRemainingTime, 1000);
+    
+    function updateRemainingTime() {
+        const now = new Date();
+        const remainingTime = endDate - now;
+        if (remainingTime > 0) {
+            const hours = Math.floor((remainingTime / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((remainingTime / (1000 * 60)) % 60);
+            const seconds = Math.floor((remainingTime / 1000) % 60);
+            document.getElementById('using-room-menu-remaining-time').textContent = `${hours}h ${minutes}m ${seconds}s`;
+        } else {
+            document.getElementById('using-room-menu-remaining-time').textContent = 'Hết giờ';
+            clearInterval(timer);
+        }
+    }
+
+    updateRemainingTime();
+
+    // Display the modal
+    document.getElementById('detail-using-room-modal').style.display = 'block';
+
+    document.getElementById('checkin-menu-back-btn').addEventListener('click', () => {
+        closeDetailUsingRoomModal();
+        clearInterval(timer);
+    });
+}
+
+function closeDetailUsingRoomModal() {
+    document.getElementById('detail-using-room-modal').style.display = 'none';
+}
+
+async function showCheckoutUsingRoom(usingRoom) {
+    console.log('[INFO]: Checkout using room:', usingRoom);
+    document.getElementById('checkout-using-room-modal').style.display = 'block';
+
+    document.querySelector('.checkout-confirm-btn').addEventListener('click', () => {
+        confirmCheckoutUsingRoom(usingRoom);
+    });
+    
+    document.querySelector('.checkout-back-btn').addEventListener('click', () => {
+        closeCheckoutUsingRoomModal();
+    });
+}
+
+function confirmCheckoutUsingRoom(usingRoom) {
+    console.log('[INFO]: Confirm checkout using room.');
+    // Call API to checkout the room with current time and usingRoom
+    try {
+        const currentTime = new Date().toISOString(); // Get current time in ISO format
+        fetch(`${RESERVATIONS_API}/checkout`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                reservation: usingRoom,
+                checkoutTime: currentTime // Include current time in the request
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log('[INFO]: Checkout successful!');
+                closeCheckoutUsingRoomModal(); // Close modal after successful checkout
+                loadReservationsView();
+            } else {
+                console.log('[INFO]: Checkout failed: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error during checkout:', error);
+            alert('An error occurred during checkout.');
+        });
+    } catch (error) {
+        console.error('[ERROR]:', error);
+        alert('Có lỗi xảy ra khi thực hiện hủy đặt phòng.');
+    }
+}
+
+function closeCheckoutUsingRoomModal() {
+    console.log('[INFO]: Close checkout using room modal.');
+    // document.querySelector('.checkout-confirm-btn').removeEventListener('click');
+    document.getElementById('checkout-using-room-modal').style.display = 'none';
 }

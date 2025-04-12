@@ -407,8 +407,8 @@
       "endpoint": "api/reservations/get-reservations",
       "responses": [
         {
-          "uuid": "2be911a5-86dc-4193-a512-3709acab35cb",
-          "body": "{\n  \"success\": true,\n  \"userStatus\": \"Idle\",\n  \"reservations\": [\n    {\n      \"reservationId\": \"1\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-101\",\n      \"time\": \"13:00 - 14:00\",\n      \"details\": \"\"\n    },\n    {\n      \"reservationId\": \"2\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-201\",\n      \"time\": \"15:00 - 16:00\",\n      \"details\": \"\"\n    },\n    {\n      \"reservationId\": \"3\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-201\",\n      \"time\": \"16:00 - 17:00\",\n      \"details\": \"Chi tiết đặt phòng cho H6-201\"\n    },\n    {\n      \"reservationId\": \"4\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-201\",\n      \"time\": \"17:00 - 18:00\",\n      \"details\": \"Chi tiết đặt phòng cho H6-201\"\n    }\n  ]\n}",
+          "uuid": "ae4e8e53-1d39-4a76-ba50-eb57b6f3542a",
+          "body": "{\n  \"success\": true,\n  \"userStatus\": \"Using\",\n  \"usingStatus\": {\n      \"reservationId\": \"1\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-101\",\n      \"time\": \"17:00 - 23:59\",\n      \"checkinTime\": \"13:10\"\n    },\n  \"reservations\": [\n    {\n      \"reservationId\": \"2\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-201\",\n      \"time\": \"15:00 - 16:00\",\n      \"details\": \"\"\n    },\n    {\n      \"reservationId\": \"3\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-201\",\n      \"time\": \"16:00 - 17:00\",\n      \"details\": \"Chi tiết đặt phòng cho H6-201\"\n    },\n    {\n      \"reservationId\": \"4\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-201\",\n      \"time\": \"17:00 - 18:00\",\n      \"details\": \"Chi tiết đặt phòng cho H6-201\"\n    }\n  ]\n  \n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -422,25 +422,6 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
-          "crudKey": "id",
-          "callbacks": []
-        },
-        {
-          "uuid": "ae4e8e53-1d39-4a76-ba50-eb57b6f3542a",
-          "body": "{\n  \"success\": true,\n  \"userStatus\": \"Using\",\n  \"usingStatus\": {\n      \"reservationId\": \"1\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-101\",\n      \"time\": \"13:00 - 14:00\",\n      \"checkinTime\": \"13:10\"\n    },\n  \"reservations\": [\n    {\n      \"reservationId\": \"2\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-201\",\n      \"time\": \"15:00 - 16:00\",\n      \"details\": \"\"\n    },\n    {\n      \"reservationId\": \"3\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-201\",\n      \"time\": \"16:00 - 17:00\",\n      \"details\": \"Chi tiết đặt phòng cho H6-201\"\n    },\n    {\n      \"reservationId\": \"4\",\n      \"campus\": \"2\",\n      \"roomId\": \"H6-201\",\n      \"time\": \"17:00 - 18:00\",\n      \"details\": \"Chi tiết đặt phòng cho H6-201\"\n    }\n  ]\n  \n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -510,6 +491,37 @@
       "responseMode": null,
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "f820beaf-331e-4f54-ad01-1d9af762d1f7",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/reservations/checkout",
+      "responses": [
+        {
+          "uuid": "9253cddf-3cf3-4ec9-99fc-68877c361b0a",
+          "body": "{\n  \"success\": true,\n  \"message\": \"Rời phòng thành công. Nếu có phạt -> (Nhưng bạn đã bị phạt vì...)\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
@@ -556,6 +568,10 @@
     {
       "type": "route",
       "uuid": "c26f6396-a14e-487d-ae4f-41903f50483f"
+    },
+    {
+      "type": "route",
+      "uuid": "f820beaf-331e-4f54-ad01-1d9af762d1f7"
     }
   ],
   "proxyMode": false,

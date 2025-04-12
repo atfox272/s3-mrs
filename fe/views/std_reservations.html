@@ -1,5 +1,8 @@
 <div id="reservation-view" class="reservation-container">
     <h2>Lịch hẹn</h2>
+    <div id="using-room-list" class="using-room-list">
+        <!-- Using-room cards will be dynamically inserted here -->
+    </div>
     <div id="reservation-list" class="reservation-list">
         <!-- Reservation cards will be dynamically inserted here -->
     </div>
@@ -29,6 +32,37 @@
         <div class="reservation-action-buttons">
             <button class="cancel-reservation-confirm-btn" >Xác nhận</button>
             <button class="cancel-reservation-back-btn" >Trở về</button>
+        </div>
+    </div>
+</div>
+
+<div id="detail-using-room-modal" class="checkin-menu-container" style="display: none;">
+    <div class="checkin-menu-content">
+        <div class="detail-using-room-menu-header">
+            <span>Chi tiết sử dụng phòng</span>
+        </div>
+        <div class="using-room-details">
+            <p>Phòng: <span id="using-room-menu-room-id" class="using-room-menu-content"></span></p>
+            <p>Cơ sở: <span id="using-room-menu-campus" class="using-room-menu-content"></span></p>
+            <p>Thời gian: <span id="using-room-menu-time" class="using-room-menu-content"></span></p>
+            <p>Thời gian còn lại: <span id="using-room-menu-remaining-time" class="using-room-menu-content"></span></p>
+        </div>
+        <button id="checkin-menu-back-btn" class="checkin-menu-back-btn">Trở về</button>
+    </div>
+</div>
+
+
+<div id="checkout-using-room-modal" class="checkin-menu-container" style="display: none;">
+    <div class="checkin-menu-content">
+        <div class="detail-using-room-menu-header">
+            <span>Rời phòng</span>
+        </div>
+        <div class="using-room-details">
+            <p>Bạn có chắc chắn muốn rời phòng này không?</p>
+        </div>
+        <div class="reservation-action-buttons">
+            <button class="checkout-confirm-btn" >Xác nhận</button>
+            <button class="checkout-back-btn" >Trở về</button>
         </div>
     </div>
 </div>
