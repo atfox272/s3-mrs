@@ -55,6 +55,18 @@ async function loadRoomsByCampus(cs) {
     } catch (error) {
         console.error('Error loading rooms:', error);
     }
+    const closeButton = document.getElementById('reserve-menu-close-btn');
+    closeButton.addEventListener('click', () => {
+        closeReserveRoomMenu();
+    });
+    const cancelButton = document.getElementById('reserve-menu-cancel-btn');
+    cancelButton.addEventListener('click', () => {
+        closeReserveRoomMenu();
+    });
+    const confirmButton = document.getElementById('reserve-menu-confirm-btn');
+    confirmButton.addEventListener('click', () => {
+        requestReservation();
+    });
 }
 
 async function loadRoomsByID(roomId) {
@@ -99,8 +111,7 @@ async function loadRoomsByID(roomId) {
 
 function showReserveRoomMenu(roomId, room) {
     // Logic to navigate to the booking UI
-    console.log("[INFO]: Show reserve-room menu");
-    console.log(`[INFO]: Reserve-room menu of room: ${roomId}`);
+    console.log(`[INFO]: Show reserve-room menu of room: ${roomId}`);
     // Populate room information
         const roomCampus = document.getElementById('room-campus');
     roomCampus.innerHTML = `<strong>${room.campus}</strong>`;
@@ -162,20 +173,6 @@ function showReserveRoomMenu(roomId, room) {
             slot.classList.add('disabled');
         }
     });
-
-    const closeButton = document.getElementById('reserve-menu-close-btn');
-    closeButton.addEventListener('click', () => {
-        closeReserveRoomMenu();
-    });
-    const cancelButton = document.getElementById('reserve-menu-cancel-btn');
-    cancelButton.addEventListener('click', () => {
-        closeReserveRoomMenu();
-    });
-    const confirmButton = document.getElementById('reserve-menu-confirm-btn');
-    confirmButton.addEventListener('click', () => {
-        requestReservation();
-    });
-    
 }
 
 function closeReserveRoomMenu() {
@@ -184,6 +181,7 @@ function closeReserveRoomMenu() {
 }
 
 function requestReservation() {
+    console.log('[INFO]: Request reservation');
     // Gather room ID
     const roomId = document.getElementById('room-number').textContent.trim();
     const roomBuilding = document.getElementById('room-building').textContent.trim();
@@ -222,7 +220,7 @@ function requestReservation() {
     .then(data => {
         // Handle server response
         if (data.success) {
-            alert('Đặt phòng thành công!');
+            alert('Đặt phòng thành công. Nhấp "OK" để thoát');
             closeReserveRoomMenu();
         } else {
             alert(`Đặt phòng thất bại: ${data.message}`);
