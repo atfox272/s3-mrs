@@ -2,7 +2,10 @@ import API_URL from './api.js';
 import { currentUser } from './main.js';
 
 const RESERVATIONS_API = `${API_URL}/reservations`;
-
+let detailUsingRoomButton;
+let checkoutUsingRoomButton;
+let currentReservationCard;
+let currentUsingRoomCard;
 export async function loadReservationsView() {
     console.log('[INFO]: Loading reservations view...');
     try {
@@ -36,19 +39,18 @@ export async function loadReservationsView() {
                         <button class="checkout-using-room-button" id="checkout-using-room-button">Rời phòng</button>
                     </div>
                 `;
-
                 card.querySelector('.detail-using-room-button').addEventListener('click', () => {
                     // TODO: 
+                    console.log('[INFO]: ------ Show detail using room:');
                     showDetailUsingRoom(usingRoom);
                 });
-
                 card.querySelector('.checkout-using-room-button').addEventListener('click', () => {
                     // TODO: 
                     showCheckoutUsingRoom(usingRoom);
                 });
                 usingRoomList.appendChild(card);
             }
-
+            
             const reservationList = document.getElementById('reservation-list');
             reservationList.innerHTML = ''; // Clear existing content
 
@@ -87,9 +89,15 @@ export async function loadReservationsView() {
         console.error('Error loading reservations:', error);
         alert('Có lỗi xảy ra khi tải danh sách đặt phòng.');
     }
+    
+    document.querySelector('.checkout-back-btn').addEventListener('click', closeCheckoutUsingRoomModal);
+    document.querySelector('.checkout-confirm-btn').addEventListener('click', confirmCheckoutUsingRoom);
+    document.querySelector('.cancel-reservation-confirm-btn').addEventListener('click', confirmCancelReservation);
+    document.querySelector('.cancel-reservation-back-btn').addEventListener('click', closeCancelModal);
 }
 
 async function showCheckinMenu(reservation) {
+    console.log('[INFO]: Show checkin menu:', reservation);
     try {
         // Send API request to get the password
         const response = await fetch(`${RESERVATIONS_API}/get-room-password`, {
@@ -127,30 +135,27 @@ function closeCheckinMenu() {
 }
 
 function showCancelReservationMenu(reservation) {
+    currentReservationCard = reservation;
     document.getElementById('cancel-reservation-modal').style.display = 'block';
-    const confirmButton = document.querySelector('.cancel-reservation-confirm-btn');
-    confirmButton.addEventListener('click', () => confirmCancelReservation(reservation));
-    const backButton = document.querySelector('.cancel-reservation-back-btn');
-    backButton.addEventListener('click', closeCancelModal);
 }
 
 function closeCancelModal() {
     document.getElementById('cancel-reservation-modal').style.display = 'none';
 }
 
-async function confirmCancelReservation(reservation) {
+async function confirmCancelReservation() {
     // Logic to cancel the reservation
-    console.log(`Cancel reservation: ${reservation}`);
+    console.log(`Cancel reservation: ${currentReservationCard.roomId} - ${currentReservationCard.time}`);
     const response = await fetch(`${RESERVATIONS_API}/cancel-reservation`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },  
         body: JSON.stringify({ 
-            reservationId: reservation.reservationId,
+            reservationId: currentReservationCard.reservationId,
             userId: currentUser.id,
-            roomId: reservation.roomId,
-            time: reservation.time
+            roomId: currentReservationCard.roomId,
+            time: currentReservationCard.time
         })
     });
     const data = await response.json();
@@ -209,22 +214,14 @@ function closeDetailUsingRoomModal() {
     document.getElementById('detail-using-room-modal').style.display = 'none';
 }
 
-async function showCheckoutUsingRoom(usingRoom) {
+function showCheckoutUsingRoom(usingRoom) {
+    currentUsingRoomCard = usingRoom;
     console.log('[INFO]: Checkout using room:', usingRoom);
     document.getElementById('checkout-using-room-modal').style.display = 'block';
-
-    document.querySelector('.checkout-confirm-btn').addEventListener('click', () => {
-        confirmCheckoutUsingRoom(usingRoom);
-    });
-    
-    document.querySelector('.checkout-back-btn').addEventListener('click', () => {
-        closeCheckoutUsingRoomModal();
-    });
 }
 
-function confirmCheckoutUsingRoom(usingRoom) {
+function confirmCheckoutUsingRoom() {
     console.log('[INFO]: Confirm checkout using room.');
-    // Call API to checkout the room with current time and usingRoom
     try {
         const currentTime = new Date().toISOString(); // Get current time in ISO format
         fetch(`${RESERVATIONS_API}/checkout`, {
@@ -233,7 +230,7 @@ function confirmCheckoutUsingRoom(usingRoom) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ 
-                reservation: usingRoom,
+                reservation: currentUsingRoomCard,
                 checkoutTime: currentTime // Include current time in the request
             }),
         })
