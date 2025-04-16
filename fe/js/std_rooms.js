@@ -176,7 +176,6 @@ function showReserveRoomMenu(roomId, room) {
 }
 
 function closeReserveRoomMenu() {
-    console.log('[INFO]: Cancel reservation');
     document.getElementById('reserve-room-menu').style.display = 'none';
 }
 

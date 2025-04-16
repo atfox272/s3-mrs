@@ -221,7 +221,7 @@ function showCheckoutUsingRoom(usingRoom) {
 }
 
 function confirmCheckoutUsingRoom() {
-    console.log('[INFO]: Confirm checkout using room.');
+    console.log(`[INFO]: Confirm checkout using room: ${currentUsingRoomCard}`);
     try {
         const currentTime = new Date().toISOString(); // Get current time in ISO format
         fetch(`${RESERVATIONS_API}/checkout`, {
@@ -230,7 +230,7 @@ function confirmCheckoutUsingRoom() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ 
-                reservation: currentUsingRoomCard,
+                usingStatus: currentUsingRoomCard,
                 checkoutTime: currentTime // Include current time in the request
             }),
         })
