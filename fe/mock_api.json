@@ -522,6 +522,87 @@
       "responseMode": null,
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "7607b1d4-5242-4d19-993d-806fffcd14d0",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/std-notifications/check-notifications",
+      "responses": [
+        {
+          "uuid": "1024b093-c815-40b5-ac21-6178daa82da4",
+          "body": "{\n  \"success\": true,\n  \"notificationsList\": [\n    {\n      \"notificationId\": 0,\n      \"notificationType\": 2\n    },\n    {\n      \"notificationId\": 1,\n      \"notificationType\": 1\n    },\n    {\n      \"notificationId\": 2,\n      \"notificationType\": 1\n    },\n    {\n      \"notificationId\": 3,\n      \"notificationType\": 1\n    },\n    {\n      \"notificationId\": 4,\n      \"notificationType\": 0\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "d1b7b428-560e-4082-b577-d275a97e9e5a",
+          "body": "{\n  \"success\": true,\n  \"notificationsList\": [\n    {\n      \"notificationId\": 0,\n      \"notificationType\": 2\n    },\n    {\n      \"notificationId\": 1,\n      \"notificationType\": 1\n    },\n    {\n      \"notificationId\": 2,\n      \"notificationType\": 1\n    },\n    {\n      \"notificationId\": 3,\n      \"notificationType\": 1\n    },\n    {\n      \"notificationId\": 4,\n      \"notificationType\": 0\n    },\n    {\n      \"notificationId\": 5,\n      \"notificationType\": 0\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": "SEQUENTIAL",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "9be49251-6d57-46a4-8a36-ed4f81b96f49",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/std-notifications/get-notifications",
+      "responses": [
+        {
+          "uuid": "2b79b92f-b216-4480-bb49-9f5d6c03bdb3",
+          "body": "{\r\n  \"success\": true,\r\n  \"notifications\": [\r\n    {\r\n      \"date\": \"15/03/2025\",\r\n      \"roomId\": \"H6-201\",\r\n      \"time\": \"15:00 - 16:00\",\r\n      \"message\": \"Bạn có lịch đặt phòng H6-201 vào lúc 15:00\"\r\n    },\r\n    {\r\n      \"date\": \"15/03/2025\",\r\n      \"roomId\": \"H6-201\",\r\n      \"time\": \"16:00 - 17:00\",\r\n      \"message\": \"Bạn có lịch đặt phòng H6-201 vào lúc 16:00\"\r\n    },\r\n    {\r\n      \"date\": \"15/03/2025\",\r\n      \"roomId\": \"H6-201\",\r\n      \"time\": \"17:00 - 18:00\",\r\n      \"message\": \"Bạn có lịch đặt phòng H6-201 vào lúc 17:00\"\r\n    },\r\n    {\r\n      \"date\": \"14/03/2025\",\r\n      \"roomId\": \"H6-201\",\r\n      \"time\": \"10:00 - 11:00\",\r\n      \"message\": \"Bạn có lịch đặt phòng H6-201 vào lúc 10:00\"\r\n    }\r\n  ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
@@ -572,6 +653,14 @@
     {
       "type": "route",
       "uuid": "f820beaf-331e-4f54-ad01-1d9af762d1f7"
+    },
+    {
+      "type": "route",
+      "uuid": "7607b1d4-5242-4d19-993d-806fffcd14d0"
+    },
+    {
+      "type": "route",
+      "uuid": "9be49251-6d57-46a4-8a36-ed4f81b96f49"
     }
   ],
   "proxyMode": false,

@@ -8,6 +8,7 @@ import {loadSRSOGenConfigView} from './srso_gen_config.js';
 import {loadSRSORoomConfigView} from './srso_room_config.js';
 import {loadSRSORoomStatusView} from './srso_room_status.js';
 import {loadSRSOStatisticsView} from './srso_statistics.js';
+import {loadNotificationsView, startNotificationsChecker} from './std_notifications.js';
 // import loadStdRoomView from './std_rooms.js';
 
 // View management
@@ -65,6 +66,10 @@ export async function loadView(viewName) {
             await loadStdProfileView();
         }
 
+        if (viewName === 'std_notifications') {
+            await loadNotificationsView();
+        }
+
         if (viewName === 'srso_general_config') {
             await loadSRSOGenConfigView();
         }
@@ -80,6 +85,7 @@ export async function loadView(viewName) {
         if (viewName === 'srso_statistics') {
             await loadSRSOStatisticsView();
         }
+
 
     } catch (error) {
         console.error('Error loading view:', error);
@@ -115,6 +121,7 @@ export async function handleLogin() {
             console.log("Login successful:", currentUser);
             updateUserUI(); // Update the UI to reflect the logged-in state
             loadView('home'); // Redirect the user to the home view after successful login
+            startNotificationsChecker(2); // Start the polling process with a configurable interval (unit: minutes)
         } else {
             console.error("Login failed:", data.message);
             // alert(data.message); // Show error message to user
@@ -189,17 +196,11 @@ export function updateUserUI() {
     }
 }
 
-// Load notification view
-export function loadNotifications() {
-    loadView('notifications');
-}
-
 
 window.loadView = loadView;
 window.handleLogin = handleLogin;
 window.handleLogout = handleLogout;
 window.updateUserUI = updateUserUI;
-window.loadNotifications = loadNotifications;
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
