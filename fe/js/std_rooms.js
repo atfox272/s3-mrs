@@ -376,6 +376,13 @@ export async function loadStdRoomView() {
                 if (roomId) {
                     loadRoomsByID(roomId);
                 }
+                else {
+                    const activeButton = document.querySelector('.cs-btn.active');
+                    if (activeButton) {
+                        const campus = activeButton.id === 'cs1-btn' ? 'CS1' : 'CS2';
+                        loadRoomsByCampus(campus);
+                    }
+                }
             }
         });
     }

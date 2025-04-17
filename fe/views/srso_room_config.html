@@ -1,0 +1,31 @@
+<!-- srso_room_config.html -->
+<div id="srso-room-config-view" class="srso-room-config-container">
+    <h2>Cấu hình phòng</h2>
+    <div class="room-campus-controls">
+        <input type="text" id="srso-search-room" class="room-id-search" placeholder="Search theo cú pháp sau: tòa-số phòng (Ví dụ: H6-608, ...)" />
+        <button id="srso-campus-1-btn" class="srso-campus-btn active">Cơ sở 1</button>
+        <button id="srso-campus-2-btn" class="srso-campus-btn">Cơ sở 2</button>
+    </div>
+    <div class="srso-room-config-buttons">
+        <button id="srso-add-room-btn" class="srso-config-btn">Thêm phòng</button>
+        <button id="srso-edit-room-btn" class="srso-config-btn">Chỉnh sửa</button>
+        <button id="srso-delete-room-btn" class="srso-config-btn">Xóa phòng</button>
+    </div>
+    <table id="srso-room-table" class="room-table">
+        <thead>
+            <tr>
+                <th>Cơ sở</th>
+                <th>Tòa</th>
+                <th>Tầng</th>
+                <th>Phòng</th>
+                <th>Sức chứa</th>
+                <th>Thiết bị</th>
+                <th>Trạng thái</th>
+                <th>Camera</th>
+            </tr>
+        </thead>
+        <tbody id="srso-room-list">
+            <!-- Room rows will be dynamically inserted here -->
+        </tbody>
+    </table>
+</div>
