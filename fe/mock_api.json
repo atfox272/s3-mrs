@@ -17,7 +17,7 @@
       "responses": [
         {
           "uuid": "7ec71884-49a5-46e4-8585-9b54c0912afc",
-          "body": "{\n  \"success\": true,\n  \"user\": {\n    \"id\": \"2114700\",\n    \"name\": \"Trần Anh Student\",\n    \"email\": \"trananhtai@hcmut.edu.vn\",\n    \"role\": \"student\"\n  },\n  \"token\": \"your_jwt_token_here\"\n}",
+          "body": "{\n  \"success\": true,\n  \"user\": {\n    \"email\": \"trananhtai@hcmut.edu.vn\",\n    \"password\": 12345678,\n    \"id\": \"2114700\",\n    \"name\": \"Trần Anh Student\",\n    \"role\": \"student\"\n  },\n  \"token\": \"your_jwt_token_here\"\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -141,7 +141,7 @@
       "responses": [
         {
           "uuid": "7ed09994-35a0-4994-91b4-4a558a3530e8",
-          "body": "{\n  \"rooms\": [\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"100\",\n      \"capacity\": 2,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"C6-100\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"101\",\n      \"capacity\": 3,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"C6-101\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"B5\",\n      \"floor\": 2,\n      \"room\": \"201\",\n      \"capacity\": 5,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn, hehe\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"B5-201\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"B1\",\n      \"floor\": 3,\n      \"room\": \"301\",\n      \"capacity\": 10,\n      \"equipment\": \"wifi, máy chiếu, hehe\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"B1-301\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"B2\",\n      \"floor\": 4,\n      \"room\": \"401\",\n      \"capacity\": 1,\n      \"equipment\": \"wifi, máy chiếu, hehe\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Available\"\n        }\n      ],\n      \"roomId\": \"B2-401\"\n    }\n  ]\n}",
+          "body": "{\n  \"rooms\": [\n    {\n      \"campus\": \"1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"100\",\n      \"capacity\": 2,\n      \"equipment\": [\n          {\n            \"id\": \"wifi\",\n            \"name\": \"Wifi\"\n          },\n          {\n            \"id\": \"projector\",\n            \"name\": \"Máy chiếu\"\n          },\n          {\n            \"id\": \"charger\",\n            \"name\": \"Ổ sạc\"\n          },\n          {\n            \"id\": \"table\",\n            \"name\": \"Bàn\"\n          },\n          {\n            \"id\": \"ac\",\n            \"name\": \"Máy lạnh\"\n          }\n        ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"C6-100\"\n    },\n    {\n      \"campus\": \"1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"101\",\n      \"capacity\": 3,\n      \"equipment\": [\n          {\n            \"id\": \"wifi\",\n            \"name\": \"Wifi\"\n          },\n          {\n            \"id\": \"projector\",\n            \"name\": \"Máy chiếu\"\n          },\n          {\n            \"id\": \"charger\",\n            \"name\": \"Ổ sạc\"\n          },\n          {\n            \"id\": \"table\",\n            \"name\": \"Bàn\"\n          },\n          {\n            \"id\": \"ac\",\n            \"name\": \"Máy lạnh\"\n          }\n        ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"C6-101\"\n    },\n    {\n      \"campus\": \"1\",\n      \"building\": \"B5\",\n      \"floor\": 2,\n      \"room\": \"201\",\n      \"capacity\": 5,\n      \"equipment\": [\n          {\n            \"id\": \"wifi\",\n            \"name\": \"Wifi\"\n          },\n          {\n            \"id\": \"projector\",\n            \"name\": \"Máy chiếu\"\n          },\n          {\n            \"id\": \"charger\",\n            \"name\": \"Ổ sạc\"\n          },\n          {\n            \"id\": \"table\",\n            \"name\": \"Bàn\"\n          },\n          {\n            \"id\": \"ac\",\n            \"name\": \"Máy lạnh\"\n          }\n        ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"B5-201\"\n    },\n    {\n      \"campus\": \"1\",\n      \"building\": \"B1\",\n      \"floor\": 3,\n      \"room\": \"301\",\n      \"capacity\": 10,\n      \"equipment\": [\n          {\n            \"id\": \"wifi\",\n            \"name\": \"Wifi\"\n          },\n          {\n            \"id\": \"projector\",\n            \"name\": \"Máy chiếu\"\n          },\n          {\n            \"id\": \"charger\",\n            \"name\": \"Ổ sạc\"\n          },\n          {\n            \"id\": \"table\",\n            \"name\": \"Bàn\"\n          },\n          {\n            \"id\": \"ac\",\n            \"name\": \"Máy lạnh\"\n          }\n        ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"B1-301\"\n    },\n    {\n      \"campus\": \"1\",\n      \"building\": \"B2\",\n      \"floor\": 4,\n      \"room\": \"401\",\n      \"capacity\": 1,\n      \"equipment\": [\n          {\n            \"id\": \"wifi\",\n            \"name\": \"Wifi\"\n          },\n          {\n            \"id\": \"projector\",\n            \"name\": \"Máy chiếu\"\n          },\n          {\n            \"id\": \"charger\",\n            \"name\": \"Ổ sạc\"\n          },\n          {\n            \"id\": \"table\",\n            \"name\": \"Bàn\"\n          },\n          {\n            \"id\": \"ac\",\n            \"name\": \"Máy lạnh\"\n          }\n        ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Available\"\n        }\n      ],\n      \"roomId\": \"B2-401\"\n    }\n  ]\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -154,7 +154,7 @@
             {
               "target": "query",
               "modifier": "cs",
-              "value": "CS1",
+              "value": "1",
               "invert": false,
               "operator": "equals"
             }
@@ -168,7 +168,7 @@
         },
         {
           "uuid": "e85ef524-65e2-4f38-abda-f67578d7c008",
-          "body": "{\n  \"rooms\": [\n    {\n      \"campus\": \"CS2\",\n      \"building\": \"H6\",\n      \"floor\": 1,\n      \"room\": \"100\",\n      \"capacity\": 30,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"16:00 - 17:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"17:00 - 18:00\",\n          \"status\": \"Available\"\n        }\n      ],\n      \"roomId\": \"H6-100\"\n    },\n    {\n      \"campus\": \"CS2\",\n      \"building\": \"H6\",\n      \"floor\": 1,\n      \"room\": \"101\",\n      \"capacity\": 25,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H6-101\"\n    }\n  ]\n}",
+          "body": "{\n  \"rooms\": [\n    {\n      \"campus\": \"2\",\n      \"building\": \"H6\",\n      \"floor\": 1,\n      \"room\": \"100\",\n      \"capacity\": 30,\n      \"equipment\": [\n          {\n            \"id\": \"wifi\",\n            \"name\": \"Wifi\"\n          },\n          {\n            \"id\": \"projector\",\n            \"name\": \"Máy chiếu\"\n          },\n          {\n            \"id\": \"charger\",\n            \"name\": \"Ổ sạc\"\n          },\n          {\n            \"id\": \"table\",\n            \"name\": \"Bàn\"\n          },\n          {\n            \"id\": \"ac\",\n            \"name\": \"Máy lạnh\"\n          }\n        ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"16:00 - 17:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"17:00 - 18:00\",\n          \"status\": \"Available\"\n        }\n      ],\n      \"roomId\": \"H6-100\"\n    },\n    {\n      \"campus\": \"2\",\n      \"building\": \"H6\",\n      \"floor\": 1,\n      \"room\": \"101\",\n      \"capacity\": 25,\n      \"equipment\": [\n          {\n            \"id\": \"wifi\",\n            \"name\": \"Wifi\"\n          },\n          {\n            \"id\": \"projector\",\n            \"name\": \"Máy chiếu\"\n          },\n          {\n            \"id\": \"charger\",\n            \"name\": \"Ổ sạc\"\n          },\n          {\n            \"id\": \"table\",\n            \"name\": \"Bàn\"\n          },\n          {\n            \"id\": \"ac\",\n            \"name\": \"Máy lạnh\"\n          }\n        ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H6-101\"\n    }\n  ]\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -181,7 +181,7 @@
             {
               "target": "query",
               "modifier": "cs",
-              "value": "CS2",
+              "value": "2",
               "invert": false,
               "operator": "equals"
             }
@@ -207,7 +207,7 @@
       "responses": [
         {
           "uuid": "fa6d316a-1587-48f9-8e2b-48882dc2e53b",
-          "body": "{\n  \"room\": {\n    \"campus\": \"CS1\",\n    \"building\": \"C6\",\n    \"floor\": 1,\n    \"room\": \"103\",\n    \"capacity\": 7,\n    \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n    \"status\": \"Available\",\n    \"time\": [\n      {\n        \"slot\": \"7:00 - 8:00\",\n        \"status\": \"Available\"\n      },\n      {\n        \"slot\": \"8:00 - 9:00\",\n        \"status\": \"Occupied\"\n      },\n      {\n        \"slot\": \"9:00 - 10:00\",\n        \"status\": \"Available\"\n      },\n      {\n        \"slot\": \"10:00 - 11:00\",\n        \"status\": \"Occupied\"\n      }\n    ],\n    \"roomId\": \"C6-103\"\n  }\n}",
+          "body": "{\n  \"room\": {\n    \"campus\": \"CS1\",\n    \"building\": \"C6\",\n    \"floor\": 1,\n    \"room\": \"103\",\n    \"capacity\": 7,\n    \"equipment\": [\n        {\n          \"id\": \"wifi\",\n          \"name\": \"Wifi\"\n        },\n        {\n          \"id\": \"projector\",\n          \"name\": \"Máy chiếu\"\n        },\n        {\n          \"id\": \"charger\",\n          \"name\": \"Ổ sạc\"\n        },\n        {\n          \"id\": \"table\",\n          \"name\": \"Bàn\"\n        },\n        {\n          \"id\": \"ac\",\n          \"name\": \"Máy lạnh\"\n        }\n      ],\n    \"status\": \"Available\",\n    \"time\": [\n      {\n        \"slot\": \"7:00 - 8:00\",\n        \"status\": \"Available\"\n      },\n      {\n        \"slot\": \"8:00 - 9:00\",\n        \"status\": \"Occupied\"\n      },\n      {\n        \"slot\": \"9:00 - 10:00\",\n        \"status\": \"Available\"\n      },\n      {\n        \"slot\": \"10:00 - 11:00\",\n        \"status\": \"Occupied\"\n      }\n    ],\n    \"roomId\": \"C6-103\"\n  }\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -246,7 +246,7 @@
       "responses": [
         {
           "uuid": "a946bea6-f706-4b67-a1cd-7343af5f8eb5",
-          "body": "{\r\n  \"devices\": [\r\n    \"Máy chiếu\",\r\n    \"Máy lạnh\",\r\n    \"Bảng lớn\",\r\n    \"Thiết bị họp\",\r\n    \"Màn hình tương tác\"\r\n  ]\r\n}",
+          "body": "{\r\n  \"equipment\": [\r\n\t\t{\r\n  \t\t\"id\": \"wifi\",\r\n  \t\t\"name\": \"Wifi\"\r\n\t\t},\r\n\t\t{\r\n  \t\t\"id\": \"projector\",\r\n  \t\t\"name\": \"Máy chiếu\"\r\n\t\t},\r\n\t\t{\r\n  \t\t\"id\": \"meeting_device\",\r\n  \t\t\"name\": \"Thiết bị họp\"\r\n\t\t},\r\n\t\t{\r\n  \t\t\"id\": \"big_board\",\r\n  \t\t\"name\": \"Bảng lớn\"\r\n\t\t},\r\n\t\t{\r\n  \t\t\"id\": \"ac\",\r\n  \t\t\"name\": \"Máy lạnh\"\r\n\t\t}\r\n\t]\r\n}\r\n",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -613,7 +613,7 @@
       "responses": [
         {
           "uuid": "fe25db9c-60e0-4bef-ab25-e9a6a2dd34dd",
-          "body": "{\n  \"success\": true,\n  \"rooms\": [\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"100\",\n      \"capacity\": 2,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"C6-100\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"101\",\n      \"capacity\": 3,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"C6-101\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"B5\",\n      \"floor\": 2,\n      \"room\": \"201\",\n      \"capacity\": 5,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn, hehe\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"B5-201\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"B1\",\n      \"floor\": 3,\n      \"room\": \"301\",\n      \"capacity\": 10,\n      \"equipment\": \"wifi, máy chiếu, hehe\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"B1-301\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"CS1\",\n      \"building\": \"B2\",\n      \"floor\": 4,\n      \"room\": \"401\",\n      \"capacity\": 1,\n      \"equipment\": \"wifi, máy chiếu, hehe\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Available\"\n        }\n      ],\n      \"roomId\": \"B2-401\",\n      \"cameraLink\": \"assign camera link here\"\n    }\n  ]\n}",
+          "body": "{\n  \"success\": true,\n  \"rooms\": [\n    {\n      \"campus\": \"1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"100\",\n      \"capacity\": 2,\n      \"equipment\": [\n        {\n          \"id\": \"wifi\",\n          \"name\": \"Wifi\"\n        },\n        {\n          \"id\": \"projector\",\n          \"name\": \"Máy chiếu\"\n        },\n        {\n          \"id\": \"charger\",\n          \"name\": \"Ổ sạc\"\n        },\n        {\n          \"id\": \"table\",\n          \"name\": \"Bàn\"\n        },\n        {\n          \"id\": \"ac\",\n          \"name\": \"Máy lạnh\"\n        }\n      ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"C6-100\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"1\",\n      \"building\": \"C6\",\n      \"floor\": 1,\n      \"room\": \"101\",\n      \"capacity\": 3,\n    \"equipment\": [\n      {\n        \"id\": \"wifi\",\n        \"name\": \"Wifi\"\n      },\n      {\n        \"id\": \"projector\",\n        \"name\": \"Máy chiếu\"\n      },\n      {\n        \"id\": \"charger\",\n        \"name\": \"Ổ sạc\"\n      },\n      {\n        \"id\": \"table\",\n        \"name\": \"Bàn\"\n      },\n      {\n        \"id\": \"ac\",\n        \"name\": \"Máy lạnh\"\n      }\n    ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"C6-101\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"1\",\n      \"building\": \"B5\",\n      \"floor\": 2,\n      \"room\": \"201\",\n      \"capacity\": 5,\n    \"equipment\": [\n      {\n        \"id\": \"wifi\",\n        \"name\": \"Wifi\"\n      },\n      {\n        \"id\": \"projector\",\n        \"name\": \"Máy chiếu\"\n      },\n      {\n        \"id\": \"charger\",\n        \"name\": \"Ổ sạc\"\n      },\n      {\n        \"id\": \"table\",\n        \"name\": \"Bàn\"\n      },\n      {\n        \"id\": \"ac\",\n        \"name\": \"Máy lạnh\"\n      }\n    ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"B5-201\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"1\",\n      \"building\": \"B1\",\n      \"floor\": 3,\n      \"room\": \"301\",\n      \"capacity\": 10,\n    \"equipment\": [\n      {\n        \"id\": \"wifi\",\n        \"name\": \"Wifi\"\n      },\n      {\n        \"id\": \"projector\",\n        \"name\": \"Máy chiếu\"\n      },\n      {\n        \"id\": \"charger\",\n        \"name\": \"Ổ sạc\"\n      },\n      {\n        \"id\": \"table\",\n        \"name\": \"Bàn\"\n      },\n      {\n        \"id\": \"ac\",\n        \"name\": \"Máy lạnh\"\n      }\n    ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"B1-301\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"1\",\n      \"building\": \"B2\",\n      \"floor\": 4,\n      \"room\": \"401\",\n      \"capacity\": 1,\n    \"equipment\": [\n      {\n        \"id\": \"wifi\",\n        \"name\": \"Wifi\"\n      },\n      {\n        \"id\": \"projector\",\n        \"name\": \"Máy chiếu\"\n      },\n      {\n        \"id\": \"charger\",\n        \"name\": \"Ổ sạc\"\n      },\n      {\n        \"id\": \"table\",\n        \"name\": \"Bàn\"\n      },\n      {\n        \"id\": \"ac\",\n        \"name\": \"Máy lạnh\"\n      }\n    ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Available\"\n        }\n      ],\n      \"roomId\": \"B2-401\",\n      \"cameraLink\": \"assign camera link here\"\n    }\n  ]\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -626,7 +626,7 @@
             {
               "target": "query",
               "modifier": "cs",
-              "value": "CS1",
+              "value": "1",
               "invert": false,
               "operator": "equals"
             }
@@ -640,7 +640,7 @@
         },
         {
           "uuid": "c0c5dbdc-ff14-4e77-bfbd-1f77203affc3",
-          "body": "{\n  \"success\": true,\n  \"rooms\": [\n    {\n      \"campus\": \"CS2\",\n      \"building\": \"H6\",\n      \"floor\": 1,\n      \"room\": \"101\",\n      \"capacity\": 2,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H6-101\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"CS2\",\n      \"building\": \"H6\",\n      \"floor\": 1,\n      \"room\": \"102\",\n      \"capacity\": 3,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H6-102\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"CS2\",\n      \"building\": \"H3\",\n      \"floor\": 2,\n      \"room\": \"201\",\n      \"capacity\": 5,\n      \"equipment\": \"wifi, máy chiếu, ghế, bàn, hehe\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H3-201\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"CS2\",\n      \"building\": \"H1\",\n      \"floor\": 3,\n      \"room\": \"301\",\n      \"capacity\": 10,\n      \"equipment\": \"wifi, máy chiếu, hehe\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H1-301\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"CS2\",\n      \"building\": \"H2\",\n      \"floor\": 4,\n      \"room\": \"401\",\n      \"capacity\": 1,\n      \"equipment\": \"wifi, máy chiếu, hehe\",\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Available\"\n        }\n      ],\n      \"roomId\": \"H2-401\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"CS2\",\n      \"building\": \"H6\",\n      \"floor\": 7,\n      \"room\": \"701\",\n      \"capacity\": 1,\n      \"equipment\": \"wifi, máy chiếu, hehe\",\n      \"status\": \"Occupied\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Available\"\n        }\n      ],\n      \"roomId\": \"H6-701\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"CS2\",\n      \"building\": \"H6\",\n      \"floor\": 7,\n      \"room\": \"702\",\n      \"capacity\": 1,\n      \"equipment\": \"wifi, máy chiếu, hehe\",\n      \"status\": \"Occupied\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Available\"\n        }\n      ],\n      \"roomId\": \"H6-702\",\n      \"cameraLink\": \"assign camera link here\"\n    }\n  ]\n}",
+          "body": "{\n  \"success\": true,\n  \"rooms\": [\n    {\n      \"campus\": \"2\",\n      \"building\": \"H6\",\n      \"floor\": 1,\n      \"room\": \"101\",\n      \"capacity\": 2,\n      \"equipment\": [\n        {\n          \"id\": \"wifi\",\n          \"name\": \"Wifi\"\n        },\n        {\n          \"id\": \"projector\",\n          \"name\": \"Máy chiếu\"\n        },\n        {\n          \"id\": \"charger\",\n          \"name\": \"Ổ sạc\"\n        },\n        {\n          \"id\": \"table\",\n          \"name\": \"Bàn\"\n        },\n        {\n          \"id\": \"ac\",\n          \"name\": \"Máy lạnh\"\n        }\n      ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H6-101\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"2\",\n      \"building\": \"H6\",\n      \"floor\": 1,\n      \"room\": \"102\",\n      \"capacity\": 3,\n      \"equipment\": [\n        {\n          \"id\": \"wifi\",\n          \"name\": \"Wifi\"\n        },\n        {\n          \"id\": \"projector\",\n          \"name\": \"Máy chiếu\"\n        },\n        {\n          \"id\": \"charger\",\n          \"name\": \"Ổ sạc\"\n        },\n        {\n          \"id\": \"table\",\n          \"name\": \"Bàn\"\n        },\n        {\n          \"id\": \"ac\",\n          \"name\": \"Máy lạnh\"\n        }\n      ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H6-102\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"2\",\n      \"building\": \"H3\",\n      \"floor\": 2,\n      \"room\": \"201\",\n      \"capacity\": 5,\n      \"equipment\": [\n          {\n            \"id\": \"wifi\",\n            \"name\": \"Wifi\"\n          },\n          {\n            \"id\": \"projector\",\n            \"name\": \"Máy chiếu\"\n          },\n          {\n            \"id\": \"charger\",\n            \"name\": \"Ổ sạc\"\n          },\n          {\n            \"id\": \"table\",\n            \"name\": \"Bàn\"\n          },\n          {\n            \"id\": \"ac\",\n            \"name\": \"Máy lạnh\"\n          }\n        ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H3-201\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"2\",\n      \"building\": \"H1\",\n      \"floor\": 3,\n      \"room\": \"301\",\n      \"capacity\": 10,\n      \"equipment\": [\n          {\n            \"id\": \"wifi\",\n            \"name\": \"Wifi\"\n          },\n          {\n            \"id\": \"projector\",\n            \"name\": \"Máy chiếu\"\n          },\n          {\n            \"id\": \"charger\",\n            \"name\": \"Ổ sạc\"\n          },\n          {\n            \"id\": \"table\",\n            \"name\": \"Bàn\"\n          },\n          {\n            \"id\": \"ac\",\n            \"name\": \"Máy lạnh\"\n          }\n        ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Occupied\"\n        }\n      ],\n      \"roomId\": \"H1-301\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"2\",\n      \"building\": \"H2\",\n      \"floor\": 4,\n      \"room\": \"401\",\n      \"capacity\": 1,\n      \n      \"equipment\": [\n          {\n            \"id\": \"wifi\",\n            \"name\": \"Wifi\"\n          },\n          {\n            \"id\": \"projector\",\n            \"name\": \"Máy chiếu\"\n          },\n          {\n            \"id\": \"charger\",\n            \"name\": \"Ổ sạc\"\n          },\n          {\n            \"id\": \"table\",\n            \"name\": \"Bàn\"\n          },\n          {\n            \"id\": \"ac\",\n            \"name\": \"Máy lạnh\"\n          }\n        ],\n      \"status\": \"Available\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Available\"\n        }\n      ],\n      \"roomId\": \"H2-401\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"2\",\n      \"building\": \"H6\",\n      \"floor\": 7,\n      \"room\": \"701\",\n      \"capacity\": 1,\n      \n      \"equipment\": [\n          {\n            \"id\": \"wifi\",\n            \"name\": \"Wifi\"\n          },\n          {\n            \"id\": \"projector\",\n            \"name\": \"Máy chiếu\"\n          },\n          {\n            \"id\": \"charger\",\n            \"name\": \"Ổ sạc\"\n          },\n          {\n            \"id\": \"table\",\n            \"name\": \"Bàn\"\n          },\n          {\n            \"id\": \"ac\",\n            \"name\": \"Máy lạnh\"\n          }\n        ],\n      \"status\": \"Occupied\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Available\"\n        }\n      ],\n      \"roomId\": \"H6-701\",\n      \"cameraLink\": \"assign camera link here\"\n    },\n    {\n      \"campus\": \"2\",\n      \"building\": \"H6\",\n      \"floor\": 7,\n      \"room\": \"702\",\n      \"capacity\": 1,\n      \n      \"equipment\": [\n          {\n            \"id\": \"wifi\",\n            \"name\": \"Wifi\"\n          },\n          {\n            \"id\": \"projector\",\n            \"name\": \"Máy chiếu\"\n          },\n          {\n            \"id\": \"charger\",\n            \"name\": \"Ổ sạc\"\n          },\n          {\n            \"id\": \"table\",\n            \"name\": \"Bàn\"\n          },\n          {\n            \"id\": \"ac\",\n            \"name\": \"Máy lạnh\"\n          }\n        ],\n      \"status\": \"Occupied\",\n      \"time\": [\n        {\n          \"slot\": \"7:00 - 8:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"8:00 - 9:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"9:00 - 10:00\",\n          \"status\": \"Available\"\n        },\n        {\n          \"slot\": \"10:00 - 11:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"11:00 - 12:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"12:00 - 13:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"13:00 - 14:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"14:00 - 15:00\",\n          \"status\": \"Occupied\"\n        },\n        {\n          \"slot\": \"15:00 - 16:00\",\n          \"status\": \"Available\"\n        }\n      ],\n      \"roomId\": \"H6-702\",\n      \"cameraLink\": \"assign camera link here\"\n    }\n  ]\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -653,7 +653,7 @@
             {
               "target": "query",
               "modifier": "cs",
-              "value": "CS2",
+              "value": "2",
               "invert": false,
               "operator": "equals"
             }
@@ -679,7 +679,7 @@
       "responses": [
         {
           "uuid": "ae76fd07-6eb7-421d-94f1-30a412a4764b",
-          "body": "{\n  \"success\": true,\n  \"room\": {\n    \"campus\": \"CS1\",\n    \"building\": \"C6\",\n    \"floor\": 1,\n    \"room\": \"103\",\n    \"capacity\": 7,\n    \"equipment\": \"wifi, máy chiếu, ghế, bàn\",\n    \"status\": \"Available\",\n    \"time\": [\n      {\n        \"slot\": \"7:00 - 8:00\",\n        \"status\": \"Available\"\n      },\n      {\n        \"slot\": \"8:00 - 9:00\",\n        \"status\": \"Occupied\"\n      },\n      {\n        \"slot\": \"9:00 - 10:00\",\n        \"status\": \"Available\"\n      },\n      {\n        \"slot\": \"10:00 - 11:00\",\n        \"status\": \"Occupied\"\n      }\n    ],\n    \"roomId\": \"C6-103\",\n    \"cameraLink\": \"assign camera link here\"\n  }\n}",
+          "body": "{\n  \"success\": true,\n  \"room\": {\n    \"campus\": \"1\",\n    \"building\": \"C6\",\n    \"floor\": 1,\n    \"room\": \"103\",\n    \"capacity\": 7,\n    \"equipment\": [\n      {\n        \"id\": \"wifi\",\n        \"name\": \"Wifi\"\n      },\n      {\n        \"id\": \"projector\",\n        \"name\": \"Máy chiếu\"\n      },\n      {\n        \"id\": \"charger\",\n        \"name\": \"Ổ sạc\"\n      },\n      {\n        \"id\": \"table\",\n        \"name\": \"Bàn\"\n      },\n      {\n        \"id\": \"ac\",\n        \"name\": \"Máy lạnh\"\n      }\n    ],\n    \"status\": \"Available\",\n    \"time\": [\n      {\n        \"slot\": \"7:00 - 8:00\",\n        \"status\": \"Available\"\n      },\n      {\n        \"slot\": \"8:00 - 9:00\",\n        \"status\": \"Occupied\"\n      },\n      {\n        \"slot\": \"9:00 - 10:00\",\n        \"status\": \"Available\"\n      },\n      {\n        \"slot\": \"10:00 - 11:00\",\n        \"status\": \"Occupied\"\n      }\n    ],\n    \"roomId\": \"C6-103\",\n    \"cameraLink\": \"assign camera link here\"\n  }\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -698,6 +698,203 @@
         }
       ],
       "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "a6207042-594e-4fe8-b1b2-2f45ecf52710",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/srso-room-config/get-room-options",
+      "responses": [
+        {
+          "uuid": "400a26f9-4d63-4073-b328-6744eb2b3b85",
+          "body": "{\n  \"success\": true,\n  \"campuses\": [\n    {\n      \"id\": \"1\",\n      \"name\": \"Cơ sở 1\"\n    },\n    {\n      \"id\": \"2\",\n      \"name\": \"Cơ sở 2\"\n    }\n  ],\n  \"equipment\": [\n    {\n      \"id\": \"wifi\",\n      \"name\": \"Wifi\"\n    },\n    {\n      \"id\": \"projector\",\n      \"name\": \"Máy chiếu\"\n    },\n    {\n      \"id\": \"charger\",\n      \"name\": \"Ổ sạc\"\n    },\n    {\n      \"id\": \"table\",\n      \"name\": \"Bàn\"\n    },\n\t\t{\n  \t\t\"id\": \"meeting_device\",\n  \t\t\"name\": \"Thiết bị họp\"\n\t\t},\n\t\t{\n  \t\t\"id\": \"big_board\",\n  \t\t\"name\": \"Bảng lớn\"\n\t\t},\n    {\n      \"id\": \"ac\",\n      \"name\": \"Máy lạnh\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "15fe0033-398f-4460-8d00-6da0df4b5bd9",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/srso-room-config/add-room",
+      "responses": [
+        {
+          "uuid": "e53fbe7f-3b7b-4d45-876e-92d55ff3e935",
+          "body": "{\n  \"success\": true,\n  \"message\": \"Add a new room completely\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "room",
+              "value": "error",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "1d646fc5-197e-42f0-ac23-e90d9e813958",
+          "body": "{\n  \"success\": false,\n  \"message\": \"Phòng không hợp lệ!\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "room",
+              "value": "error",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": "FALLBACK",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "161e0743-9645-4a14-8178-cbc5346b95c5",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/srso-room-config/update-room",
+      "responses": [
+        {
+          "uuid": "a37b37e3-c78a-4f2a-9826-ac809699571a",
+          "body": "{\n  \"success\": true\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "9c143496-bcd5-4023-841f-7a0db633849f",
+          "body": "{\n  \"success\": false,\n  \"message\": \"Cơ sở không hợp lệ! Vui lòng xem lại.\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": "SEQUENTIAL",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "227d56fd-a1a5-40c4-a28f-c2f85b091b3f",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/srso-room-config/delete-room",
+      "responses": [
+        {
+          "uuid": "6a034140-c205-4b2c-ad11-5aa6ad8e897a",
+          "body": "{\n  \"success\": true\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "8a3da44c-1085-4218-b1d1-908f01b6573d",
+          "body": "{\n  \"success\": false,\n  \"message\": \"Mocked faliure\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": "SEQUENTIAL",
       "streamingMode": null,
       "streamingInterval": 0
     }
@@ -766,6 +963,22 @@
     {
       "type": "route",
       "uuid": "34c97d8d-349a-4fc0-bbf6-e20395da1034"
+    },
+    {
+      "type": "route",
+      "uuid": "a6207042-594e-4fe8-b1b2-2f45ecf52710"
+    },
+    {
+      "type": "route",
+      "uuid": "15fe0033-398f-4460-8d00-6da0df4b5bd9"
+    },
+    {
+      "type": "route",
+      "uuid": "161e0743-9645-4a14-8178-cbc5346b95c5"
+    },
+    {
+      "type": "route",
+      "uuid": "227d56fd-a1a5-40c4-a28f-c2f85b091b3f"
     }
   ],
   "proxyMode": false,

@@ -338,9 +338,9 @@ function refreshSearchFilters() {
         const campusButtonId = activeCampusButton.id; // Get the ID of the active campus button
         console.log('campus button ID: ', campusButtonId);
         if (campusButtonId === 'cs1-btn') {
-            loadRoomsByCampus('CS1');
+            loadRoomsByCampus(1);
         } else if (campusButtonId === 'cs2-btn') {
-            loadRoomsByCampus('CS2');
+            loadRoomsByCampus(2);
         }
     } else {
         console.error('No active campus found');
@@ -368,7 +368,7 @@ export async function loadStdRoomView() {
                 else {
                     const activeButton = document.querySelector('.cs-btn.active');
                     if (activeButton) {
-                        const campus = activeButton.id === 'cs1-btn' ? 'CS1' : 'CS2';
+                        const campus = activeButton.id === 'cs1-btn' ? 1 : 2;
                         loadRoomsByCampus(campus);
                     }
                 }
@@ -379,13 +379,13 @@ export async function loadStdRoomView() {
     document.getElementById('cs1-btn').addEventListener('click', () => {
         console.log('from cs1 click');
         setActiveButton('cs1-btn');
-        loadRoomsByCampus('CS1');
+        loadRoomsByCampus(1);
     });
     // Press "Cơ sở 2" button
     document.getElementById('cs2-btn').addEventListener('click', () => {
         console.log('from cs2 click'); // Corrected log message to reflect the button clicked
         setActiveButton('cs2-btn');
-        loadRoomsByCampus('CS2');
+        loadRoomsByCampus(2);
     });
     // Open advanced reservation menu
     document.getElementById('advanced-search-menu-btn').addEventListener('click', () => {
@@ -412,5 +412,5 @@ export async function loadStdRoomView() {
     });
 
     setActiveButton('cs1-btn'); // Set CS1 as active by default
-    loadRoomsByCampus('CS1'); // Load CS1 by default
+    loadRoomsByCampus(1); // Load CS1 by default
 }
