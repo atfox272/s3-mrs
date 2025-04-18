@@ -3,6 +3,7 @@ import { currentUser } from './main.js';
 
 const ROOMS_API = `${API_URL}/rooms`;
 
+let currentReserveRoom = null;
 // Function to get room rules from the backend
 export async function getRoomRule() {
     try {
@@ -42,13 +43,11 @@ async function loadRoomsByCampus(cs) {
                 <td>${room.equipment}</td>
                 <td>${room.status}</td>
                 <td>${availableTimes}</td>
-                <td><a href="#" class="reserve-room" data-room-id="${room.roomId}">Đặt phòng</a></td>
+                <td><a href="#" class="reserve-room-btn" id="reserve-room-btn">Đặt phòng</a></td>
             `;
             // Open reserve-room menu
-            row.querySelector('.reserve-room').addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent default link behavior
-                const roomId = this.getAttribute('data-room-id');
-                showReserveRoomMenu(roomId, room);
+            row.addEventListener('click', () => {
+                showReserveRoomMenu(room);
             });
             roomList.appendChild(row);
         });
@@ -56,17 +55,11 @@ async function loadRoomsByCampus(cs) {
         console.error('Error loading rooms:', error);
     }
     const closeButton = document.getElementById('reserve-menu-close-btn');
-    closeButton.addEventListener('click', () => {
-        closeReserveRoomMenu();
-    });
+    closeButton.addEventListener('click', closeReserveRoomMenu);
     const cancelButton = document.getElementById('reserve-menu-cancel-btn');
-    cancelButton.addEventListener('click', () => {
-        closeReserveRoomMenu();
-    });
+    cancelButton.addEventListener('click', closeReserveRoomMenu);
     const confirmButton = document.getElementById('reserve-menu-confirm-btn');
-    confirmButton.addEventListener('click', () => {
-        requestReservation();
-    });
+    confirmButton.addEventListener('click', requestReservation);
 }
 
 async function loadRoomsByID(roomId) {
@@ -94,13 +87,11 @@ async function loadRoomsByID(roomId) {
             <td>${room.equipment}</td>
             <td>${room.status}</td>
             <td>${availableTimes}</td>
-            <td><a href="#" class="reserve-room" data-room-id="${room.roomId}">Đặt phòng</a></td>
+            <td><a href="#" class="reserve-room-btn" id="reserve-room-btn">Đặt phòng</a></td>
         `;
         // Open reserve-room menu
-        row.querySelector('.reserve-room').addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default link behavior
-            const roomId = this.getAttribute('data-room-id');
-            showReserveRoomMenu(roomId, room);
+        row.addEventListener('click', () => {
+            showReserveRoomMenu(room);
         });
         roomList.appendChild(row);
     } catch (error) {
@@ -109,9 +100,9 @@ async function loadRoomsByID(roomId) {
 }
 
 
-function showReserveRoomMenu(roomId, room) {
+function showReserveRoomMenu(room) {
     // Logic to navigate to the booking UI
-    console.log(`[INFO]: Show reserve-room menu of room: ${roomId}`);
+    console.log(`[INFO]: Show reserve-room menu of room: ${room.room}`);
     // Populate room information
         const roomCampus = document.getElementById('room-campus');
     roomCampus.innerHTML = `<strong>${room.campus}</strong>`;
@@ -321,13 +312,11 @@ function searchRooms() {
                 <td>${room.equipment}</td>
                 <td>${room.status}</td>
                 <td>${availableTimes}</td>
-                <td><a href="#" class="reserve-room" data-room-id="${room.roomId}">Đặt phòng</a></td>
+                <td><a href="#" class="reserve-room-btn" id="reserve-room-btn">Đặt phòng</a></td>
             `;
             // Open reserve-room menu
-            row.querySelector('.reserve-room').addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent default link behavior
-                const roomId = this.getAttribute('data-room-id');
-                showReserveRoomMenu(roomId, room);
+            row.addEventListener('click', () => {
+                showReserveRoomMenu(room);
             });
             roomList.appendChild(row);
         });
