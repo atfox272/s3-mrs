@@ -40,7 +40,7 @@ async function loadRoomsByCampus(cs) {
                 <td>${room.floor}</td>
                 <td>${room.room}</td>
                 <td>${room.capacity}</td>
-                <td>${room.equipment}</td>
+                <td>${room.equipment.map(eq => eq.name).join(', ')}</td>
                 <td>${room.status}</td>
                 <td>${availableTimes}</td>
                 <td><a href="#" class="reserve-room-btn" id="reserve-room-btn">Đặt phòng</a></td>
@@ -84,7 +84,7 @@ async function loadRoomsByID(roomId) {
             <td>${room.floor}</td>
             <td>${room.room}</td>
             <td>${room.capacity}</td>
-            <td>${room.equipment}</td>
+            <td>${room.equipment.map(eq => eq.name).join(', ')}</td>
             <td>${room.status}</td>
             <td>${availableTimes}</td>
             <td><a href="#" class="reserve-room-btn" id="reserve-room-btn">Đặt phòng</a></td>
@@ -230,9 +230,9 @@ async function showAdvancedSearchMenu() {
         const devicesResponse = await fetch(`${API_URL}/rooms/special-devices`);
         const devicesData = await devicesResponse.json();
         const devicesContainer = document.getElementById('special-devices');
-        devicesContainer.innerHTML = devicesData.devices.map(device => `
+        devicesContainer.innerHTML = devicesData.equipment.map(equipment => `
             <label>
-                <input type="checkbox" /> ${device}
+                <input type="checkbox" /> ${equipment.name}
             </label>
         `).join('');
 
@@ -309,7 +309,7 @@ function searchRooms() {
                 <td>${room.floor}</td>
                 <td>${room.room}</td>
                 <td>${room.capacity}</td>
-                <td>${room.equipment}</td>
+                <td>${room.equipment.map(eq => eq.name).join(', ')}</td>
                 <td>${room.status}</td>
                 <td>${availableTimes}</td>
                 <td><a href="#" class="reserve-room-btn" id="reserve-room-btn">Đặt phòng</a></td>
