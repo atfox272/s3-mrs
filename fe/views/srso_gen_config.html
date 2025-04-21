@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cấu hình chung</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="config-container">
+        <h2>Cấu hình chung</h2>
+        <div class="config-tabs">
+            <button class="tab-link active" data-tab="tab-times">Số lần</button>
+            <button class="tab-link" data-tab="tab-time">Thời gian</button>
+            <button class="tab-link" data-tab="tab-rules">Luật lệ phòng</button>
+        </div>
+        <div id="tab-times" class="tab-content active">
+            <label for="max-times">Số lần chọn khung thời gian:</label>
+            <input type="number" id="max-times" min="1" value="8">
+        </div>
+        <div id="tab-time" class="tab-content">
+            <label for="auto-cancel-time">Thời gian tự động hủy (phút):</label>
+            <input type="number" id="auto-cancel-time" min="0" value="30">
+            <label for="cancel-time-hours">Thời gian hủy phòng (giờ):</label>
+            <input type="number" id="cancel-time-hours" min="0" value="2">
+            <label for="cancel-time-minutes">Thời gian hủy phòng (phút):</label>
+            <input type="number" id="cancel-time-minutes" min="0" max="59" value="30">
+        </div>
+        <div id="tab-rules" class="tab-content">
+            <label for="room-rules">Luật lệ phòng:</label>
+            <textarea id="room-rules" rows="5"></textarea>
+        </div>
+        <div class="form-actions">
+            <button id="save-config">OK</button>
+            <button id="cancel-config">Cancel</button>
+        </div>
+    </div>
+
+    <script type="module" src="/js/srso_gen_config.js"></script>
+</body>
+</html>
