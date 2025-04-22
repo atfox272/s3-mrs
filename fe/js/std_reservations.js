@@ -231,6 +231,7 @@ function confirmCheckoutUsingRoom() {
             },
             body: JSON.stringify({ 
                 usingStatus: currentUsingRoomCard,
+                userId: currentUser.id,
                 checkoutTime: currentTime // Include current time in the request
             }),
         })
