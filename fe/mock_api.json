@@ -973,7 +973,7 @@
       "responses": [
         {
           "uuid": "6598ddd4-55d8-4da9-82b7-e86849b06da3",
-          "body": "{\r\n    \"maxTimes\": 8,\r\n    \"autoCancelTime\": 30,\r\n    \"cancelTimeHours\": 2,\r\n    \"cancelTimeMinutes\": 30,\r\n    \"roomRules\": \"Không gây ồn ào\\nKhông mang đồ ăn vào phòng\"\r\n}",
+          "body": "{\r\n  \"reservationLimitation\": 8,\r\n  \"autoCancelTime\": 30,\r\n  \"cancelTimeHours\": 2,\r\n  \"cancelTimeMinutes\": 30,\r\n  \"rules\": [\r\n    {\r\n      \"id\": 1,\r\n      \"text\": \"Không xả rác trong phòng học.\"\r\n    },\r\n    {\r\n      \"id\": 2,\r\n      \"text\": \"Sắp xếp lại ghế khi ra khỏi phòng.\"\r\n    },\r\n    {\r\n      \"id\": 3,\r\n      \"text\": \"Giữ gìn cơ sở vật chất và thiết bị trong phòng học.\"\r\n    },\r\n    {\r\n      \"id\": 4,\r\n      \"text\": \"Không mang đồ ăn gây mùi vào phòng học.\"\r\n    },\r\n    {\r\n      \"id\": 5,\r\n      \"text\": \"Nếu có vấn đề về cơ sở vật chất thì vui lòng báo cáo lên quản trị viên.\"\r\n    },\r\n    {\r\n      \"id\": 6,\r\n      \"text\": \"Vui lòng checkin trước khi sử dụng phòng học\"\r\n    },\r\n    {\r\n      \"id\": 7,\r\n      \"text\": \"Vui lòng tắt hết các thiết bị và đèn khi rời khỏi phòng học.\"\r\n    },\r\n    {\r\n      \"id\": 8,\r\n      \"text\": \"Mỗi lần đặt phòng, sinh viên chỉ được đặt trong 1 khoảng thời gian cho phép.\"\r\n    },\r\n    {\r\n      \"id\": 9,\r\n      \"text\": \"Vui lòng không đặt phòng vượt quá số lượng hiện có quá 2 người.\"\r\n    }\r\n  ]\r\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -1004,7 +1004,7 @@
       "responses": [
         {
           "uuid": "098b017f-2fff-4b5d-bbff-59c109c1e501",
-          "body": "{\r\n    \"success\": true\r\n}",
+          "body": "{\r\n  \"success\": true,\r\n  \"message\": \"Cấu hình đã được cập nhật thành công\"\r\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
