@@ -931,6 +931,33 @@
           "default": true,
           "crudKey": "id",
           "callbacks": []
+        },
+        {
+          "uuid": "2d67bc42-20d1-4527-8b98-57f762f8e941",
+          "body": "{\r\n        \"campus\": \"Cơ sở 2\",\r\n        \"building\": \"H6\",\r\n        \"roomNumber\": \"603\",\r\n        \"date\": \"2023-4-20\",\r\n        \"time\": \"08:00-10:00\",\r\n        \"status\": \"Đã sử dụng\"\r\n    },\r\n    {\r\n        \"campus\": \"Cơ sở 2\",\r\n        \"building\": \"H1\",\r\n        \"roomNumber\": \"202\",\r\n        \"date\": \"2023-5-21\",\r\n        \"time\": \"08:00-10:00\",\r\n        \"status\": \"Đã sử dụng\"\r\n    }",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "userId",
+              "value": "2114700",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
       "responseMode": null,
