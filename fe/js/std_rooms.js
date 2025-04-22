@@ -227,7 +227,7 @@ function setActiveButton(buttonId) {
 
 async function showAdvancedSearchMenu() {
     try {
-        const devicesResponse = await fetch(`${API_URL}/rooms/special-devices`);
+        const devicesResponse = await fetch(`${API_URL}/rooms/special-equipment`);
         const devicesData = await devicesResponse.json();
         const devicesContainer = document.getElementById('special-devices');
         devicesContainer.innerHTML = devicesData.equipment.map(equipment => `
@@ -276,7 +276,7 @@ function searchRooms() {
         campus: campus,
         building: building,
         floor: floor,
-        specialDevices: specialDevices,
+        equipment: specialDevices,
         timeSlots: timeSlots
     };
 

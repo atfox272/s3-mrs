@@ -1,0 +1,41 @@
+[
+    {
+        "id": "2114700",
+        "name": "Trần Anh Student",
+        "email": "user@gmail.com",
+        "password": "123456",
+        "role": "student",
+        "dailyCount": 5,
+        "birthday": "25/02/2004",
+        "faculty": "CSE",
+        "major": "CE",
+        "reservationHistory": [],
+        "reservationLimitation": 4
+    },
+    {
+        "id": "2114701",
+        "name": "Trần Anh SRSO",
+        "email": "srso@gmail.com",
+        "password": "123456",
+        "role": "SRSO",
+        "dailyCount": 5,
+        "birthday": "26/02/2004",
+        "faculty": "CSE",
+        "major": "CS",
+        "reservationHistory": [],
+        "reservationLimitation": 4
+    },
+    {
+        "id": "2114702",
+        "name": "Trần Anh Student 2",
+        "email": "user2@gmail.com",
+        "password": "123456",
+        "role": "student",
+        "dailyCount": 5,
+        "birthday": "27/02/2004",
+        "faculty": "CSE",
+        "major": "CS",
+        "reservationHistory": [],
+        "reservationLimitation": 4
+    }
+]
