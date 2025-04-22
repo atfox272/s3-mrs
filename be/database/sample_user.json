@@ -5,22 +5,23 @@
       "email": "user@gmail.com",
       "password": "123456",
       "role": "student",
-      "dailyCount": 2,
+      "dailyCount": 4,
       "birthday": "25/02/2004",
       "faculty": "CSE",
       "major": "CE",
       "usingStatus": {
         "reservationId": "2",
-        "campus": "2",
-        "roomId": "H6-101",
+        "campus": "1",
+        "roomId": "C6-101",
         "time": "17:00 - 23:59",
-        "checkinTime": "13:10"
+        "checkinTime": "17:10"
       },
       "reservationHistory": [
         {
           "reservationId": "1",
           "campus": "1",
           "roomId": "C6-101",
+          "date": "4/21/2025",
           "time": "7:00 - 8:00",
           "checkoutTime": "7:58",
           "detail": ""
@@ -28,15 +29,22 @@
       ],
       "reservationUsing": [
         {
-          "reservationId": "3",
-          "campus": "2",
-          "roomId": "H6-201",
+          "reservationId": "4",
+          "campus": "1",
+          "roomId": "C6-102",
           "time": "15:00 - 16:00",
+          "detail": ""
+        },
+        {
+          "reservationId": "5",
+          "campus": "1",
+          "roomId": "C6-103",
+          "time": "10:00 - 11:00",
           "detail": ""
         }
       ],
       "reservationLimitation": 16,
-      "nextReservationId": "4"
+      "nextReservationId": "6"
     },
     {
       "id": "2114701",
@@ -67,4 +75,4 @@
       "reservationLimitation": 16,
       "nextReservationId": "4"
     }
-]
+  ]

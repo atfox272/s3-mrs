@@ -24,7 +24,7 @@ app.use('/api/srso-room-config', srsoRoomConfigRoutes);
 app.use('/api/srso-room-status', srsoRoomStatusRoutes);
 app.use('/api/std-history', stdHistoryRoutes);
 app.use('/api/std-notifications', stdNotificationRoutes);
-app.use('/api/std-reservations', stdReservationsRoutes);
+app.use('/api/reservations', stdReservationsRoutes);
 
 
 // Start server
