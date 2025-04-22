@@ -1,382 +1,382 @@
 [
   {
-    "roomId": "C6-101",
-    "campus": "1",
-    "building": "C6",
-    "floor": "1",
-    "room": "101",
-    "capacity": 4,
-    "equipment": [
-      {
-        "id": "wifi",
-        "name": "Wifi"
-      },
-      {
-        "id": "projector",
-        "name": "Máy chiếu"
-      },
-      {
-        "id": "charger",
-        "name": "Ổ sạc"
-      },
-      {
-        "id": "table",
-        "name": "Bàn"
-      }
-    ],
-    "status": "Available",
-    "time": [
-      {
-        "slot": "7:00 - 8:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "8:00 - 9:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "9:00 - 10:00",
-        "status": "Available"
-      },
-      {
-        "slot": "10:00 - 11:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "11:00 - 12:00",
-        "status": "Available"
-      },
-      {
-        "slot": "12:00 - 13:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "13:00 - 14:00",
-        "status": "Available"
-      },
-      {
-        "slot": "14:00 - 15:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "15:00 - 16:00",
-        "status": "Available"
-      },
-      {
-        "slot": "16:00 - 17:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "17:00 - 18:00",
-        "status": "Available"
-      }
-    ],
-    "roomUsage": [],
-    "roomHistory": [],
-    "cameraLink": "assign camera link here"
+      "roomId": "C6-101",
+      "campus": "1",
+      "building": "C6",
+      "floor": "1",
+      "room": "101",
+      "capacity": 4,
+      "equipment": [
+          {
+            "id": "wifi",
+            "name": "Wifi"
+          },
+          {
+            "id": "projector",
+            "name": "Máy chiếu"
+          },
+          {
+            "id": "charger",
+            "name": "Ổ sạc"
+          },
+          {
+            "id": "table",
+            "name": "Bàn"
+          }
+      ],
+      "status": "Available",
+      "time": [
+        {
+          "slot": "7:00 - 8:00",
+          "status": "Available"
+        },
+        {
+          "slot": "8:00 - 9:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "9:00 - 10:00",
+          "status": "Available"
+        },
+        {
+          "slot": "10:00 - 11:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "11:00 - 12:00",
+          "status": "Available"
+        },
+        {
+          "slot": "12:00 - 13:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "13:00 - 14:00",
+          "status": "Available"
+        },
+        {
+          "slot": "14:00 - 15:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "15:00 - 16:00",
+          "status": "Available"
+        },
+        {
+          "slot": "16:00 - 17:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "17:00 - 18:00",
+          "status": "Available"
+        }
+      ],
+      "roomUsage": [],
+      "roomHistory": [],
+      "cameraLink": "assign camera link here"
   },
   {
-    "roomId": "C6-102",
-    "campus": "1",
-    "building": "C6",
-    "floor": "1",
-    "room": "102",
-    "capacity": 2,
-    "equipment": [
-      {
-        "id": "wifi",
-        "name": "Wifi"
-      },
-      {
-        "id": "charger",
-        "name": "Ổ sạc"
-      },
-      {
-        "id": "table",
-        "name": "Bàn"
-      },
-      {
-        "id": "ac",
-        "name": "Máy lạnh"
-      }
-    ],
-    "status": "Available",
-    "time": [
-      {
-        "slot": "7:00 - 8:00",
-        "status": "Available"
-      },
-      {
-        "slot": "8:00 - 9:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "9:00 - 10:00",
-        "status": "Available"
-      },
-      {
-        "slot": "10:00 - 11:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "11:00 - 12:00",
-        "status": "Available"
-      },
-      {
-        "slot": "12:00 - 13:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "13:00 - 14:00",
-        "status": "Available"
-      },
-      {
-        "slot": "14:00 - 15:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "15:00 - 16:00",
-        "status": "Available"
-      },
-      {
-        "slot": "16:00 - 17:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "17:00 - 18:00",
-        "status": "Available"
-      }
-    ],
-    "roomUsage": [],
-    "roomHistory": [],
-    "cameraLink": "assign camera link here"
+      "roomId": "C6-102",
+      "campus": "1",
+      "building": "C6",
+      "floor": "1",
+      "room": "102",
+      "capacity": 2,
+      "equipment": [
+          {
+            "id": "wifi",
+            "name": "Wifi"
+          },
+          {
+            "id": "charger",
+            "name": "Ổ sạc"
+          },
+          {
+            "id": "table",
+            "name": "Bàn"
+          },
+          {
+            "id": "ac",
+            "name": "Máy lạnh"
+          }
+      ],
+      "status": "Available",
+      "time": [
+        {
+          "slot": "7:00 - 8:00",
+          "status": "Available"
+        },
+        {
+          "slot": "8:00 - 9:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "9:00 - 10:00",
+          "status": "Available"
+        },
+        {
+          "slot": "10:00 - 11:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "11:00 - 12:00",
+          "status": "Available"
+        },
+        {
+          "slot": "12:00 - 13:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "13:00 - 14:00",
+          "status": "Available"
+        },
+        {
+          "slot": "14:00 - 15:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "15:00 - 16:00",
+          "status": "Available"
+        },
+        {
+          "slot": "16:00 - 17:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "17:00 - 18:00",
+          "status": "Available"
+        }
+      ],
+      "roomUsage": [],
+      "roomHistory": [],
+      "cameraLink": "assign camera link here"
   },
   {
-    "roomId": "C6-103",
-    "campus": "1",
-    "building": "C6",
-    "floor": "1",
-    "room": "103",
-    "capacity": 2,
-    "equipment": [
-      {
-        "id": "wifi",
-        "name": "Wifi"
-      },
-      {
-        "id": "projector",
-        "name": "Máy chiếu"
-      },
-      {
-        "id": "charger",
-        "name": "Ổ sạc"
-      },
-      {
-        "id": "table",
-        "name": "Bàn"
-      },
-      {
-        "id": "ac",
-        "name": "Máy lạnh"
-      }
-    ],
-    "status": "Available",
-    "time": [
-      {
-        "slot": "7:00 - 8:00",
-        "status": "Available"
-      },
-      {
-        "slot": "8:00 - 9:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "9:00 - 10:00",
-        "status": "Available"
-      },
-      {
-        "slot": "10:00 - 11:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "11:00 - 12:00",
-        "status": "Available"
-      },
-      {
-        "slot": "12:00 - 13:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "13:00 - 14:00",
-        "status": "Available"
-      },
-      {
-        "slot": "14:00 - 15:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "15:00 - 16:00",
-        "status": "Available"
-      },
-      {
-        "slot": "16:00 - 17:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "17:00 - 18:00",
-        "status": "Available"
-      }
-    ],
-    "roomUsage": [],
-    "roomHistory": [],
-    "cameraLink": "assign camera link here"
+      "roomId": "C6-103",
+      "campus": "1",
+      "building": "C6",
+      "floor": "1",
+      "room": "103",
+      "capacity": 2,
+      "equipment": [
+          {
+            "id": "wifi",
+            "name": "Wifi"
+          },
+          {
+            "id": "projector",
+            "name": "Máy chiếu"
+          },
+          {
+            "id": "charger",
+            "name": "Ổ sạc"
+          },
+          {
+            "id": "table",
+            "name": "Bàn"
+          },
+          {
+            "id": "ac",
+            "name": "Máy lạnh"
+          }
+      ],
+      "status": "Available",
+      "time": [
+        {
+          "slot": "7:00 - 8:00",
+          "status": "Available"
+        },
+        {
+          "slot": "8:00 - 9:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "9:00 - 10:00",
+          "status": "Available"
+        },
+        {
+          "slot": "10:00 - 11:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "11:00 - 12:00",
+          "status": "Available"
+        },
+        {
+          "slot": "12:00 - 13:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "13:00 - 14:00",
+          "status": "Available"
+        },
+        {
+          "slot": "14:00 - 15:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "15:00 - 16:00",
+          "status": "Available"
+        },
+        {
+          "slot": "16:00 - 17:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "17:00 - 18:00",
+          "status": "Available"
+        }
+      ],
+      "roomUsage": [],
+      "roomHistory": [],
+      "cameraLink": "assign camera link here"
   },
   {
-    "roomId": "H3-105",
-    "campus": "2",
-    "building": "H3",
-    "floor": "1",
-    "room": "105",
-    "capacity": 1,
-    "equipment": [
-      {
-        "id": "wifi",
-        "name": "Wifi"
-      },
-      {
-        "id": "projector",
-        "name": "Máy chiếu"
-      },
-      {
-        "id": "charger",
-        "name": "Ổ sạc"
-      },
-      {
-        "id": "table",
-        "name": "Bàn"
-      }
-    ],
-    "status": "Available",
-    "time": [
-      {
-        "slot": "7:00 - 8:00",
-        "status": "Available"
-      },
-      {
-        "slot": "8:00 - 9:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "9:00 - 10:00",
-        "status": "Available"
-      },
-      {
-        "slot": "10:00 - 11:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "11:00 - 12:00",
-        "status": "Available"
-      },
-      {
-        "slot": "12:00 - 13:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "13:00 - 14:00",
-        "status": "Available"
-      },
-      {
-        "slot": "14:00 - 15:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "15:00 - 16:00",
-        "status": "Available"
-      },
-      {
-        "slot": "16:00 - 17:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "17:00 - 18:00",
-        "status": "Available"
-      }
-    ],
-    "roomUsage": [],
-    "roomHistory": [],
-    "cameraLink": "assign camera link here"
+      "roomId": "H3-105",
+      "campus": "2",
+      "building": "H3",
+      "floor": "1",
+      "room": "105",
+      "capacity": 1,
+      "equipment": [
+          {
+            "id": "wifi",
+            "name": "Wifi"
+          },
+          {
+            "id": "projector",
+            "name": "Máy chiếu"
+          },
+          {
+            "id": "charger",
+            "name": "Ổ sạc"
+          },
+          {
+            "id": "table",
+            "name": "Bàn"
+          }
+      ],
+      "status": "Available",
+      "time": [
+        {
+          "slot": "7:00 - 8:00",
+          "status": "Available"
+        },
+        {
+          "slot": "8:00 - 9:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "9:00 - 10:00",
+          "status": "Available"
+        },
+        {
+          "slot": "10:00 - 11:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "11:00 - 12:00",
+          "status": "Available"
+        },
+        {
+          "slot": "12:00 - 13:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "13:00 - 14:00",
+          "status": "Available"
+        },
+        {
+          "slot": "14:00 - 15:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "15:00 - 16:00",
+          "status": "Available"
+        },
+        {
+          "slot": "16:00 - 17:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "17:00 - 18:00",
+          "status": "Available"
+        }
+      ],
+      "roomUsage": [],
+      "roomHistory": [],
+      "cameraLink": "assign camera link here"
   },
   {
-    "roomId": "H3-106",
-    "campus": "2",
-    "building": "H3",
-    "floor": "1",
-    "room": "106",
-    "capacity": 2,
-    "equipment": [
-      {
-        "id": "wifi",
-        "name": "Wifi"
-      },
-      {
-        "id": "charger",
-        "name": "Ổ sạc"
-      },
-      {
-        "id": "table",
-        "name": "Bàn"
-      }
-    ],
-    "status": "Available",
-    "time": [
-      {
-        "slot": "7:00 - 8:00",
-        "status": "Available"
-      },
-      {
-        "slot": "8:00 - 9:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "9:00 - 10:00",
-        "status": "Available"
-      },
-      {
-        "slot": "10:00 - 11:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "11:00 - 12:00",
-        "status": "Available"
-      },
-      {
-        "slot": "12:00 - 13:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "13:00 - 14:00",
-        "status": "Available"
-      },
-      {
-        "slot": "14:00 - 15:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "15:00 - 16:00",
-        "status": "Available"
-      },
-      {
-        "slot": "16:00 - 17:00",
-        "status": "Occupied"
-      },
-      {
-        "slot": "17:00 - 18:00",
-        "status": "Available"
-      }
-    ],
-    "roomUsage": [],
-    "roomHistory": [],
-    "cameraLink": "assign camera link here"
+      "roomId": "H3-106",
+      "campus": "2",
+      "building": "H3",
+      "floor": "1",
+      "room": "106",
+      "capacity": 2,
+      "equipment": [
+          {
+            "id": "wifi",
+            "name": "Wifi"
+          },
+          {
+            "id": "charger",
+            "name": "Ổ sạc"
+          },
+          {
+            "id": "table",
+            "name": "Bàn"
+          }
+      ],
+      "status": "Available",
+      "time": [
+        {
+          "slot": "7:00 - 8:00",
+          "status": "Available"
+        },
+        {
+          "slot": "8:00 - 9:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "9:00 - 10:00",
+          "status": "Available"
+        },
+        {
+          "slot": "10:00 - 11:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "11:00 - 12:00",
+          "status": "Available"
+        },
+        {
+          "slot": "12:00 - 13:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "13:00 - 14:00",
+          "status": "Available"
+        },
+        {
+          "slot": "14:00 - 15:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "15:00 - 16:00",
+          "status": "Available"
+        },
+        {
+          "slot": "16:00 - 17:00",
+          "status": "Occupied"
+        },
+        {
+          "slot": "17:00 - 18:00",
+          "status": "Available"
+        }
+      ],
+      "roomUsage": [],
+      "roomHistory": [],
+      "cameraLink": "assign camera link here"
   }
 ]
