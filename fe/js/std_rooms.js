@@ -257,13 +257,13 @@ function hideAdvancedSearchMenu() {
 
 function searchRooms() {
     // Gather selected options
-    const campusCheckbox = document.querySelector('input[placeholder="Vd: 1, 2"]');
-    const buildingCheckbox = document.querySelector('input[placeholder="Vd: C6, H3"]');
-    const floorCheckbox = document.querySelector('input[placeholder="Vd: 1, 2, 6"]');
+    const campusInput = document.querySelector('input[placeholder="Vd: 1, 2"]');
+    const buildingInput = document.querySelector('input[placeholder="Vd: C6, H3"]');
+    const floorInput = document.querySelector('input[placeholder="Vd: 1, 2, 6"]');
 
-    const campus = campusCheckbox.checked ? campusCheckbox.value : null;
-    const building = buildingCheckbox.checked ? buildingCheckbox.value : null;
-    const floor = floorCheckbox.checked ? floorCheckbox.value : null;
+    const campus = campusInput.value.trim() || null;
+    const building = buildingInput.value.trim() || null;
+    const floor = floorInput.value.trim() || null;
 
     const specialDevices = Array.from(document.querySelectorAll('#special-devices input[type="checkbox"]:checked'))
         .map(checkbox => checkbox.nextSibling.textContent.trim());
