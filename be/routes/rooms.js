@@ -9,5 +9,11 @@ const roomController = require('../controllers/rooms_controller');
 // router.delete('/:id', roomController.deleteRoom);
 
 router.get('/rules', roomController.getRules);
+router.get('/room-id', roomController.getRoomById);
+router.get('/campus', roomController.getRoomByCampus);
+router.post('/room-metadata', roomController.getRoomMetadata);
+router.get('/special-equipment', roomController.getSpecialEquipment);
+router.get('/time-slots', roomController.getTimeSlots);
+router.post('/reserve', roomController.reserveRoom);
 
 module.exports = router;

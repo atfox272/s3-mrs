@@ -1,41 +1,77 @@
 [
-    {
-        "id": "2114700",
-        "name": "Trần Anh Student",
-        "email": "user@gmail.com",
-        "password": "123456",
-        "role": "student",
-        "dailyCount": 5,
-        "birthday": "25/02/2004",
-        "faculty": "CSE",
-        "major": "CE",
-        "reservationHistory": [],
-        "reservationLimitation": 4
+  {
+    "id": "2114700",
+    "name": "Trần Anh Student",
+    "email": "user@gmail.com",
+    "password": "123456",
+    "role": "student",
+    "dailyCount": 3,
+    "birthday": "25/02/2004",
+    "faculty": "CSE",
+    "major": "CE",
+    "usingStatus": {
+      "reservationId": "2",
+      "campus": "2",
+      "roomId": "H6-101",
+      "time": "17:00 - 23:59",
+      "checkinTime": "13:10"
     },
-    {
-        "id": "2114701",
-        "name": "Trần Anh SRSO",
-        "email": "srso@gmail.com",
-        "password": "123456",
-        "role": "SRSO",
-        "dailyCount": 5,
-        "birthday": "26/02/2004",
-        "faculty": "CSE",
-        "major": "CS",
-        "reservationHistory": [],
-        "reservationLimitation": 4
-    },
-    {
-        "id": "2114702",
-        "name": "Trần Anh Student 2",
-        "email": "user2@gmail.com",
-        "password": "123456",
-        "role": "student",
-        "dailyCount": 5,
-        "birthday": "27/02/2004",
-        "faculty": "CSE",
-        "major": "CS",
-        "reservationHistory": [],
-        "reservationLimitation": 4
-    }
+    "reservationHistory": [
+      {
+        "reservationId": "1",
+        "campus": "1",
+        "roomId": "C6-101",
+        "time": "7:00 - 8:00",
+        "checkoutTime": "7:58",
+        "detail": ""
+      }
+    ],
+    "reservationUsing": [
+      {
+        "reservationId": "3",
+        "campus": "2",
+        "roomId": "H6-201",
+        "time": "15:00 - 16:00",
+        "detail": ""
+      },
+      {
+        "reservationId": "4",
+        "campus": "1",
+        "roomId": "C6-101",
+        "time": "7:00 - 8:00",
+        "detail": ""
+      }
+    ],
+    "reservationLimitation": 16,
+    "nextReservationId": "5"
+  },
+  {
+    "id": "2114701",
+    "name": "Trần Anh SRSO",
+    "email": "srso@gmail.com",
+    "password": "123456",
+    "role": "SRSO",
+    "dailyCount": 5,
+    "birthday": "26/02/2004",
+    "faculty": "CSE",
+    "major": "CS",
+    "reservationHistory": [],
+    "reservationLimitation": 4
+  },
+  {
+    "id": "2114702",
+    "name": "Trần Anh Student 2",
+    "email": "user2@gmail.com",
+    "password": "123456",
+    "role": "student",
+    "dailyCount": 5,
+    "birthday": "27/02/2004",
+    "faculty": "CSE",
+    "major": "CS",
+    "usingStatus": null,
+    "reservationHistory": [],
+    "reservationUsing": [],
+    "reservationLimitation": 16,
+    "nextReservationId": "4"
+  }
 ]
