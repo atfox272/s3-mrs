@@ -125,7 +125,7 @@ function showReserveRoomMenu(room) {
     roomCapacity.style.color = '#1a237e'; // Set color for room capacity
 
     const roomEquipment = document.getElementById('room-equipment');
-    roomEquipment.innerHTML = `<strong>${room.equipment}</strong>`; // Set equipment text in bold
+    roomEquipment.innerHTML = `<strong>${room.equipment.map(eq => eq.name).join(', ')}</strong>`; // Set equipment text in bold
     roomEquipment.style.color = '#1a237e'; // Set color for room equipment
 
     // Align text to the center
@@ -212,6 +212,11 @@ function requestReservation() {
         if (data.success) {
             alert('Đặt phòng thành công. Nhấp "OK" để thoát');
             closeReserveRoomMenu();
+            const activeButton = document.querySelector('.cs-btn.active');
+            if (activeButton) {
+                const campus = activeButton.id === 'cs1-btn' ? "1" : "2";
+                loadRoomsByCampus(campus);
+            }
         } else {
             alert(`Đặt phòng thất bại: ${data.message}`);
         }
