@@ -56,6 +56,12 @@ export async function loadNotificationsView() {
 }
 
 function checkNotifications() {
+    if(currentUser == null) {
+        return;
+    }
+    if(currentUser.role != 'student') {
+        return;
+    }
     fetch(`${STD_NOTIFICATIONS_API}/check-notifications`, {
         method: 'POST',
         headers: {
