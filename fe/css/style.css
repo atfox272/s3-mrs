@@ -1087,3 +1087,264 @@ form input[type="text"], form input[type="number"] {
     background-position: right 10px top 50%;
     background-size: 12px;
 }
+
+/* History view */
+.std-history-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.std-history-container h2 {
+    text-align: center;
+    color: #1a237e;
+    margin-bottom: 2rem;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    flex-wrap: nowrap; 
+}
+
+.filter-group label {
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; 
+}
+
+.filter-group select,
+.filter-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.filter-group input[type="date"] {
+    padding-right: 2rem;
+    background: url('data:image/svg+xml;utf8,<svg fill="%23333" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>') no-repeat right 0.5rem center;
+    background-size: 16px;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+.history-item:hover {
+    background-color: #f9f9f9;
+}
+
+.room-info {
+    flex: 2;
+    font-weight: bold;
+    color: #1a237e;
+}
+
+.date-info,
+.time-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: #666;
+}
+
+.status {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+}
+
+.room-info i,
+.date-info i,
+.time-info i,
+.status i {
+    margin-right: 0.5rem;
+}
+
+.status-used {
+    color: #2e7d32;
+}
+
+.status-canceled {
+    color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+    .filter-section {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .filter-group {
+        flex-direction: row; 
+        width: 100%;
+    }
+
+    .history-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .room-info,
+    .date-info,
+    .time-info,
+    .status {
+        flex: none;
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+/* General Configuration */
+.config-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.config-container h2 {
+    text-align: center;
+    color: #1a237e;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.config-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-link {
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    color: #666;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.tab-link:hover {
+    color: #1a237e;
+    background-color: #e8eaf6;
+}
+
+.tab-link.active {
+    color: #1a237e;
+    font-weight: bold;
+}
+
+.tab-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #1a237e;
+}
+
+.tab-content {
+    display: none;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fafafa;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.tab-content input,
+.tab-content select,
+.tab-content textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s;
+}
+
+.tab-content input:focus,
+.tab-content select:focus,
+.tab-content textarea:focus {
+    border-color: #1a237e;
+    outline: none;
+}
+
+.tab-content textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.form-actions button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#save-config {
+    background-color: #1a237e;
+    color: white;
+}
+
+#save-config:hover {
+    background-color: #3949ab;
+}
+
+#cancel-config {
+    background-color: #f44336;
+    color: white;
+}
+
+#cancel-config:hover {
+    background-color: #d32f2f;
+}

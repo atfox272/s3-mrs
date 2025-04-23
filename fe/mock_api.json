@@ -897,6 +897,134 @@
       "responseMode": "SEQUENTIAL",
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "c8cade40-3a1d-4835-ba4f-d5f89b1b6fde",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/std-history/get-history",
+      "responses": [
+        {
+          "uuid": "ce45e4b4-200f-45a7-9e8f-40c5bed7cddd",
+          "body": "[\r\n    {\r\n        \"campus\": \"Cơ sở 1\",\r\n        \"building\": \"B9\",\r\n        \"roomNumber\": \"101\",\r\n        \"date\": \"2023-10-20\",\r\n        \"time\": \"08:00-10:00\",\r\n        \"status\": \"Đã sử dụng\"\r\n    },\r\n    {\r\n        \"campus\": \"Cơ sở 2\",\r\n        \"building\": \"H1\",\r\n        \"roomNumber\": \"202\",\r\n        \"date\": \"2023-10-20\",\r\n        \"time\": \"08:00-10:00\",\r\n        \"status\": \"Đã hủy\"\r\n    }\r\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "userId",
+              "value": "2114700",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "2d67bc42-20d1-4527-8b98-57f762f8e941",
+          "body": "{\r\n        \"campus\": \"Cơ sở 2\",\r\n        \"building\": \"H6\",\r\n        \"roomNumber\": \"603\",\r\n        \"date\": \"2023-4-20\",\r\n        \"time\": \"08:00-10:00\",\r\n        \"status\": \"Đã sử dụng\"\r\n    },\r\n    {\r\n        \"campus\": \"Cơ sở 2\",\r\n        \"building\": \"H1\",\r\n        \"roomNumber\": \"202\",\r\n        \"date\": \"2023-5-21\",\r\n        \"time\": \"08:00-10:00\",\r\n        \"status\": \"Đã sử dụng\"\r\n    }",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "userId",
+              "value": "2114700",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "94f6fd5c-f6c4-49c1-92d4-dd2796ec696d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/srso-gen-config/get-gen-config",
+      "responses": [
+        {
+          "uuid": "6598ddd4-55d8-4da9-82b7-e86849b06da3",
+          "body": "{\r\n  \"reservationLimitation\": 8,\r\n  \"autoCancelTime\": 30,\r\n  \"cancelTimeHours\": 2,\r\n  \"cancelTimeMinutes\": 30,\r\n  \"rules\": [\r\n    {\r\n      \"id\": 1,\r\n      \"text\": \"Không xả rác trong phòng học.\"\r\n    },\r\n    {\r\n      \"id\": 2,\r\n      \"text\": \"Sắp xếp lại ghế khi ra khỏi phòng.\"\r\n    },\r\n    {\r\n      \"id\": 3,\r\n      \"text\": \"Giữ gìn cơ sở vật chất và thiết bị trong phòng học.\"\r\n    },\r\n    {\r\n      \"id\": 4,\r\n      \"text\": \"Không mang đồ ăn gây mùi vào phòng học.\"\r\n    },\r\n    {\r\n      \"id\": 5,\r\n      \"text\": \"Nếu có vấn đề về cơ sở vật chất thì vui lòng báo cáo lên quản trị viên.\"\r\n    },\r\n    {\r\n      \"id\": 6,\r\n      \"text\": \"Vui lòng checkin trước khi sử dụng phòng học\"\r\n    },\r\n    {\r\n      \"id\": 7,\r\n      \"text\": \"Vui lòng tắt hết các thiết bị và đèn khi rời khỏi phòng học.\"\r\n    },\r\n    {\r\n      \"id\": 8,\r\n      \"text\": \"Mỗi lần đặt phòng, sinh viên chỉ được đặt trong 1 khoảng thời gian cho phép.\"\r\n    },\r\n    {\r\n      \"id\": 9,\r\n      \"text\": \"Vui lòng không đặt phòng vượt quá số lượng hiện có quá 2 người.\"\r\n    }\r\n  ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "f54d60b6-35ec-4e4c-abe2-05dab472f3c4",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "api/srso-gen-config/update-gen-config",
+      "responses": [
+        {
+          "uuid": "098b017f-2fff-4b5d-bbff-59c109c1e501",
+          "body": "{\r\n  \"success\": true,\r\n  \"message\": \"Cấu hình đã được cập nhật thành công\"\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
@@ -979,6 +1107,18 @@
     {
       "type": "route",
       "uuid": "227d56fd-a1a5-40c4-a28f-c2f85b091b3f"
+    },
+    {
+      "type": "route",
+      "uuid": "c8cade40-3a1d-4835-ba4f-d5f89b1b6fde"
+    },
+    {
+      "type": "route",
+      "uuid": "94f6fd5c-f6c4-49c1-92d4-dd2796ec696d"
+    },
+    {
+      "type": "route",
+      "uuid": "f54d60b6-35ec-4e4c-abe2-05dab472f3c4"
     }
   ],
   "proxyMode": false,
