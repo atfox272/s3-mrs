@@ -246,7 +246,7 @@
       "responses": [
         {
           "uuid": "a946bea6-f706-4b67-a1cd-7343af5f8eb5",
-          "body": "{\r\n  \"equipment\": [\r\n\t\t{\r\n  \t\t\"id\": \"wifi\",\r\n  \t\t\"name\": \"Wifi\"\r\n\t\t},\r\n\t\t{\r\n  \t\t\"id\": \"projector\",\r\n  \t\t\"name\": \"Máy chiếu\"\r\n\t\t},\r\n\t\t{\r\n  \t\t\"id\": \"meeting_device\",\r\n  \t\t\"name\": \"Thiết bị họp\"\r\n\t\t},\r\n\t\t{\r\n  \t\t\"id\": \"big_board\",\r\n  \t\t\"name\": \"Bảng lớn\"\r\n\t\t},\r\n\t\t{\r\n  \t\t\"id\": \"ac\",\r\n  \t\t\"name\": \"Máy lạnh\"\r\n\t\t}\r\n\t]\r\n}\r\n",
+          "body": "{\r\n  \"specialEquipment\": [\r\n\t\t{\r\n  \t\t\"id\": \"wifi\",\r\n  \t\t\"name\": \"Wifi\"\r\n\t\t},\r\n\t\t{\r\n  \t\t\"id\": \"projector\",\r\n  \t\t\"name\": \"Máy chiếu\"\r\n\t\t},\r\n\t\t{\r\n  \t\t\"id\": \"meeting_device\",\r\n  \t\t\"name\": \"Thiết bị họp\"\r\n\t\t},\r\n\t\t{\r\n  \t\t\"id\": \"big_board\",\r\n  \t\t\"name\": \"Bảng lớn\"\r\n\t\t},\r\n\t\t{\r\n  \t\t\"id\": \"ac\",\r\n  \t\t\"name\": \"Máy lạnh\"\r\n\t\t}\r\n\t]\r\n}\r\n",
           "latency": 0,
           "statusCode": 200,
           "label": "",
