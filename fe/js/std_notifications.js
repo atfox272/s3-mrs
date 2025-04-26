@@ -72,11 +72,7 @@ function checkNotifications() {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            const newNotifications = data.notificationsList.filter(notification => 
-                !prevNotificationsList || !prevNotificationsList.some(prevNotification => 
-                    prevNotification.notificationId === notification.notificationId
-                )
-            );
+            const newNotifications = data.notificationsList;
 
             if (newNotifications.length > 0) {
                 // Activate new notifications
