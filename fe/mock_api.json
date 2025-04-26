@@ -1025,6 +1025,68 @@
       "responseMode": null,
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "0ae45698-4df0-4767-b242-eafe813bfd30",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/std-profile/get-profile",
+      "responses": [
+        {
+          "uuid": "980e526a-f759-4dbd-bb90-90904e2a3dd7",
+          "body": "{\r\n  \"id\": \"2314280\",\r\n  \"name\": \"Nguyễn Văn A\",\r\n  \"dob\": \"25/02/2004\",\r\n  \"email\": \"nguyenvana@gmail.com\",\r\n  \"faculty\": \"Khoa học và kỹ thuật máy tính\",\r\n  \"major\": \"Khoa học máy tính\",\r\n  \"code\": \"08081321492115\",\r\n  \"bookingCount\": 5\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "a3ee6aaa-1ef6-4847-8b1a-1040c343581e",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/srso-room-status/get-room-status",
+      "responses": [
+        {
+          "uuid": "c0ab6c3e-726d-4689-ad48-c25468077153",
+          "body": "[\r\n  {\r\n    \"mssv\": \"2114700\",\r\n    \"fullName\": \"Nguyễn Văn A\",\r\n    \"cs\": \"CS2\",\r\n    \"building\": \"H6\",\r\n    \"floor\": \"6\",\r\n    \"room\": \"608\",\r\n    \"time\": \"09:00 - 11:00\",\r\n    \"date\": \"2025-04-23\",\r\n    \"checkIn\": \"09:05\",\r\n    \"checkOut\": \"10:55\",\r\n    \"members\": [\"2114700\", \"2114701\"],\r\n    \"status\": \"Hoàn tất\"\r\n  },\r\n  {\r\n    \"mssv\": \"2114702\",\r\n    \"fullName\": \"Trần Thị B\",\r\n    \"cs\": \"CS3\",\r\n    \"building\": \"H7\",\r\n    \"floor\": \"5\",\r\n    \"room\": \"507\",\r\n    \"time\": \"11:00 - 13:00\",\r\n    \"date\": \"2025-04-23\",\r\n    \"checkIn\": \"11:10\",\r\n    \"checkOut\": \"13:55\",\r\n    \"members\": [\"2114702\", \"2114703\"],\r\n    \"status\": \"Đang sử dụng\"\r\n  },\r\n  {\r\n    \"mssv\": \"2114704\",\r\n    \"fullName\": \"Lê Quang C\",\r\n    \"cs\": \"CS4\",\r\n    \"building\": \"H5\",\r\n    \"floor\": \"4\",\r\n    \"room\": \"402\",\r\n    \"time\": \"13:00 - 15:00\",\r\n    \"date\": \"2025-04-23\",\r\n    \"checkIn\": \"13:05\",\r\n    \"checkOut\": \"14:55\",\r\n    \"members\": [\"2114704\", \"2114705\"],\r\n    \"status\": \"Hoàn tất\"\r\n  },\r\n  {\r\n    \"mssv\": \"2114706\",\r\n    \"fullName\": \"Phạm Thị D\",\r\n    \"cs\": \"CS1\",\r\n    \"building\": \"H8\",\r\n    \"floor\": \"3\",\r\n    \"room\": \"308\",\r\n    \"time\": \"15:00 - 17:00\",\r\n    \"date\": \"2025-04-23\",\r\n    \"checkIn\": \"15:10\",\r\n    \"checkOut\": \"16:45\",\r\n    \"members\": [\"2114706\", \"2114707\"],\r\n    \"status\": \"Hoàn tất\"\r\n  },\r\n  {\r\n    \"mssv\": \"2114708\",\r\n    \"fullName\": \"Đỗ Văn E\",\r\n    \"cs\": \"CS2\",\r\n    \"building\": \"H6\",\r\n    \"floor\": \"2\",\r\n    \"room\": \"202\",\r\n    \"time\": \"17:00 - 19:00\",\r\n    \"date\": \"2025-04-23\",\r\n    \"checkIn\": \"17:00\",\r\n    \"checkOut\": \"18:55\",\r\n    \"members\": [\"2114708\", \"2114709\"],\r\n    \"status\": \"Đang sử dụng\"\r\n  }\r\n]\r\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
@@ -1119,6 +1181,14 @@
     {
       "type": "route",
       "uuid": "f54d60b6-35ec-4e4c-abe2-05dab472f3c4"
+    },
+    {
+      "type": "route",
+      "uuid": "0ae45698-4df0-4767-b242-eafe813bfd30"
+    },
+    {
+      "type": "route",
+      "uuid": "a3ee6aaa-1ef6-4847-8b1a-1040c343581e"
     }
   ],
   "proxyMode": false,

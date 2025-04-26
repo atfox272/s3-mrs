@@ -7,12 +7,17 @@ const STD_PROFILE_API = `${API_URL}/std-profile`;
 export async function loadStdProfileView() {
     try {
         console.log(" Current user: ", currentUser);
-        console.log(" Gửi yêu cầu tới: ", `${STD_PROFILE_API}?id=${currentUser.id}`);
+        console.log(" Gửi yêu cầu tới: ", `${STD_PROFILE_API}/get-profile?id=${currentUser.id}`);
 
-        const res = await fetch(`${STD_PROFILE_API}?id=${currentUser.id}`);
-        if (!res.ok) throw new Error("API response lỗi");
+        const res = await fetch(`${STD_PROFILE_API}/get-profile?id=${currentUser.id}`);
+        
+        // Kiểm tra mã trạng thái HTTP
+        if (!res.ok) {
+            throw new Error(`Lỗi API: ${res.status} ${res.statusText}`);
+        }
 
         const data = await res.json();
+        console.log(data); // Kiểm tra dữ liệu trả về
 
         // Gán dữ liệu vào các phần tử HTML
         document.getElementById("profile-name").innerText = data.name;
@@ -27,7 +32,7 @@ export async function loadStdProfileView() {
         document.getElementById("profile-bookingCount").innerText = `${data.bookingCount} / ${maxBooking}`;
         
     } catch (err) {
-        console.error(" Error: Lỗi khi lấy thông tin hồ sơ", err);
+        console.error("Error: Lỗi khi lấy thông tin hồ sơ", err);
     }
 }
 
