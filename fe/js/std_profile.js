@@ -1,24 +1,36 @@
-import API_URL from '../js/api.js';
-import { currentUser } from '../js/main.js';
+// std_profile.js
+import API_URL from './api.js'; // Đảm bảo trong api.js: export default 'http://localhost:3002/api';
+import { currentUser } from './main.js';
 
 const STD_PROFILE_API = `${API_URL}/std-profile`;
 
-// TODO: add your functions here
-
 export async function loadStdProfileView() {
-    // TODO: Code here
-    // - Using API STD_PROFILE_API to get profile of current user
-    // - See Figma
-    // - Add new APIs based on this path "${STD_PROFILE_API}" (Example: "${STD_PROFILE_API}/get-profile")
-    // - Use user information via currentUser global varible
-    // - currentUser: {
-    //     "id": "2114700",
-    //     "name": "Trần Anh Student",
-    //     "email": "trananhtai@hcmut.edu.vn",
-    //     "role": "student"
-    //   },
-    
-    // Request API
+    try {
+        console.log(" Current user: ", currentUser);
+        console.log(" Gửi yêu cầu tới: ", `${STD_PROFILE_API}?id=${currentUser.id}`);
+
+        const res = await fetch(`${STD_PROFILE_API}?id=${currentUser.id}`);
+        if (!res.ok) throw new Error("API response lỗi");
+
+        const data = await res.json();
+
+        // Gán dữ liệu vào các phần tử HTML
+        document.getElementById("profile-name").innerText = data.name;
+        document.getElementById("profile-email").innerText = data.email;
+        document.getElementById("profile-dob").innerText = data.dob;
+        document.getElementById("profile-faculty").innerText = data.faculty;
+        document.getElementById("profile-major").innerText = data.major;
+        document.getElementById("profile-id").innerText = data.id;
+
+        // Hiển thị số lượt đặt phòng dạng "x / 6"
+        const maxBooking = 6;
+        document.getElementById("profile-bookingCount").innerText = `${data.bookingCount} / ${maxBooking}`;
+        
+    } catch (err) {
+        console.error(" Error: Lỗi khi lấy thông tin hồ sơ", err);
+    }
 }
 
-
+window.addEventListener("DOMContentLoaded", () => {
+    loadStdProfileView();
+});
