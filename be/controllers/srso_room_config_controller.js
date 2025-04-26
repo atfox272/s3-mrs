@@ -1,13 +1,13 @@
 const rooms = require('../database/rooms.json');
 
 exports.getRoomByCampus = (req, res) => {
-    const { cs } = req.body;
-    const room = rooms.find(rr => rr.campus === cs);
-    if (room) {
-        res.json({ success: true, room: room});
-    } else {
-        res.status(404).json({ success: false, message: 'User not found' });
-    }
+  const cs = req.query.cs;
+  const room = rooms.filter(rr => rr.campus === cs);
+  if (room) {
+      res.json({ success: true, rooms: room});
+  } else {
+      res.status(404).json({ success: false, message: 'User not found' });
+  }
 }; 
 
 exports.getRoomById = (req, res) => {
