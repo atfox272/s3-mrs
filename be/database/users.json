@@ -9,24 +9,21 @@
     "birthday": "25/02/2004",
     "faculty": "CSE",
     "major": "CE",
-    "usingStatus": null,
+    "usingStatus": {
+      "reservationId": "2",
+      "campus": "1",
+      "roomId": "C6-101",
+      "time": "17:00 - 23:59",
+      "checkinTime": "17:10"
+    },
     "reservationHistory": [
       {
         "reservationId": "1",
         "campus": "1",
         "roomId": "C6-101",
-        "date": "22/04/2025",
+        "date": "4/21/2025",
         "time": "7:00 - 8:00",
         "checkoutTime": "7:58",
-        "detail": ""
-      },
-      {
-        "reservationId": "2",
-        "campus": "1",
-        "roomId": "C6-101",
-        "date": "4/22/2025",
-        "time": "17:00 - 23:59",
-        "checkoutTime": "2025-04-22T16:53:35.293Z",
         "detail": ""
       }
     ],
