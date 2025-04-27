@@ -223,7 +223,8 @@ function showCheckoutUsingRoom(usingRoom) {
 function confirmCheckoutUsingRoom() {
     console.log(`[INFO]: Confirm checkout using room: ${currentUsingRoomCard}`);
     try {
-        const currentTime = new Date().toISOString(); // Get current time in ISO format
+        const currentTime = new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' }); // Get current time in simple format
+        console.log('[INFO]: Checkout - current time:', currentTime);
         fetch(`${RESERVATIONS_API}/checkout`, {
             method: 'POST',
             headers: {
