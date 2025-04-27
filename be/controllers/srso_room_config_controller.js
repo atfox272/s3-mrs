@@ -23,6 +23,7 @@ exports.getRoomById = (req, res) => {
 };
 
 exports.addRoom = (req, res) => {
+  console.log(req.body);
   const { campus, building, floor, room, capacity, equipment } = req.body;
   const newRoom = {
     campus,
@@ -46,9 +47,11 @@ exports.addRoom = (req, res) => {
       .json({ success: false, message: "Failed to save room data" });
   }
   res.json({ success: true, message: "Add a new room completely" });
+  console.log(res.body);
 };
 
 exports.updateRoom = (req, res) => {
+  console.log(req.body);
   const { campus, building, floor, room } = req.body;
   const r = rooms.find(
     (rr) =>
@@ -75,9 +78,11 @@ exports.updateRoom = (req, res) => {
   } else {
     res.status(404).send("Room not found to update");
   }
+  console.log(res.body);
 };
 
 exports.deleteRoom = (req, res) => {
+  console.log(req.body);
   const { campus, building, floor, room } = req.body;
   const rindex = rooms.findIndex(
     (rr) =>
@@ -104,9 +109,11 @@ exports.deleteRoom = (req, res) => {
   } else {
     res.status(404).send("Room not found to delete");
   }
+  console.log(res.body);
 };
 
 exports.getRoomOptions = (req, res) => {
+  console.log(req.body);
   res.json({
     success: true,
     campuses: [
@@ -150,4 +157,5 @@ exports.getRoomOptions = (req, res) => {
       },
     ],
   });
+  console.log(res.body);
 };

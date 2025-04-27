@@ -102,25 +102,8 @@
     "building": "C6",
     "floor": "1",
     "room": "102",
-    "capacity": 2,
-    "equipment": [
-      {
-        "id": "wifi",
-        "name": "Wifi"
-      },
-      {
-        "id": "charger",
-        "name": "Ổ sạc"
-      },
-      {
-        "id": "table",
-        "name": "Bàn"
-      },
-      {
-        "id": "ac",
-        "name": "Máy lạnh"
-      }
-    ],
+    "capacity": "20",
+    "equipment": [],
     "status": "Available",
     "time": [
       {
@@ -187,29 +170,8 @@
     "building": "C6",
     "floor": "1",
     "room": "103",
-    "capacity": 2,
-    "equipment": [
-      {
-        "id": "wifi",
-        "name": "Wifi"
-      },
-      {
-        "id": "projector",
-        "name": "Máy chiếu"
-      },
-      {
-        "id": "charger",
-        "name": "Ổ sạc"
-      },
-      {
-        "id": "table",
-        "name": "Bàn"
-      },
-      {
-        "id": "ac",
-        "name": "Máy lạnh"
-      }
-    ],
+    "capacity": "2",
+    "equipment": [],
     "status": "Available",
     "time": [
       {
@@ -420,11 +382,39 @@
   },
   {
     "campus": "1",
+    "building": "69",
+    "floor": "69",
+    "room": "69",
+    "capacity": "69",
+    "equipment": [
+      "big_board"
+    ]
+  },
+  {
+    "campus": "1",
     "building": "H3",
-    "floor": "2",
+    "floor": "69",
+    "room": "101",
+    "capacity": "69",
+    "equipment": [
+      "projector",
+      "charger",
+      "meeting_device",
+      "big_board",
+      "ac"
+    ]
+  },
+  {
+    "campus": "1",
+    "building": "C6",
+    "floor": "1",
     "room": "169",
     "capacity": "69",
     "equipment": [
+      "wifi",
+      "projector",
+      "table",
+      "big_board",
       "ac"
     ]
   },
@@ -434,14 +424,11 @@
     "floor": "",
     "room": "",
     "capacity": "",
-    "equipment": []
-  },
-  {
-    "campus": "1",
-    "building": "",
-    "floor": "",
-    "room": "",
-    "capacity": "",
-    "equipment": []
+    "equipment": [
+      "projector",
+      "charger",
+      "table",
+      "meeting_device"
+    ]
   }
 ]
