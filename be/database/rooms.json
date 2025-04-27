@@ -417,5 +417,31 @@
     "roomUsage": [],
     "roomHistory": [],
     "cameraLink": "assign camera link here"
+  },
+  {
+    "campus": "1",
+    "building": "H3",
+    "floor": "2",
+    "room": "169",
+    "capacity": "69",
+    "equipment": [
+      "ac"
+    ]
+  },
+  {
+    "campus": "1",
+    "building": "",
+    "floor": "",
+    "room": "",
+    "capacity": "",
+    "equipment": []
+  },
+  {
+    "campus": "1",
+    "building": "",
+    "floor": "",
+    "room": "",
+    "capacity": "",
+    "equipment": []
   }
 ]

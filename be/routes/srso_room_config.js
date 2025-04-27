@@ -4,7 +4,7 @@ const srsoRoomConfigController = require('../controllers/srso_room_config_contro
 
 router.get('/get-room-by-campus', srsoRoomConfigController.getRoomByCampus);
 router.get('/get-room-by-id', srsoRoomConfigController.getRoomById);
-router.get('/get-room-by-options', srsoRoomConfigController.getRoomByOptions);
+router.get('/get-room-options', srsoRoomConfigController.getRoomOptions);
 router.post('/add-room', srsoRoomConfigController.addRoom);
 router.post('/update-room', srsoRoomConfigController.updateRoom);
 router.post('/delete-room', srsoRoomConfigController.deleteRoom);
