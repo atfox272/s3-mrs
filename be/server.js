@@ -15,6 +15,7 @@ const srsoRoomConfigRoutes = require('./routes/srso_room_config');
 const srsoRoomStatusRoutes = require('./routes/srso_room_status');
 const stdHistoryRoutes = require('./routes/std_history');
 const stdNotificationRoutes = require('./routes/std_notification');
+const stdProfileRoutes = require('./routes/std_profile');
 const stdReservationsRoutes = require('./routes/std_reservations');
 
 app.use('/api/auth', userRoutes);
@@ -24,8 +25,8 @@ app.use('/api/srso-room-config', srsoRoomConfigRoutes);
 app.use('/api/srso-room-status', srsoRoomStatusRoutes);
 app.use('/api/std-history', stdHistoryRoutes);
 app.use('/api/std-notifications', stdNotificationRoutes);
+app.use('/api/std-profile', stdProfileRoutes);
 app.use('/api/reservations', stdReservationsRoutes);
-
 
 // Start server
 app.listen(port, () => {
