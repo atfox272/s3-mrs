@@ -203,9 +203,18 @@ exports.deleteRoom = (req, res) => {
     }
 };
 exports.getRules = (req, res) => {
-    try {
-        res.json(rules);
-    } catch (error) {
-        res.status(500).json({ error: 'Failed to load rules' });
-    }
+    const rulesFilePath = path.join(__dirname, '../database/config.json');
+    fs.readFile(rulesFilePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading rules from config.json:', err);
+            return res.status(500).json({ error: 'Failed to load rules' });
+        }
+        try {
+            const config = JSON.parse(data);
+            res.json(config.rules);
+        } catch (parseError) {
+            console.error('Error parsing rules from config.json:', parseError);
+            res.status(500).json({ error: 'Failed to parse rules' });
+        }
+    });
 };

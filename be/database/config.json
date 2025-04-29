@@ -1,101 +1,104 @@
 {
-    "rules": [
-      {
-        "id": 1,
-        "text": "Không xả rác trong phòng học."
-      },
-      {
-        "id": 2,
-        "text": "Sắp xếp lại ghế khi ra khỏi phòng."
-      },
-      {
-        "id": 3,
-        "text": "Giữ gìn cơ sở vật chất và thiết bị trong phòng học."
-      },
-      {
-        "id": 4,
-        "text": "Không mang đồ ăn gây mùi vào phòng học."
-      },
-      {
-        "id": 5,
-        "text": "Nếu có vấn đề về cơ sở vật chất thì vui lòng báo cáo lên quản trị viên."
-      },
-      {
-        "id": 6,
-        "text": "Vui lòng checkin trước khi sử dụng phòng học"
-      },
-      {
-        "id": 7,
-        "text": "Vui lòng tắt hết các thiết bị và đèn khi rời khỏi phòng học."
-      },
-      {
-        "id": 8,
-        "text": "Mỗi lần đặt phòng, sinh viên chỉ được đặt trong 1 khoảng thời gian cho phép."
-      },
-      {
-        "id": 9,
-        "text": "Vui lòng không đặt phòng vượt quá số lượng hiện có quá 2 người."
-      }
-    ],
-    "reservationLimitation": 2,
-    "timeSlots": [
-      {
-        "slot": "7:00 - 8:00",
-        "status": "Past"
-      },
-      {
-        "slot": "10:00 - 11:00",
-        "status": "Past"
-      },
-      {
-        "slot": "11:00 - 12:00",
-        "status": "Past"
-      },
-      {
-        "slot": "12:00 - 13:00",
-        "status": "Available"
-      },
-      {
-        "slot": "13:00 - 14:00",
-        "status": "Available"
-      },
-      {
-        "slot": "14:00 - 15:00",
-        "status": "Available"
-      },
-      {
-        "slot": "15:00 - 16:00",
-        "status": "Available"
-      },
-      {
-        "slot": "16:00 - 17:00",
-        "status": "Available"
-      },
-      {
-        "slot": "17:00 - 18:00",
-        "status": "Available"
-      }
-    ],
-    "equipment": [
-      {
-        "id": "wifi",
-        "name": "Wifi"
-      },
-      {
-        "id": "projector",
-        "name": "Máy chiếu"
-      },
-      {
-        "id": "meeting_device",
-        "name": "Thiết bị họp"
-      },
-      {
-        "id": "big_board",
-        "name": "Bảng lớn"
-      },
-      {
-        "id": "ac",
-        "name": "Máy lạnh"
-      }
-    ]
-  }
+  "rules": [
+    {
+      "id": 1,
+      "text": "Không xả rác trong phòng học."
+    },
+    {
+      "id": 2,
+      "text": "Sắp xếp lại ghế khi ra khỏi phòng."
+    },
+    {
+      "id": 3,
+      "text": "Giữ gìn cơ sở vật chất và thiết bị trong phòng học."
+    },
+    {
+      "id": 4,
+      "text": "Không mang đồ ăn gây mùi vào phòng học."
+    },
+    {
+      "id": 5,
+      "text": "Nếu có vấn đề về cơ sở vật chất thì vui lòng báo cáo lên quản trị viên."
+    },
+    {
+      "id": 6,
+      "text": "Vui lòng checkin trước khi sử dụng phòng học"
+    },
+    {
+      "id": 7,
+      "text": "Vui lòng tắt hết các thiết bị và đèn khi rời khỏi phòng học."
+    },
+    {
+      "id": 8,
+      "text": "Mỗi lần đặt phòng, sinh viên chỉ được đặt trong 1 khoảng thời gian cho phép."
+    },
+    {
+      "id": 9,
+      "text": "Vui lòng không đặt phòng vượt quá số lượng hiện có quá 2 người."
+    }
+  ],
+  "reservationLimitation": 6,
+  "autoCancelTime": 60,
+  "cancelTimeHours": 2,
+  "cancelTimeMinutes": 30,
+  "timeSlots": [
+    {
+      "slot": "7:00 - 8:00",
+      "status": "Past"
+    },
+    {
+      "slot": "10:00 - 11:00",
+      "status": "Past"
+    },
+    {
+      "slot": "11:00 - 12:00",
+      "status": "Past"
+    },
+    {
+      "slot": "12:00 - 13:00",
+      "status": "Available"
+    },
+    {
+      "slot": "13:00 - 14:00",
+      "status": "Available"
+    },
+    {
+      "slot": "14:00 - 15:00",
+      "status": "Available"
+    },
+    {
+      "slot": "15:00 - 16:00",
+      "status": "Available"
+    },
+    {
+      "slot": "16:00 - 17:00",
+      "status": "Available"
+    },
+    {
+      "slot": "17:00 - 18:00",
+      "status": "Available"
+    }
+  ],
+  "equipment": [
+    {
+      "id": "wifi",
+      "name": "Wifi"
+    },
+    {
+      "id": "projector",
+      "name": "Máy chiếu"
+    },
+    {
+      "id": "meeting_device",
+      "name": "Thiết bị họp"
+    },
+    {
+      "id": "big_board",
+      "name": "Bảng lớn"
+    },
+    {
+      "id": "ac",
+      "name": "Máy lạnh"
+    }
+  ]
+}
