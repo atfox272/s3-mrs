@@ -24,34 +24,16 @@
         "date": "4/21/2025",
         "time": "7:00 - 8:00",
         "checkoutTime": "7:58",
-        "detail": ""
+        "detail": "Checkout"
       },
       {
-        "reservationId": "4",
+        "reservationId": "2",
         "campus": "1",
-        "roomId": "C6-102",
-        "date": "4/25/2025",
-        "time": "13:00 - 16:00",
-        "checkoutTime": "10:58",
-        "detail": ""
-      },
-      {
-        "reservationId": "5",
-        "campus": "1",
-        "roomId": "C6-103",
-        "date": "4/27/2025",
-        "time": "14:00 - 16:00",
-        "checkoutTime": "13:58",
-        "detail": ""
-      },
-      {
-        "reservationId": "4",
-        "campus": "1",
-        "roomId": "C6-102",
-        "date": "4/28/2025",
-        "time": "8:00 - 11:00",
-        "checkoutTime": "9:18",
-        "detail": ""
+        "roomId": "C6-101",
+        "date": "4/22/2025",
+        "time": "17:00 - 18:00",
+        "checkoutTime": "",
+        "detail": "hủy"
       }
     ],
     "reservationUsing": [
@@ -59,6 +41,7 @@
         "reservationId": "4",
         "campus": "1",
         "roomId": "C6-102",
+        "date": "4/22/2025",
         "time": "15:00 - 16:00",
         "detail": ""
       },
@@ -66,6 +49,7 @@
         "reservationId": "5",
         "campus": "1",
         "roomId": "C6-103",
+        "date": "4/22/2025",
         "time": "10:00 - 11:00",
         "detail": ""
       }

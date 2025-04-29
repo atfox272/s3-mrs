@@ -67,6 +67,17 @@ exports.cancelReservation = (req, res) => {
         }
     }
 
+    // Add the canceled reservation to the user's reservationHistory
+    user.reservationHistory.push({
+        reservationId: reservation.reservationId,
+        campus: reservation.campus,
+        roomId: reservation.roomId,
+        date: reservation.date, // Use the date of the reservation
+        time: reservation.time,
+        checkoutTime: "",
+        detail: "hủy"
+    });
+
     // Update the user's reservation list
     user.reservationUsing = user.reservationUsing.filter(r => r.reservationId !== reservationId);
 

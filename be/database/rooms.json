@@ -82,16 +82,6 @@
         "time": "7:00 - 8:00",
         "checkoutTime": "7:58",
         "detail": ""
-      },
-      {
-        "userId": "2114700",
-        "reservationId": "2",
-        "campus": "1",
-        "roomId": "C6-101",
-        "date": "4/22/2025",
-        "time": "17:00 - 23:59",
-        "checkoutTime": "17:21",
-        "detail": ""
       }
     ],
     "cameraLink": "assign camera link here"
