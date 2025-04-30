@@ -26,19 +26,37 @@ exports.addRoom = (req, res) => {
   console.log(req.body);
   const { campus, building, floor, room, capacity, equipment } = req.body;
   const newRoom = {
+    roomId: `${building}-${room}`,
     campus,
     building,
     floor,
     room,
     capacity,
     equipment,
+    status: "Available",
+    time: [
+      { slot: "7:00 - 8:00", status: "Available" },
+      { slot: "8:00 - 9:00", status: "Available" },
+      { slot: "9:00 - 10:00", status: "Available" },
+      { slot: "10:00 - 11:00", status: "Available" },
+      { slot: "11:00 - 12:00", status: "Available" },
+      { slot: "12:00 - 13:00", status: "Available" },
+      { slot: "13:00 - 14:00", status: "Available" },
+      { slot: "14:00 - 15:00", status: "Available" },
+      { slot: "15:00 - 16:00", status: "Available" },
+      { slot: "16:00 - 17:00", status: "Available" },
+      { slot: "17:00 - 18:00", status: "Available" }
+    ],
+    roomUsage: [],
+    roomHistory: [],
+    cameraLink: "assign camera link here"
   };
   rooms.push(newRoom);
   try {
     fs.writeFileSync(
       path.resolve(__dirname, "../database/rooms.json"),
       JSON.stringify(rooms, null, 2),
-      "utf8",
+      "utf8"
     );
   } catch (error) {
     console.error("Error writing to file:", error);
