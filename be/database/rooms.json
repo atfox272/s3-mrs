@@ -82,16 +82,6 @@
         "time": "7:00 - 8:00",
         "checkoutTime": "7:58",
         "detail": ""
-      },
-      {
-        "userId": "2114700",
-        "reservationId": "2",
-        "campus": "1",
-        "roomId": "C6-101",
-        "date": "4/22/2025",
-        "time": "17:00 - 23:59",
-        "checkoutTime": "2025-04-22T16:53:35.293Z",
-        "detail": ""
       }
     ],
     "cameraLink": "assign camera link here"
@@ -102,8 +92,25 @@
     "building": "C6",
     "floor": "1",
     "room": "102",
-    "capacity": "20",
-    "equipment": [],
+    "capacity": 2,
+    "equipment": [
+      {
+        "id": "wifi",
+        "name": "Wifi"
+      },
+      {
+        "id": "charger",
+        "name": "Ổ sạc"
+      },
+      {
+        "id": "table",
+        "name": "Bàn"
+      },
+      {
+        "id": "ac",
+        "name": "Máy lạnh"
+      }
+    ],
     "status": "Available",
     "time": [
       {
@@ -170,8 +177,29 @@
     "building": "C6",
     "floor": "1",
     "room": "103",
-    "capacity": "2",
-    "equipment": [],
+    "capacity": 2,
+    "equipment": [
+      {
+        "id": "wifi",
+        "name": "Wifi"
+      },
+      {
+        "id": "projector",
+        "name": "Máy chiếu"
+      },
+      {
+        "id": "charger",
+        "name": "Ổ sạc"
+      },
+      {
+        "id": "table",
+        "name": "Bàn"
+      },
+      {
+        "id": "ac",
+        "name": "Máy lạnh"
+      }
+    ],
     "status": "Available",
     "time": [
       {
@@ -379,56 +407,5 @@
     "roomUsage": [],
     "roomHistory": [],
     "cameraLink": "assign camera link here"
-  },
-  {
-    "campus": "1",
-    "building": "69",
-    "floor": "69",
-    "room": "69",
-    "capacity": "69",
-    "equipment": [
-      "big_board"
-    ]
-  },
-  {
-    "campus": "1",
-    "building": "H3",
-    "floor": "69",
-    "room": "101",
-    "capacity": "69",
-    "equipment": [
-      "projector",
-      "charger",
-      "meeting_device",
-      "big_board",
-      "ac"
-    ]
-  },
-  {
-    "campus": "1",
-    "building": "C6",
-    "floor": "1",
-    "room": "169",
-    "capacity": "69",
-    "equipment": [
-      "wifi",
-      "projector",
-      "table",
-      "big_board",
-      "ac"
-    ]
-  },
-  {
-    "campus": "1",
-    "building": "",
-    "floor": "",
-    "room": "",
-    "capacity": "",
-    "equipment": [
-      "projector",
-      "charger",
-      "table",
-      "meeting_device"
-    ]
   }
 ]
