@@ -2,6 +2,7 @@ import API_URL from '../js/api.js';
 import { currentUser } from '../js/main.js';
 
 const SRSO_ROOM_CONF_API = `${API_URL}/srso-room-config`;
+let roomEquipment = null;
 
 // Function to load room configuration view
 export function loadSRSORoomConfigView() {
@@ -160,6 +161,7 @@ async function showAddRoomModal() {
             });
 
             // Populate "Thiết bị" options with checkboxes
+            roomEquipment = data.equipment;
             const equipmentContainer = document.getElementById('srso-room-config-equipment');
             equipmentContainer.innerHTML = ''; // Clear existing options
             data.equipment.forEach(item => {
@@ -193,7 +195,13 @@ function confirmAddRoom() {
     const floor = document.getElementById('srso-room-config-floor-input').value;
     const room = document.getElementById('srso-room-config-room-input').value;
     const capacity = document.getElementById('srso-room-config-capacity-input').value;
-    const equipment = Array.from(document.querySelectorAll('#srso-room-config-equipment input:checked')).map(input => input.value);
+    const equipment = Array.from(document.querySelectorAll('#srso-room-config-equipment input:checked')).map(input => {
+        const equipmentItem = roomEquipment.find(eq => eq.id === input.value);
+        return {
+            id: equipmentItem.id,
+            name: equipmentItem.name
+        };
+    });
 
     console.log('[INFO]: Adding new room:', { campus, building, floor, room, capacity, equipment });
     fetch(`${SRSO_ROOM_CONF_API}/add-room`, {
