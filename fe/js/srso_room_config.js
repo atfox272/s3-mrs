@@ -223,6 +223,9 @@ function confirmAddRoom() {
         if (data.success) {
             alert('Thêm phòng thành công!. Nhấp "OK" để đóng cửa sổ thêm phòng.');
             closeAddRoomModal();
+            const activeButton = document.querySelector('.srso-campus-btn.active');
+            const currentCampus = activeButton ? (activeButton.id === 'srso-campus-1-btn' ? 1 : 2) : campus;
+            getRoomByCampus(currentCampus);
         } else {
             alert('Thêm phòng thất bại: ' + data.message);
         }
@@ -245,8 +248,9 @@ async function showRoomEditMenu(room) {
             }
         });
         const data = await response.json();
-
+        
         if (data.success) {
+            roomEquipment = data.equipment;
             // Populate the modal with room details
             document.getElementById('edit-campus').value = room.campus;
             document.getElementById('edit-building').value = room.building;
@@ -254,10 +258,11 @@ async function showRoomEditMenu(room) {
             document.getElementById('edit-room').value = room.room;
             document.getElementById('edit-capacity').value = room.capacity;
 
-            // Populate equipment checkboxes
+            // Populate equipment checkboxes similar to add room
+            roomEquipment = data.equipment;
             const equipmentContainer = document.getElementById('edit-equipment');
             equipmentContainer.innerHTML = ''; // Clear existing checkboxes
-            data.equipment.forEach(equip => {
+            roomEquipment.forEach(equip => {
                 const label = document.createElement('label');
                 const checkbox = document.createElement('input');
                 checkbox.type = 'checkbox';
@@ -286,10 +291,15 @@ async function showRoomEditMenu(room) {
             floor: document.getElementById('edit-floor').value,
             room: document.getElementById('edit-room').value,
             capacity: document.getElementById('edit-capacity').value,
-            equipment: Array.from(document.querySelectorAll('#edit-equipment input:checked')).map(input => input.value)
+            equipment: Array.from(document.querySelectorAll('#edit-equipment input:checked')).map(input => {
+                const equipmentItem = roomEquipment.find(eq => eq.id === input.value);
+                return {
+                    id: equipmentItem.id,
+                    name: equipmentItem.name
+                };
+            })
         };
         updateRoomHandler(updatedRoom);
-        
     };
 
     // Handle delete action
