@@ -12,6 +12,7 @@
     "usingStatus": {
       "reservationId": "2",
       "campus": "1",
+      "date": "4/23/2025",
       "roomId": "C6-101",
       "time": "17:00 - 23:59",
       "checkinTime": "17:10"
@@ -32,7 +33,7 @@
         "roomId": "C6-101",
         "date": "4/22/2025",
         "time": "17:00 - 18:00",
-        "checkoutTime": "",
+        "checkoutTime": "17:50",
         "detail": "hủy"
       }
     ],
@@ -68,6 +69,7 @@
     "faculty": "CSE",
     "major": "CS",
     "reservationHistory": [],
+    "reservationUsing": [],
     "reservationLimitation": 4
   },
   {
